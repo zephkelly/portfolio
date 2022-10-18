@@ -1,0 +1,21 @@
+p[b-t8ds9oklp0] {
+  color: ghostwhite;
+}
+
+.top-animated[b-t8ds9oklp0] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: ghostwhite;
+}
+
+.text-cursor[b-t8ds9oklp0] {
+  font-size: 28px;
+  animation: blinker-b-t8ds9oklp0 1.6s linear infinite;
+}
+
+@keyframes blinker-b-t8ds9oklp0 {
+  50% {
+    opacity: 20%;
+  }
+}

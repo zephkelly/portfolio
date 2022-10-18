@@ -1,0 +1,21 @@
+﻿p {
+  color: ghostwhite;
+}
+
+.top-animated {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: ghostwhite;
+}
+
+.text-cursor {
+  font-size: 28px;
+  animation: blinker 1.6s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 20%;
+  }
+}

@@ -1,0 +1,23 @@
+.page[b-y5pde0k6jk] {
+  position: relative;
+  display: flex;
+}
+
+main[b-y5pde0k6jk] {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.topbar[b-y5pde0k6jk] {
+  background-image: linear-gradient(180deg, #181818 0%, #141414 100%);
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+}
+
+@media (min-width: 641px) {
+  .page[b-y5pde0k6jk] {
+    flex-direction: column;
+    background-color: #171717;
+    height: 100vh;
+  }
+}
