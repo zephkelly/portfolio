@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wtbSVEyKKPCfneBVvUKd8r3c19uFEBGeYcDb65+PC+U=",
+  "Hash": "CSw3bejsCq4ZONC8dIUfZ0rx1bVzqiRiHQrOTDT8QYA=",
   "Source": "portfolio",
   "BasePath": "_content/portfolio",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "portfolio\\wwwroot",
       "Source": "portfolio",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\bundle\\portfolio.styles.css",
+      "Identity": "C:\\development\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\bundle\\portfolio.styles.css",
       "SourceId": "portfolio",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "portfolio.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\development\\portfolio\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\bundle\\portfolio.styles.css"
+      "OriginalItemSpec": "C:\\development\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\bundle\\portfolio.styles.css"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\portfolio.bundle.scp.css",
+      "Identity": "C:\\development\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\portfolio.bundle.scp.css",
       "SourceId": "portfolio",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "portfolio.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\development\\portfolio\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\portfolio.bundle.scp.css"
+      "OriginalItemSpec": "C:\\development\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\portfolio.bundle.scp.css"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\css\\site.css",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\css\\site.css",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\favicon.ico",
+      "Identity": "C:\\development\\portfolio\\portfolio\\wwwroot\\favicon.ico",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\development\\portfolio\\portfolio\\portfolio\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\portfolio\\wwwroot\\",
       "BasePath": "_content/portfolio",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
