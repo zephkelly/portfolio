@@ -2,22 +2,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: rgb(15, 15, 15);
+  background-color: ghostwhite;
   height: 100vh;
 }
 
-main[b-y5pde0k6jk] {
-    flex: 1;
-}
-
 .nav-bar[b-y5pde0k6jk] {
-  background-color: rgba(5, 5, 5, 0.4);
+  background-color: ghostwhite;
 }
-
-.sidebar[b-y5pde0k6jk] {
-  justify-content: space-evenly;
-}
-
 
 .site-brand[b-y5pde0k6jk] {
   font-family: 'Kaushan Script', cursive;
@@ -25,40 +16,55 @@ main[b-y5pde0k6jk] {
   padding-top: 0.4rem;
   padding-left: 1rem;
   padding-right: 2rem;
-  color: ghostwhite;
+  font-style: normal;
+  text-decoration: none;
 }
 
+  .site-brand a:link[b-y5pde0k6jk] {
+    color: rgb(15,15,15);
+    text-decoration: none;
+  }
 
+  .site-brand a:visited[b-y5pde0k6jk] {
+    color: rgb(15,15,15);
+    text-decoration: none;
+  }
+
+  .site-brand a:hover[b-y5pde0k6jk] {
+    color: rgb(15,15,15);
+    text-decoration: none;
+  }
+
+  .site-brand a:active[b-y5pde0k6jk] {
+    color: rgb(15,15,15);
+    text-decoration: none;
+  }
+
+main[b-y5pde0k6jk] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Mobile*/
 @media (max-width: 640.98px) {
   .site-brand[b-y5pde0k6jk] {
     display: none;
   }
 }
 
+/*Tablet*/
 @media (min-width: 641px) {
-  .page[b-y5pde0k6jk] {
-      flex-direction: column;
-  }
-
   .nav-bar[b-y5pde0k6jk] {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
-
-    .sidebar[b-y5pde0k6jk] {
-        width: 100vw;
-        height: auto;
-        position: sticky;
-        top: 0;
-    }
 }
 
+/*Computer*/
 @media (min-width: 1400px) {
-  .page[b-y5pde0k6jk] {
-    flex-direction: column;
-  }
-
   .sidebar[b-y5pde0k6jk] {
     width: 100vw;
     height: auto;

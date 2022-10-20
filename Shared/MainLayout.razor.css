@@ -2,22 +2,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: rgb(15, 15, 15);
+  background-color: ghostwhite;
   height: 100vh;
 }
 
-main {
-    flex: 1;
-}
-
 .nav-bar {
-  background-color: rgba(5, 5, 5, 0.4);
+  background-color: ghostwhite;
 }
-
-.sidebar {
-  justify-content: space-evenly;
-}
-
 
 .site-brand {
   font-family: 'Kaushan Script', cursive;
@@ -25,40 +16,55 @@ main {
   padding-top: 0.4rem;
   padding-left: 1rem;
   padding-right: 2rem;
-  color: ghostwhite;
+  font-style: normal;
+  text-decoration: none;
 }
 
+  .site-brand a:link {
+    color: rgb(15,15,15);
+    text-decoration: none;
+  }
 
+  .site-brand a:visited {
+    color: rgb(15,15,15);
+    text-decoration: none;
+  }
+
+  .site-brand a:hover {
+    color: rgb(15,15,15);
+    text-decoration: none;
+  }
+
+  .site-brand a:active {
+    color: rgb(15,15,15);
+    text-decoration: none;
+  }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Mobile*/
 @media (max-width: 640.98px) {
   .site-brand {
     display: none;
   }
 }
 
+/*Tablet*/
 @media (min-width: 641px) {
-  .page {
-      flex-direction: column;
-  }
-
   .nav-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
-
-    .sidebar {
-        width: 100vw;
-        height: auto;
-        position: sticky;
-        top: 0;
-    }
 }
 
+/*Computer*/
 @media (min-width: 1400px) {
-  .page {
-    flex-direction: column;
-  }
-
   .sidebar {
     width: 100vw;
     height: auto;

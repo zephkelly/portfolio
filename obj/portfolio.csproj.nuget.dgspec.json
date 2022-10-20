@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\development\\portfolio\\portfolio\\portfolio.csproj": {}
+    "C:\\development\\portfolio\\portfolio.csproj": {}
   },
   "projects": {
-    "C:\\development\\portfolio\\portfolio\\portfolio.csproj": {
+    "C:\\development\\portfolio\\portfolio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\development\\portfolio\\portfolio\\portfolio.csproj",
+        "projectUniqueName": "C:\\development\\portfolio\\portfolio.csproj",
         "projectName": "portfolio",
-        "projectPath": "C:\\development\\portfolio\\portfolio\\portfolio.csproj",
+        "projectPath": "C:\\development\\portfolio\\portfolio.csproj",
         "packagesPath": "C:\\Users\\maste\\.nuget\\packages\\",
-        "outputPath": "C:\\development\\portfolio\\portfolio\\obj\\",
+        "outputPath": "C:\\development\\portfolio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

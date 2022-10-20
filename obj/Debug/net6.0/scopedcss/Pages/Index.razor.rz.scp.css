@@ -1,7 +1,81 @@
+main[b-t8ds9oklp0] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 span[b-t8ds9oklp0] {
-  color: ghostwhite;
+  color: rgb(15,15,15);
 }
 
 h1[b-t8ds9oklp0] {
-  color: ghostwhite;
+  color: rgb(15,15,15);
 }
+
+.text-highlight[b-t8ds9oklp0] {
+  font-family: 'Kaushan Script', cursive;
+  color: #8223b8; /*TBD*/
+}
+
+.intro-text[b-t8ds9oklp0] {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin-top: 4rem;
+  padding-bottom: 16rem;
+  display: flex;
+  align-content: center;
+  width: 70vw;
+}
+
+.box0[b-t8ds9oklp0] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .box0[b-t8ds9oklp0] {
+    font-size: 1.8rem;
+    background-color: rgb(240,240,240);
+    width: 70vw;
+    height: 16rem;
+    padding-top: 2rem;
+  }
+
+  .box0 ul[b-t8ds9oklp0] {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+  }
+
+  .box0 li[b-t8ds9oklp0] {
+    width: 10vw;
+    font-size: 0.6rem;
+    padding: 0.5rem;
+  }
+
+/*Mobile*/
+@media (max-width: 640.98px) {
+  h1[b-t8ds9oklp0] {
+    font-size: 1.8rem;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 641px) {
+  h1[b-t8ds9oklp0] {
+    font-size: 2rem;
+  }
+}
+
+/*Computer*/
+@media (min-width: 1400px) {
+  h1[b-t8ds9oklp0] {
+    font-size: 2.4rem;
+  }
+
+  .intro-text[b-t8ds9oklp0] {
+    width: 50vw;
+  }
+}
+
