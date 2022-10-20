@@ -1,27 +1,32 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Evan</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
+﻿<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+<div class="top-row ps-2 navbar navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Evan Kelly</a>
+
+    <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
+<div class="@NavMenuCssClass">
+  <nav class="d-flex flex-sm-row flex-column nav-fill @NavMenusFillClass">
+    <div class="nav-item px-1">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Projects
+                Projects
             </NavLink>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Resume
+    <div class="nav-item px-1">
+            <NavLink class="nav-link" href="resume">
+                Resume
             </NavLink>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Contact
+    <div class="nav-item px-1">
+            <NavLink class="nav-link" href="contact">
+                Contact
             </NavLink>
         </div>
     </nav>
@@ -31,6 +36,7 @@
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string? NavMenusFillClass => collapseNavMenu ? "w-25" : "w-100";
 
     private void ToggleNavMenu()
     {

@@ -1,83 +1,76 @@
+/* _content/portfolio/Pages/Index.razor.rz.scp.css */
+span[b-t8ds9oklp0] {
+  color: ghostwhite;
+}
+
+h1[b-t8ds9oklp0] {
+  color: ghostwhite;
+}
 /* _content/portfolio/Shared/MainLayout.razor.rz.scp.css */
 .page[b-y5pde0k6jk] {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 15, 15);
+  height: 100vh;
 }
 
 main[b-y5pde0k6jk] {
     flex: 1;
 }
 
+.nav-bar[b-y5pde0k6jk] {
+  background-color: rgba(5, 5, 5, 0.4);
+}
+
 .sidebar[b-y5pde0k6jk] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+  justify-content: space-evenly;
 }
 
-.top-row[b-y5pde0k6jk] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
+
+.site-brand[b-y5pde0k6jk] {
+  font-family: 'Kaushan Script', cursive;
+  margin: 0.5rem;
+  padding-top: 0.4rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  color: ghostwhite;
 }
 
-    .top-row[b-y5pde0k6jk]  a, .top-row .btn-link[b-y5pde0k6jk] {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-    }
-
-    .top-row a:first-child[b-y5pde0k6jk] {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
 
 @media (max-width: 640.98px) {
-    .top-row:not(.auth)[b-y5pde0k6jk] {
-        display: none;
-    }
-
-    .top-row.auth[b-y5pde0k6jk] {
-        justify-content: space-between;
-    }
-
-    .top-row a[b-y5pde0k6jk], .top-row .btn-link[b-y5pde0k6jk] {
-        margin-left: 0;
-    }
+  .site-brand[b-y5pde0k6jk] {
+    display: none;
+  }
 }
 
 @media (min-width: 641px) {
-    .page[b-y5pde0k6jk] {
-        flex-direction: column;
-    }
+  .page[b-y5pde0k6jk] {
+      flex-direction: column;
+  }
+
+  .nav-bar[b-y5pde0k6jk] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
     .sidebar[b-y5pde0k6jk] {
         width: 100vw;
-        height: 180px;
+        height: auto;
         position: sticky;
         top: 0;
-    }
-
-    .top-row[b-y5pde0k6jk] {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .top-row[b-y5pde0k6jk], article[b-y5pde0k6jk] {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
     }
 }
 
 @media (min-width: 1400px) {
   .page[b-y5pde0k6jk] {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .sidebar[b-y5pde0k6jk] {
-    width: 250px;
-    height: 100vh;
+    width: 100vw;
+    height: auto;
     position: sticky;
     top: 0;
   }
@@ -94,66 +87,60 @@ main[b-y5pde0k6jk] {
   }
 }
 /* _content/portfolio/Shared/NavMenu.razor.rz.scp.css */
+div[b-u603n3jyus] {
+  font-family: 'Roboto', sans-serif;
+}
+
 .navbar-toggler[b-u603n3jyus] {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 .top-row[b-u603n3jyus] {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+  height: 4rem;
+  background-color: rgba(0,0,0,0.1);
 }
 
 .navbar-brand[b-u603n3jyus] {
-    font-size: 1.1rem;
-    flex-direction: column;
-}
-
-.oi[b-u603n3jyus] {
-    width: 2rem;
-    font-size: 1.1rem;
-    vertical-align: text-top;
-    top: -2px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.6rem;
+  flex-direction: row;
 }
 
 .nav-item[b-u603n3jyus] {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+  font-size: 1rem;
+  padding: 4px;
+  display: flex;
 }
 
-    .nav-item:first-of-type[b-u603n3jyus] {
-        padding-top: 1rem;
-    }
-
-    .nav-item:last-of-type[b-u603n3jyus] {
-        padding-bottom: 1rem;
-    }
-
-    .nav-item[b-u603n3jyus]  a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
+  .nav-item[b-u603n3jyus]  a {
+    color: #d7d7d7;
+    border-radius: 3px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+  }
 
 .nav-item[b-u603n3jyus]  a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
+  background-color: rgba(255,255,255,0.05);
+  color: white;
 }
 
 .nav-item[b-u603n3jyus]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
+  background-color: rgba(255,255,255,0.1);
+  color: white;
 }
 
 @media (min-width: 641px) {
-    .navbar-toggler[b-u603n3jyus] {
-        display: none;
-    }
+  .top-row[b-u603n3jyus] {
+    display: none;
+  }
 
-    .collapse[b-u603n3jyus] {
-        /* Never collapse the sidebar for wide screens */
-        display: flex;
-    }
+  .navbar-toggler[b-u603n3jyus] {
+    display: none;
+  }
+
+  .collapse[b-u603n3jyus] {
+    /* Never collapse the sidebar for wide screens */
+    display: block;
+  }
 }
