@@ -1,3 +1,10 @@
+.top-row[b-u603n3jyus] {
+  height: 4rem;
+  background-color: rgba(15,15,15);
+  position: sticky;
+  z-index: 2;
+}
+
 div[b-u603n3jyus] {
   font-family: 'Roboto', sans-serif;
 }
@@ -8,11 +15,6 @@ div[b-u603n3jyus] {
 
 .custom-toggler .navbar-toggler-icon[b-u603n3jyus] {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(240,240,240, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.top-row[b-u603n3jyus] {
-  height: 4rem;
-  background-color: rgba(15,15,15);
 }
 
 .navbar-brand[b-u603n3jyus] {
@@ -34,7 +36,6 @@ div[b-u603n3jyus] {
     height: 3rem;
     display: flex;
     align-items: center;
-    background-color: rgba(15, 15, 15, 0.05);
   }
 
     .nav-item[b-u603n3jyus]  a.active {

@@ -1,13 +1,35 @@
 .page {
+  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: ghostwhite;
+  align-items: center;
   height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  z-index: 2;
 }
 
 .nav-bar {
+  position: absolute;
   background-color: ghostwhite;
+  width: 100vw;
+  z-index: 1;
+}
+
+.body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
 }
 
 .site-brand {

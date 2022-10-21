@@ -1,3 +1,10 @@
+.top-row {
+  height: 4rem;
+  background-color: rgba(15,15,15);
+  position: sticky;
+  z-index: 2;
+}
+
 div {
   font-family: 'Roboto', sans-serif;
 }
@@ -8,11 +15,6 @@ div {
 
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(240,240,240, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.top-row {
-  height: 4rem;
-  background-color: rgba(15,15,15);
 }
 
 .navbar-brand {
@@ -34,7 +36,6 @@ div {
     height: 3rem;
     display: flex;
     align-items: center;
-    background-color: rgba(15, 15, 15, 0.05);
   }
 
     .nav-item ::deep a.active {
