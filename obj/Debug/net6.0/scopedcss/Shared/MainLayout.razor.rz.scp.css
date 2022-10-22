@@ -8,14 +8,15 @@
   margin: 0px;
   padding: 0px;
   width: 100vw;
-  z-index: 2;
+  z-index: 1;
 }
 
 .nav-bar[b-y5pde0k6jk] {
-  position: absolute;
+  position: fixed;
   background-color: ghostwhite;
   width: 100vw;
-  z-index: 1;
+  overflow-x: hidden;
+  z-index: 2;
 }
 
 .body[b-y5pde0k6jk] {
