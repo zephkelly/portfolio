@@ -20,45 +20,101 @@ h1[b-t8ds9oklp0] {
 .intro-text[b-t8ds9oklp0] {
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  margin-top: 18rem;
+  margin-top: 16rem;
   margin-bottom: 18rem;
   position: absolute;
   display: flex;
+  flex-direction: column;
   width: 70vw;
 }
 
-.box1[b-t8ds9oklp0] {
-  position: absolute;
-  margin-top: 52rem;
+.logos[b-t8ds9oklp0] {
   display: flex;
-  justify-content: center;
-  background-color: rgb(15,15,15);
-  font-family: 'Kaushan Script', cursive;
-  width: 100vw;
-  height: 800px;
-  padding-top: 4rem;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30rem;
 }
 
-  .box1 h1[b-t8ds9oklp0] {
-    color: ghostwhite;
-    font-size: 3rem;
-    margin-left: -60vw;
+.logos2[b-t8ds9oklp0] {
+  margin-top: 2rem;
+}
+
+  .logo[b-t8ds9oklp0] {
+    display: flex;
+    align-items: center;
+    width: 2rem;
+  }
+
+  .logo h3[b-t8ds9oklp0] {
+    font-size: 12px;
+  }
+
+  .logo4 img[b-t8ds9oklp0] {
+    width: 1.2rem;
+  }
+
+  .logo5 img[b-t8ds9oklp0] {
+    width: 1.5rem;
+  }
+
+.logo6 img[b-t8ds9oklp0] {
+  width: 1.5rem;
+}
+
+.projects-container[b-t8ds9oklp0] {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 800px;
+  margin-top: 52rem;
+  padding-top: 8rem;
+  background-color: ghostwhite;
+  padding-left: 17.3vw;
+}
+
+  .projects-container h1[b-t8ds9oklp0] {
+    font-family: 'Kaushan Script', cursive;
+  }
+
+  .projects-container h2[b-t8ds9oklp0] {
+    margin-bottom: 44rem;
+    font-family: 'Roboto', sans-serif;
+    width: 56vw;
+    font-size: 2rem;
+    font-weight: 300;
   }
 
 .box2[b-t8ds9oklp0] {
   position: absolute;
   display: flex;
-  justify-content: center;
-  top: 96rem;
-  height: 80px;
-  width: 80vw;
+  background-color: rgb(15,15,15);
+  top: 66rem;
+  height: 800px;
+  width: 65vw;
 }
 
   .box2 h1[b-t8ds9oklp0] {
-    background-color: #82ceff;
-    width: 80vw;
-    height: 60vw;
+    margin-left: 42vw;
+    margin-top: 2rem;
+    color: ghostwhite;
+    font-size: 3vw;
+    font-style: oblique;
+    width: 18vw;
   }
+
+  .code-editor[b-t8ds9oklp0] {
+    display: flex;
+    flex-direction: row;
+  }
+
+    .code-editor h4[b-t8ds9oklp0] {
+      font-size: 3vw;
+      margin-top: 1.6rem;
+      color: ghostwhite;
+    }
+
 
 .box3[b-t8ds9oklp0] {
   top: 140rem;
@@ -102,43 +158,97 @@ h1[b-t8ds9oklp0] {
     font-size: 1.5rem;
   }
 
-  .intro-text[b-t8ds9oklp0] {
-    width: 80vw;
-    text-align: left;
-    padding-bottom: 5rem;
+.intro-text[b-t8ds9oklp0] {
+  margin-top: 12rem;
+  align-items: center;
+}
+
+  .intro-text h2[b-t8ds9oklp0] {
+    margin-top: 2rem;
+    font-size: 12px;
   }
 
-  .box1[b-t8ds9oklp0] {
-    margin-top: 44rem;
+.logos[b-t8ds9oklp0] {
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo[b-t8ds9oklp0] {
+  margin-top: 0.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1.5rem;
+}
+
+  .logo h3[b-t8ds9oklp0] {
+    font-size: 12px;
   }
 
-    .box1 h1[b-t8ds9oklp0] {
-      color: ghostwhite;
-      font-size: 2.5rem;
-      margin-left: -50vw;
+  .projects-container[b-t8ds9oklp0] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36rem;
+  }
+
+    .projects-container h1[b-t8ds9oklp0] {
+      margin-left: 0;
     }
 
   .box2[b-t8ds9oklp0] {
-    top: 78rem;
+    top: 42rem;
   }
 }
 
 /*Tablet*/
 @media (min-width: 641px) {
-  h1[b-t8ds9oklp0] {
-    font-size: 2rem;
+  .intro-text[b-t8ds9oklp0] {
+    align-items: center;
+  }
+
+  .intro-text h2[b-t8ds9oklp0] {
+    padding-top: 4rem;
+    font-size: 1.4rem;
+  }
+
+  .logos[b-t8ds9oklp0] {
+    width: 15rem;
+  }
+
+  .logo[b-t8ds9oklp0] {
+    flex-direction: column;
+    width: 1.4rem;
   }
 }
 
 /*Computer*/
 @media (min-width: 1200px) {
-  h1[b-t8ds9oklp0] {
-    font-size: 2.4rem;
-  }
-
   .intro-text[b-t8ds9oklp0] {
     width: 30rem;
     text-align: left;
     margin-left: 55vw;
+    align-items: flex-start;
+  }
+
+  .intro-text h2[b-t8ds9oklp0] {
+    font-size: 1rem;
+  }
+
+  .logos[b-t8ds9oklp0] {
+    width: 26rem;
+  }
+
+  .logo[b-t8ds9oklp0] {
+    flex-direction: row;
+  }
+
+  .logo h3[b-t8ds9oklp0] {
+    padding-left: 1rem;
   }
 }

@@ -196,13 +196,13 @@
       "mscorlib.dll": "sha256-MnMyZHtcymf0sLxXeFBbQZVsdNdxT0GXJaa9t3ZdSek=",
       "netstandard.dll": "sha256-+SGdnDhVMiZ9hq0EsYwJ+mcK0odf3bAtXnSKLorGDCs=",
       "System.Private.CoreLib.dll": "sha256-mqfalNg3wC8XHlyA+j5ioNcnc0kt4prNudKdyJoaYaU=",
-      "portfolio.dll": "sha256-mbIyOT5aMzwxdR1l2h3Zu99gVA00k4wwE2iZjHbeN0I="
+      "portfolio.dll": "sha256-WPh7Btk1+q7s4xWUCVksTrjMYLgC5kJ0hNO7lQ+pFQA="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "portfolio.pdb": "sha256-JxEmGGkUs+miPhah68ksq02wxXr211vmf\/RP02ytWOc="
+      "portfolio.pdb": "sha256-NXNgL3TFFH+iMIl1lNCmM8LyRgSyT1UZ89ns\/9bLMcM="
     },
     "runtime": {
       "dotnet.6.0.9.conel24403.js": "sha256-Azk5sbYFVo84h8NpIst9roIPGLH2y8ewQ9SY\/sUHvgs=",
