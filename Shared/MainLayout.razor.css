@@ -15,8 +15,8 @@
   position: fixed;
   background-color: ghostwhite;
   width: 100vw;
-  overflow-x: hidden;
-  z-index: 2;
+  margin-right: 17px;
+  z-index: 1;
 }
 
 .body {
@@ -73,6 +73,10 @@ main {
 @media (max-width: 640.98px) {
   .site-brand {
     display: none;
+  }
+
+  .nav-bar {
+    margin-right: 0px;
   }
 }
 

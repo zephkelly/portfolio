@@ -19,24 +19,32 @@ h1 {
 
 .intro-text {
   font-family: 'Roboto', sans-serif;
-  text-align: center;
-  margin-top: 16rem;
-  margin-bottom: 18rem;
+  text-align: left;
   position: absolute;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 70vw;
+  width: 80vw;
+  height: 100vh;
 }
+  
+  .intro-text h1 {
+    font-size: 3.5vw;
+    width: 60vw;
+  }
+
+  .intro-text h2 {
+    padding-top: 6rem;
+  }
 
 .logos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 30rem;
 }
 
 .logos2 {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
   .logo {
@@ -45,113 +53,120 @@ h1 {
     width: 2rem;
   }
 
+  .logo img {
+    width: 2rem;
+  }
+
   .logo h3 {
-    font-size: 12px;
+    font-size: 16px;
   }
 
-  .logo4 img {
-    width: 1.2rem;
-  }
-
-  .logo5 img {
-    width: 1.5rem;
-  }
-
-.logo6 img {
-  width: 1.5rem;
-}
-
-.projects-transition {
+.projects-container {
+  font-family: 'Roboto', sans-serif;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-  height: 800px;
-  margin-top: 52rem;
-  padding-top: 8rem;
+  top: 100vh;
+  padding-top: 4rem;
   background-color: ghostwhite;
-  padding-left: 17.3vw;
-}
-
-.projects-transition h1 {
-  font-family: 'Kaushan Script', cursive;
-}
-
-.projects-transition h2 {
-  margin-bottom: 44rem;
-  font-family: 'Roboto', sans-serif;
-  width: 56vw;
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.code-editor {
-  padding-top: 2rem;
-  position: absolute;
+  width: 100vw;
+  height: 200vh;
   display: flex;
-  background-color: rgb(15,15,15);
-  top: 66rem;
-  height: 800px;
-  width: 65vw;
-  font-family: 'Roboto', sans-serif;
   flex-direction: column;
+  align-items: center;
 }
 
-  .code-editor .title {
-    width: 100%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    flex-direction: row;
+  .project-container {
+    background-color: rgb(15,15,15);
+    position: absolute;
+    top: 10rem;
+    right: 14rem;
+    width: 65vw;
+    height: 55vh;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
-    .code-editor .title h1 {
+    .project-container p {
+        width: 90%;
+        font-size: 1.2rem;
+        color: ghostwhite;
+        padding-top: 3rem;
+    }
+
+    .projects-container h2 {
+      padding-bottom: 3rem;
+    }
+
+    .project-container .title {
       color: ghostwhite;
-      font-size: 3vw;
-      font-style: oblique;
-      margin-top: 0.3rem;
-      margin-right: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
     }
 
-    .code-editor .title h2 {
-      color: ghostwhite;
-      font-size: 3vw;
-      font-style: oblique;
-      margin-right: 3vw;
+    .project-container h3 {
+      font-size: 3rem;
+      margin-right: 4rem;
     }
 
-  .code-editor .technologies {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 3.2vw;
-    margin-left: 45vw;
-  }
+      .project-container ul, li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 4rem;
+        padding: 0px;
+        margin-bottom: 0px;
+        color: dimgrey;
+      }
 
-    .technologies h4 {
-      font-weight: 300;
-      font-size: 0.8rem;
-      color: dimgrey;
-    }
-
-  .blinker {
-    color: ghostwhite;
-    font-style: normal;
-  }
-
-.box3 {
-  top: 140rem;
-  position: absolute;
+.unity-game {
+  top: 86rem;
+  right: 0;
+  left: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
+
+    .unity-game .title {
+      justify-content: right;
+    }
+
+      .unity-game h3 {
+        margin-right: 0rem;
+        margin-left: 4rem;
+      }
+
+      .unity-game p {
+        text-align: right;
+      }
+
+  #code-editor {
+    position: absolute;
+    left: 12rem;
+    top: 26rem;
+    width: 70vw;
+    height: auto;
+    background-color: forestgreen;
+  }
+
+  #video-game {
+    position: absolute;
+    right: 12rem;
+    top: 104rem;
+    width: 70vw;
+    height: auto;
+    background-color: forestgreen;
+  }
 
 /*Sliding boxes*/
 .bg {
-  animation: slide 8s ease-in-out infinite alternate;
+  animation: slide 10s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
   bottom: -300px;
   left: -50%;
-  opacity: .2;
+  opacity: .13;
   right: -50%;
   top: 0px;
   position: absolute;
@@ -159,11 +174,11 @@ h1 {
 
 .bg2 {
   animation-direction: alternate-reverse;
-  animation-duration: 16s;
+  animation-duration: 22s;
 }
 
 .bg3 {
-  animation-duration: 12s;
+  animation-duration: 16s;
 }
 
 @keyframes slide {
@@ -176,126 +191,8 @@ h1 {
   }
 }
 
-/*Mobile*/
-@media (max-width: 640.98px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-.intro-text {
-  margin-top: 10rem;
-  align-items: center;
-}
-
-  .intro-text h2 {
-    margin-top: 2rem;
-    font-size: 12px;
-  }
-
-.logos {
-  width: 40vw;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  margin-top: 0.4rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: 2px;
-  font-weight: 300;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1.5rem;
-}
-
-  .logo h3 {
-    font-size: 12px;
-  }
-
-  .projects-transition {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 36rem;
-
-    padding-left: 0;
-  }
-
-    .projects-transition h2 {
-      width: 80vw;
-      text-align: center;
-    }
-
-.code-editor {
-  align-items: center;
-  margin-top: -13rem;
-  width: 80vw;
-  height: 600px;
-}
-  
-  .code-editor .title {
-    justify-content: center;
-  }
-
-  .code-editor .title h1 {
-    font-size: 1.6rem;
-  }
-
-  .code-editor .title h2 {
-    display: none;
-    font-size: 1.4rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .code-editor .technologies {
-    width: 50%;
-    margin-left: 30vw;
-    margin: 0;
-    width: 60%;
-  }
-  
-    .code-editor .technologies h4 {
-      font-size: 0.6rem;
-    }
-}
-
-/*Tablet*/
-@media (min-width: 641px) {
-  .intro-text {
-    align-items: center;
-  }
-
-  .intro-text h2 {
-    padding-top: 6rem;
-    font-size: 1.4rem;
-  }
-
-  .logos {
-    width: 15rem;
-  }
-
-  .logo {
-    flex-direction: column;
-    width: 1.4rem;
-  }
-
-  .technologies h4 {
-    font-weight: 300;
-    font-size: 0.6rem;
-    color: dimgrey;
-  }
-}
-
 /*Computer*/
 @media (min-width: 1200px) {
-  .intro-text {
-    width: 30rem;
-    text-align: left;
-    margin-left: 55vw;
-    align-items: flex-start;
-  }
 
   .intro-text h2 {
     font-size: 1rem;
@@ -312,4 +209,68 @@ h1 {
   .logo h3 {
     padding-left: 1rem;
   }
+}
+
+/*Tablet*/
+@media (max-width: 1199px) {
+  .intro-text {
+    align-items: center;
+    text-align: center;
+  }
+
+    .intro-text h1 {
+      width: 100%;
+      font-size: 2.8rem;
+    }
+
+    .intro-text h2 {
+      font-size: 1.4rem;
+    }
+
+  .logos {
+    width: 50vw;
+  }
+
+  .logo {
+    flex-direction: column;
+    width: 1.4rem;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 640.98px) {
+  .intro-text {
+    align-items: center;
+  }
+
+    .intro-text h1 {
+      width: 85vw;
+      font-size: 1.9rem;
+      margin-top: 3rem;
+    }
+
+    .intro-text h2 {
+      font-size: 1.4rem;
+    }
+
+  .logos {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-top: 0.4rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1.5rem;
+  }
+
+    .logo h3 {
+      font-size: 12px;
+    }
 }
