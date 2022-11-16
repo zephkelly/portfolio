@@ -35,9 +35,11 @@ h1 {
 
   .intro-text h2 {
     padding-top: 6rem;
+    font-size: 1rem;
   }
 
 .logos {
+  width: 26rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -47,11 +49,12 @@ h1 {
   margin-top: 3rem;
 }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    width: 2rem;
-  }
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 2rem;
+}
 
   .logo img {
     width: 2rem;
@@ -59,6 +62,7 @@ h1 {
 
   .logo h3 {
     font-size: 16px;
+    padding-left: 1rem;
   }
 
 .projects-container {
@@ -80,27 +84,29 @@ h1 {
 
 .page-height {
   position: relative;
-  margin-top: 8vh;
-  height: 85vh;
+  margin-bottom: 8vh;
+  height: 100vh;
   width: 100vw;
 }
 
-  .project-container {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(15,15,15);
-    position: absolute;
-    top: 6vh;
-    right: 16vw;
-    width: 65vw;
-    height: 40rem;
-    padding: 2rem;
-    padding-left: 4rem;
-    padding-right: 2.1vw;
-  }
+.project-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15,15,15);
+  position: absolute;
+  top: 13%;
+  bottom: 25%;
+  left: 20%;
+  right: 12%;
+  width: auto;
+  height: 35vw;
+  padding: 2rem;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
 
   .project-container .buttons {
-    margin-top: 10vh;
+    margin-top: 15%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -114,7 +120,7 @@ h1 {
 
     .project-container p {
         width: 90%;
-        font-size: 1.2rem;
+        font-size: clamp(1.5vw, 1.5vw, 2vw);
         color: ghostwhite;
         padding-top: 3rem;
     }
@@ -147,41 +153,21 @@ h1 {
         color: dimgrey;
       }
 
-.unity-game {
-  right: 0;
-  left: 16vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-    .unity-game .title {
-      justify-content: right;
-    }
-
-      .unity-game h3 {
-        margin-right: 0rem;
-        margin-left: 4rem;
-      }
-
-      .unity-game p {
-        text-align: right;
-      }
 
 #code-editor {
   position: absolute;
-  left: 16vw;
-  top: 24vh;
-  width: 50vw;
+  top: 15vw;
+  left: -12%;
+  width: 55vw;
   height: auto;
   background-color: forestgreen;
 }
 
 #video-game {
   position: absolute;
-  right: 16vw;
-  top: 24vh;
-  width: 50vw;
+  top: 15vw;
+  left: -12%;
+  width: 55vw;
   height: auto;
   background-color: forestgreen;
 }
@@ -218,27 +204,58 @@ h1 {
 }
 
 /*Computer*/
-@media (min-width: 1200px) {
-
-  .intro-text h2 {
-    font-size: 1rem;
+@media (max-width: 1920px) {
+  #code-editor {
+    top: 18vw;
   }
 
-  .logos {
-    width: 26rem;
-  }
-
-  .logo {
-    flex-direction: row;
-  }
-
-  .logo h3 {
-    padding-left: 1rem;
+  #video-game {
+    top: 18vw;
   }
 }
 
+/*Small Computer*/
+@media (max-width: 1700px) {
+  .page-height {
+    height: 90vh;
+  }
+
+  .project-container {
+    top: 10%;
+    bottom: 60%;
+    right: 10%;
+    left: 10%;
+    height: 50vh;
+    border: solid;
+    border-radius: 2rem; 
+  }
+
+  .project-container .buttons {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    flex-direction: row;
+  }
+
+  #code-editor {
+    position: relative;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    border-radius: 2rem
+  }
+
+  #video-game {
+    position: relative;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    border-radius: 2rem;
+  }
+}
+
+
 /*Tablet*/
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   .intro-text {
     align-items: center;
     text-align: center;
@@ -261,10 +278,14 @@ h1 {
     flex-direction: column;
     width: 1.4rem;
   }
+
+  .page-height {
+    height: 70vh;
+  }
 }
 
 /*Mobile*/
-@media (max-width: 640.98px) {
+@media (max-width: 640px) {
   .intro-text {
     align-items: center;
   }
@@ -298,5 +319,55 @@ h1 {
 
     .logo h3 {
       font-size: 12px;
+      padding-left: 0;
     }
+
+  .page-height {
+    height: 100vh;
+    display: flex;
+  }
+
+  .project-container {
+    height: 60vh;
+    width: 90vw;
+    left: 5%;
+    right: 0;
+  }
+
+  .project-container .title {
+    flex-direction: column;
+  }
+
+    .project-container .title ul {
+      gap: 1.2rem;
+      font-size: 0.8rem;
+    }
+
+  .project-container .title h3 {
+    font-size: 2rem;
+  }
+
+  .project-container p {
+    font-size: 1rem;
+  }
+
+  .project-container button {
+    width: 6rem;
+  }
+
+  #code-editor {
+    position: relative;
+    top: 0%;
+    left: -1.25rem;
+    width: 90vw;
+    border-radius: 2rem
+  }
+
+  #video-game {
+    position: relative;
+    top: 0%;
+    left: -1.25rem;
+    width: 90vw;
+    border-radius: 2rem;
+  }
 }
