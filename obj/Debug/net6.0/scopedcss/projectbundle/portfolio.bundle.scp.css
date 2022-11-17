@@ -80,15 +80,26 @@ h1[b-t8ds9oklp0] {
 }
 
   .projects-container h2[b-t8ds9oklp0] {
+    font-size: 10rem;
     margin-bottom: 6vh;
+    margin-top: 6vh;
   }
 
 .page-height[b-t8ds9oklp0] {
   position: relative;
-  margin-bottom: 8vh;
   height: 100vh;
   width: 100vw;
+  min-height: 80rem;
+  max-height: 45rem;
 }
+
+  .container-one[b-t8ds9oklp0] {
+    margin-bottom: 0;
+  }
+
+  .container-two[b-t8ds9oklp0] {
+    margin-bottom: 0;
+  }
 
 .project-container[b-t8ds9oklp0] {
   display: flex;
@@ -104,6 +115,7 @@ h1[b-t8ds9oklp0] {
   padding: 2rem;
   padding-left: 4vw;
   padding-right: 4vw;
+  border-radius: 2rem
 }
 
   .project-container .buttons[b-t8ds9oklp0] {
@@ -117,6 +129,12 @@ h1[b-t8ds9oklp0] {
     .project-container button[b-t8ds9oklp0] {
         width: 14vw;
         height: 3rem;
+
+        background-color: transparent;
+        color: ghostwhite;
+        border-style: solid;
+        border: solid;
+        border-color: ghostwhite;
     }
 
     .project-container p[b-t8ds9oklp0] {
@@ -128,7 +146,7 @@ h1[b-t8ds9oklp0] {
 
     .projects-container h2[b-t8ds9oklp0] {
       font-family: 'Kaushan Script', cursive;
-      font-size: 4rem;
+      font-size: 5rem;
     }
 
     .project-container .title[b-t8ds9oklp0] {
@@ -161,7 +179,8 @@ h1[b-t8ds9oklp0] {
   left: -12%;
   width: 55vw;
   height: auto;
-  background-color: forestgreen;
+  background-color: ghostwhite;
+  border-radius: 2rem
 }
 
 #video-game[b-t8ds9oklp0] {
@@ -170,8 +189,34 @@ h1[b-t8ds9oklp0] {
   left: -12%;
   width: 55vw;
   height: auto;
-  background-color: forestgreen;
+  background-color: ghostwhite;
+  border-radius: 2rem
 }
+
+.about-container[b-t8ds9oklp0] {
+  background-color: rgb(15,15,15);
+  height: 100vh;
+  width: 100vw;
+  margin-top: 20vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10vw;
+  color: ghostwhite;
+}
+
+  .about-container .grid[b-t8ds9oklp0] {
+    width: 40vw;
+    padding-top: 2vh;
+  }
+
+    .grid h2[b-t8ds9oklp0] {
+      font-size: clamp(1rem, 6vw, 4rem);
+    }
 
 /*Sliding boxes*/
 .bg[b-t8ds9oklp0] {
@@ -226,9 +271,8 @@ h1[b-t8ds9oklp0] {
     bottom: 60%;
     right: 10%;
     left: 10%;
-    height: 50vh;
     border: solid;
-    border-radius: 2rem; 
+    height: clamp(38rem, 75vw, 46rem);
   }
 
   .project-container .buttons[b-t8ds9oklp0] {
@@ -242,7 +286,6 @@ h1[b-t8ds9oklp0] {
     top: 0%;
     left: 0;
     width: 100%;
-    border-radius: 2rem
   }
 
   #video-game[b-t8ds9oklp0] {
@@ -250,7 +293,6 @@ h1[b-t8ds9oklp0] {
     top: 0%;
     left: 0;
     width: 100%;
-    border-radius: 2rem;
   }
 }
 
@@ -281,7 +323,8 @@ h1[b-t8ds9oklp0] {
   }
 
   .page-height[b-t8ds9oklp0] {
-    height: 70vh;
+    min-height: 70rem;
+    margin-bottom: -20vw;
   }
 }
 
@@ -325,14 +368,20 @@ h1[b-t8ds9oklp0] {
 
   .page-height[b-t8ds9oklp0] {
     height: 100vh;
+    min-height: 50rem;
+    max-height: 45rem;
     display: flex;
+    margin-bottom: 0;
+  }
+
+  .projects-container h2[b-t8ds9oklp0] {
+    margin-left: -2vw;
   }
 
   .project-container[b-t8ds9oklp0] {
-    height: 60vh;
-    width: 90vw;
-    left: 5%;
-    right: 0;
+    height: clamp(30rem, 80vh, 40rem);
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   .project-container .title[b-t8ds9oklp0] {
@@ -352,6 +401,11 @@ h1[b-t8ds9oklp0] {
     font-size: 1rem;
   }
 
+  .project-container .buttons[b-t8ds9oklp0] {
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+
   .project-container button[b-t8ds9oklp0] {
     width: 6rem;
   }
@@ -359,17 +413,30 @@ h1[b-t8ds9oklp0] {
   #code-editor[b-t8ds9oklp0] {
     position: relative;
     top: 0%;
-    left: -1.25rem;
-    width: 90vw;
-    border-radius: 2rem
+    left: -8.9vw;
+    width: 80.5vw;
   }
 
   #video-game[b-t8ds9oklp0] {
     position: relative;
     top: 0%;
-    left: -1.25rem;
-    width: 90vw;
-    border-radius: 2rem;
+    left: -8.9vw;
+    width: 80.5vw;
+  }
+
+  .about-container[b-t8ds9oklp0] {
+    flex-direction: column;
+    height: auto;
+    padding-top: 5vh;
+  }
+
+  .grid[b-t8ds9oklp0] {
+    height: 85vh;
+  }
+
+  .grid h2[b-t8ds9oklp0] {
+    font-size: clamp(1rem, 10vw, 9rem);
+    margin-top: 0;
   }
 }
 /* /Shared/MainLayout.razor.rz.scp.css */

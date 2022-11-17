@@ -79,15 +79,26 @@ h1 {
 }
 
   .projects-container h2 {
+    font-size: 10rem;
     margin-bottom: 6vh;
+    margin-top: 6vh;
   }
 
 .page-height {
   position: relative;
-  margin-bottom: 8vh;
   height: 100vh;
   width: 100vw;
+  min-height: 80rem;
+  max-height: 45rem;
 }
+
+  .container-one {
+    margin-bottom: 0;
+  }
+
+  .container-two {
+    margin-bottom: 0;
+  }
 
 .project-container {
   display: flex;
@@ -103,6 +114,7 @@ h1 {
   padding: 2rem;
   padding-left: 4vw;
   padding-right: 4vw;
+  border-radius: 2rem
 }
 
   .project-container .buttons {
@@ -116,6 +128,12 @@ h1 {
     .project-container button {
         width: 14vw;
         height: 3rem;
+
+        background-color: transparent;
+        color: ghostwhite;
+        border-style: solid;
+        border: solid;
+        border-color: ghostwhite;
     }
 
     .project-container p {
@@ -127,7 +145,7 @@ h1 {
 
     .projects-container h2 {
       font-family: 'Kaushan Script', cursive;
-      font-size: 4rem;
+      font-size: 5rem;
     }
 
     .project-container .title {
@@ -160,7 +178,8 @@ h1 {
   left: -12%;
   width: 55vw;
   height: auto;
-  background-color: forestgreen;
+  background-color: ghostwhite;
+  border-radius: 2rem
 }
 
 #video-game {
@@ -169,8 +188,34 @@ h1 {
   left: -12%;
   width: 55vw;
   height: auto;
-  background-color: forestgreen;
+  background-color: ghostwhite;
+  border-radius: 2rem
 }
+
+.about-container {
+  background-color: rgb(15,15,15);
+  height: 100vh;
+  width: 100vw;
+  margin-top: 20vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10vw;
+  color: ghostwhite;
+}
+
+  .about-container .grid {
+    width: 40vw;
+    padding-top: 2vh;
+  }
+
+    .grid h2 {
+      font-size: clamp(1rem, 6vw, 4rem);
+    }
 
 /*Sliding boxes*/
 .bg {
@@ -225,9 +270,8 @@ h1 {
     bottom: 60%;
     right: 10%;
     left: 10%;
-    height: 50vh;
     border: solid;
-    border-radius: 2rem; 
+    height: clamp(38rem, 75vw, 46rem);
   }
 
   .project-container .buttons {
@@ -241,7 +285,6 @@ h1 {
     top: 0%;
     left: 0;
     width: 100%;
-    border-radius: 2rem
   }
 
   #video-game {
@@ -249,7 +292,6 @@ h1 {
     top: 0%;
     left: 0;
     width: 100%;
-    border-radius: 2rem;
   }
 }
 
@@ -280,7 +322,8 @@ h1 {
   }
 
   .page-height {
-    height: 70vh;
+    min-height: 70rem;
+    margin-bottom: -20vw;
   }
 }
 
@@ -324,14 +367,20 @@ h1 {
 
   .page-height {
     height: 100vh;
+    min-height: 50rem;
+    max-height: 45rem;
     display: flex;
+    margin-bottom: 0;
+  }
+
+  .projects-container h2 {
+    margin-left: -2vw;
   }
 
   .project-container {
-    height: 60vh;
-    width: 90vw;
-    left: 5%;
-    right: 0;
+    height: clamp(30rem, 80vh, 40rem);
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   .project-container .title {
@@ -351,6 +400,11 @@ h1 {
     font-size: 1rem;
   }
 
+  .project-container .buttons {
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+
   .project-container button {
     width: 6rem;
   }
@@ -358,16 +412,29 @@ h1 {
   #code-editor {
     position: relative;
     top: 0%;
-    left: -1.25rem;
-    width: 90vw;
-    border-radius: 2rem
+    left: -8.9vw;
+    width: 80.5vw;
   }
 
   #video-game {
     position: relative;
     top: 0%;
-    left: -1.25rem;
-    width: 90vw;
-    border-radius: 2rem;
+    left: -8.9vw;
+    width: 80.5vw;
+  }
+
+  .about-container {
+    flex-direction: column;
+    height: auto;
+    padding-top: 5vh;
+  }
+
+  .grid {
+    height: 85vh;
+  }
+
+  .grid h2 {
+    font-size: clamp(1rem, 10vw, 9rem);
+    margin-top: 0;
   }
 }
