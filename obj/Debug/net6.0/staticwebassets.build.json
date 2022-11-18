@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jP3Y8PqGOUQ6JeMVJjOUaRRip4JEEZMRHEhKP38Gnw0=",
+  "Hash": "+PDFdnGlYjqFC4xFlK3Ft2gcGGKIY95+X7up41zkXa8=",
   "Source": "portfolio",
   "BasePath": "/",
   "Mode": "Root",
@@ -7172,6 +7172,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\html5.svg"
+    },
+    {
+      "Identity": "C:\\development\\portfolio\\wwwroot\\images\\pfp.jpg",
+      "SourceId": "portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\development\\portfolio\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/pfp.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pfp.jpg"
     },
     {
       "Identity": "C:\\development\\portfolio\\wwwroot\\images\\projects\\codeeditor.JPG",
