@@ -118,7 +118,7 @@ h1 {
 }
 
   .project-container .buttons {
-    margin-top: 15%;
+    margin-top: 6vh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -127,7 +127,7 @@ h1 {
 
     .project-container button {
         width: 14vw;
-        height: 3rem;
+        height: 4rem;
 
         background-color: transparent;
         color: ghostwhite;
@@ -213,17 +213,14 @@ h1 {
   .about-container .title {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
   }
 
   .title h2 {
     font-size: clamp(5rem, 4vw, 5rem);
     margin-top: 0;
-  }
-
-  .about-container .title {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
 
     .title img {
@@ -232,19 +229,26 @@ h1 {
       max-width: 100rem;
       min-width: 15rem;
       border-radius: 20rem;
+      padding-bottom: 1rem;
     }
 
 .introduction {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding-bottom: 3rem;
 }
 
   .introduction p {
-    font-size: clamp(0.8rem, 4vw, 1.8rem);
+    font-size: clamp(0.8rem, 4vw, 1.7rem);
   }
 
+.contact-container {
+  
+}
+
+  .contact-container .title {
+    margin-top: 7rem;
+  }
 /*Sliding boxes*/
 .bg {
   animation: slide 10s ease-in-out infinite alternate;
@@ -426,83 +430,71 @@ h1 {
     margin-bottom: 0rem;
   }
 
-  .projects-container h2 {
-    margin-left: -2vw;
+  .projects-container {
+    padding-top: 7rem;
   }
 
-  .project-container {
-    height: clamp(30rem, 80vh, 40rem);
-    padding-left: 8vw;
-    padding-right: 8vw;
-  }
-
-  .project-container .title {
-    flex-direction: column;
-  }
-
-    .project-container .title ul {
-      gap: 1.2rem;
-      font-size: 0.8rem;
+    .project-container {
+      height: clamp(30rem, 80vh, 40rem);
+      padding-left: 8vw;
+      padding-right: 8vw;
     }
 
-  .project-container .title h3 {
-    font-size: 2rem;
-  }
+    .projects-container h2 {
+      margin-left: -2vw;
+      margin-top: 0rem;
+      font-size: 4.5rem;
+    }
 
-  .project-container p {
-    font-size: 1rem;
-  }
+    .project-container .title {
+      flex-direction: column;
+    }
 
-  .project-container .buttons {
-    justify-content: space-evenly;
-    gap: 1rem;
-  }
+      .project-container .title ul {
+        gap: 1.2rem;
+        font-size: 0.8rem;
+      }
 
-  .project-container button {
-    width: 6rem;
-  }
+    .project-container .title h3 {
+      font-size: 2rem;
+    }
 
-  #code-editor {
-    position: relative;
-    top: 0%;
-    left: -8.9vw;
-    width: 80.5vw;
-  }
+    .project-container p {
+      font-size: 1rem;
+    }
 
-  #video-game {
-    position: relative;
-    top: 0%;
-    left: -8.9vw;
-    width: 80.5vw;
-  }
+    .project-container .buttons {
+      justify-content: space-evenly;
+      gap: 1rem;
+    }
+
+    .project-container button {
+      width: 8rem;
+      font-size: 0.9rem;
+    }
+
+    #code-editor {
+      position: relative;
+      top: 0%;
+      left: -8.9vw;
+      width: 80.5vw;
+    }
+
+    #video-game {
+      position: relative;
+      top: 0%;
+      left: -8.9vw;
+      width: 80.5vw;
+    }
 
   .about-container {
     flex-direction: column;
     height: auto;
-    padding-top: 5vh;
-    margin-top: 6rem;
+    padding-top: 7rem;
+    margin-top: 7rem;
     padding-bottom: 5vh;
   }
 
-    .about-container .grid {
-      height: 85vh;
-      min-height: 50rem;
-      width: 100%;
-      align-items: start;
-      justify-content: center;
-    }
-
-      .grid .title {
-         align-items: center;
-      }
-
-      .grid h2 {
-        font-size: 4.5rem;
-      }
-
-      .grid img {
-        width: 16vw;
-      }
 
   .about-container {
     display: flex;

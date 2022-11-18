@@ -15,7 +15,7 @@
   position: fixed;
   background-color: ghostwhite;
   width: 100vw;
-  margin-right: 17px;
+  /*margin-right: 17px;*/
   z-index: 1;
 }
 
@@ -87,6 +87,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-right: 0px;
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+PDFdnGlYjqFC4xFlK3Ft2gcGGKIY95+X7up41zkXa8=",
+  "Hash": "qsDPktV/sIIZ8t/r0ADSnPe2LHWB4K1OJvkzu8OSxVE=",
   "Source": "portfolio",
   "BasePath": "/",
   "Mode": "Root",
@@ -7157,6 +7157,23 @@
       "OriginalItemSpec": "wwwroot\\images\\dotnet.png"
     },
     {
+      "Identity": "C:\\development\\portfolio\\wwwroot\\images\\github.svg",
+      "SourceId": "portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\development\\portfolio\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/github.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\github.svg"
+    },
+    {
       "Identity": "C:\\development\\portfolio\\wwwroot\\images\\html5.svg",
       "SourceId": "portfolio",
       "SourceType": "Discovered",
@@ -7172,6 +7189,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\html5.svg"
+    },
+    {
+      "Identity": "C:\\development\\portfolio\\wwwroot\\images\\linkedin.png",
+      "SourceId": "portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\development\\portfolio\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/linkedin.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\linkedin.png"
     },
     {
       "Identity": "C:\\development\\portfolio\\wwwroot\\images\\pfp.jpg",
