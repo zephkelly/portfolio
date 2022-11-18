@@ -24,4 +24,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: release/wwwroot
+          FOLDER: portfolio/bin/Release/net6.0/browser-wasm/publish/wwwroot/
