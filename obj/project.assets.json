@@ -1762,7 +1762,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ev\\.nuget\\packages\\": {}
+    "C:\\Users\\maste\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1770,11 +1771,15 @@
       "projectUniqueName": "C:\\development\\portfolio\\portfolio.csproj",
       "projectName": "portfolio",
       "projectPath": "C:\\development\\portfolio\\portfolio.csproj",
-      "packagesPath": "C:\\Users\\Ev\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\maste\\.nuget\\packages\\",
       "outputPath": "C:\\development\\portfolio\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Ev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1782,6 +1787,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

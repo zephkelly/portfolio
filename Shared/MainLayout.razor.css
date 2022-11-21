@@ -15,7 +15,8 @@
   position: fixed;
   background-color: ghostwhite;
   width: 100vw;
-  /*margin-right: 17px;*/
+  height: 3.5rem;
+  margin-right: 17px;
   z-index: 1;
 }
 

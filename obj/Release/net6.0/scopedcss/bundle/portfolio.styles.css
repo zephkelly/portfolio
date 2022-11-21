@@ -81,25 +81,17 @@ h1[b-t8ds9oklp0] {
 
   .projects-container h2[b-t8ds9oklp0] {
     font-size: 10rem;
-    margin-bottom: 6vh;
+    margin-bottom: -6vh;
     margin-top: 6vh;
   }
 
 .page-height[b-t8ds9oklp0] {
   position: relative;
-  height: 100vh;
+  height: auto;
   width: 100vw;
-  min-height: 80rem;
-  max-height: 45rem;
+  min-height: 68rem;
+  max-height: 80rem;
 }
-
-  .container-one[b-t8ds9oklp0] {
-    margin-bottom: 0;
-  }
-
-  .container-two[b-t8ds9oklp0] {
-    margin-bottom: 0;
-  }
 
 .project-container[b-t8ds9oklp0] {
   display: flex;
@@ -110,8 +102,6 @@ h1[b-t8ds9oklp0] {
   bottom: 25%;
   left: 20%;
   right: 12%;
-  width: auto;
-  height: 35vw;
   padding: 2rem;
   padding-left: 4vw;
   padding-right: 4vw;
@@ -129,7 +119,6 @@ h1[b-t8ds9oklp0] {
     .project-container button[b-t8ds9oklp0] {
         width: 14vw;
         height: 4rem;
-
         background-color: transparent;
         color: ghostwhite;
         border-style: solid;
@@ -139,7 +128,7 @@ h1[b-t8ds9oklp0] {
 
     .project-container p[b-t8ds9oklp0] {
         width: 90%;
-        font-size: clamp(1.5vw, 1.5vw, 2vw);
+        font-size: clamp(0.1rem, 1.5vw, 1.4rem);
         color: ghostwhite;
         padding-top: 3rem;
     }
@@ -243,10 +232,6 @@ h1[b-t8ds9oklp0] {
     font-size: clamp(0.8rem, 4vw, 1.7rem);
   }
 
-.contact-container[b-t8ds9oklp0] {
-  
-}
-
   .contact-container .title[b-t8ds9oklp0] {
     margin-top: 7rem;
   }
@@ -281,23 +266,24 @@ h1[b-t8ds9oklp0] {
   }
 }
 
+/*4k*/
+@media (max-width: 3840px) {
+  
+}
+
 /*Computer*/
 @media (max-width: 1920px) {
   #code-editor[b-t8ds9oklp0] {
-    top: 18vw;
+    top: 40%;
   }
 
   #video-game[b-t8ds9oklp0] {
-    top: 18vw;
+    top: 40%;
   }
 }
 
 /*Small Computer*/
 @media (max-width: 1700px) {
-  .page-height[b-t8ds9oklp0] {
-    height: 90vh;
-  }
-
   .project-container[b-t8ds9oklp0] {
     top: 10%;
     bottom: 60%;
@@ -436,7 +422,7 @@ h1[b-t8ds9oklp0] {
   }
 
     .project-container[b-t8ds9oklp0] {
-      height: clamp(30rem, 80vh, 40rem);
+      height: clamp(40rem, 80vh, 45rem);
       padding-left: 8vw;
       padding-right: 8vw;
     }
@@ -496,7 +482,6 @@ h1[b-t8ds9oklp0] {
     padding-bottom: 5vh;
   }
 
-
   .about-container[b-t8ds9oklp0] {
     display: flex;
     flex-direction: column;
@@ -526,7 +511,8 @@ h1[b-t8ds9oklp0] {
   position: fixed;
   background-color: ghostwhite;
   width: 100vw;
-  /*margin-right: 17px;*/
+  height: 3.5rem;
+  margin-right: 17px;
   z-index: 1;
 }
 
