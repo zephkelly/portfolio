@@ -27,7 +27,7 @@ h1 {
   width: 80vw;
   height: 100vh;
 }
-  
+
   .intro-text h1 {
     font-size: 3.5vw;
     width: 60vw;
@@ -104,7 +104,8 @@ h1 {
   padding: 2rem;
   padding-left: 4vw;
   padding-right: 4vw;
-  border-radius: 2rem
+  border-radius: 2rem;
+  border-color: rgb(15,15,15);
 }
 
   .project-container .buttons {
@@ -115,50 +116,50 @@ h1 {
     gap: 2rem;
   }
 
-    .project-container button {
-        width: 14vw;
-        height: 4rem;
-        background-color: transparent;
-        color: ghostwhite;
-        border-style: solid;
-        border: solid;
-        border-color: ghostwhite;
-    }
+  .project-container button {
+    width: 14vw;
+    height: 4rem;
+    background-color: transparent;
+    color: ghostwhite;
+    border-style: solid;
+    border: solid;
+    border-color: ghostwhite;
+  }
 
-    .project-container p {
-        width: 90%;
-        font-size: clamp(0.1rem, 1.5vw, 1.4rem);
-        color: ghostwhite;
-        padding-top: 3rem;
-    }
+  .project-container p {
+    width: 90%;
+    font-size: clamp(0.1rem, 1.5vw, 1.4rem);
+    color: ghostwhite;
+    padding-top: 3rem;
+  }
 
-    .projects-container h2 {
-      font-family: 'Kaushan Script', cursive;
-      font-size: 5rem;
-    }
+.projects-container h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 5rem;
+}
 
-    .project-container .title {
-      color: ghostwhite;
-      display: flex;
-      flex-direction: row;
-      justify-content: left;
-    }
+.project-container .title {
+  color: ghostwhite;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
 
-    .project-container h3 {
-      font-size: 3rem;
-      margin-right: 4rem;
-    }
+.project-container h3 {
+  font-size: 3rem;
+  margin-right: 4rem;
+}
 
-      .project-container ul, li {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: 4rem;
-        padding: 0px;
-        margin-bottom: 0px;
-        color: dimgrey;
-      }
+.project-container ul, li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4rem;
+  padding: 0px;
+  margin-bottom: 0px;
+  color: dimgrey;
+}
 
 
 #code-editor {
@@ -202,24 +203,25 @@ h1 {
   .about-container .title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
     width: 100%;
+    gap: 6rem;
   }
 
-  .title h2 {
-    font-size: clamp(5rem, 4vw, 5rem);
-    margin-top: 0;
-  }
+.title h2 {
+  font-size: clamp(3.5rem, 4vw, 5rem);
+  margin-top: 0;
+}
 
-    .title img {
-      width: 16vw;
-      height: auto;
-      max-width: 100rem;
-      min-width: 15rem;
-      border-radius: 20rem;
-      padding-bottom: 1rem;
-    }
+.title img {
+  width: 16vw;
+  height: auto;
+  max-width: 100rem;
+  min-width: 15rem;
+  border-radius: 20rem;
+  padding-bottom: 1rem;
+}
 
 .introduction {
   display: flex;
@@ -231,9 +233,9 @@ h1 {
     font-size: clamp(0.8rem, 4vw, 1.7rem);
   }
 
-  .contact-container .title {
-    margin-top: 7rem;
-  }
+.contact-container .title {
+  margin-top: 7rem;
+}
 /*Sliding boxes*/
 .bg {
   animation: slide 10s ease-in-out infinite alternate;
@@ -267,7 +269,6 @@ h1 {
 
 /*4k*/
 @media (max-width: 3840px) {
-  
 }
 
 /*Computer*/
@@ -288,15 +289,14 @@ h1 {
     bottom: 60%;
     right: 10%;
     left: 10%;
-    border: solid;
     height: clamp(38rem, 75vw, 46rem);
   }
 
-  .project-container .buttons {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    flex-direction: row;
-  }
+    .project-container .buttons {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      flex-direction: row;
+    }
 
   #code-editor {
     position: relative;
@@ -417,67 +417,68 @@ h1 {
   }
 
   .projects-container {
-    padding-top: 7rem;
+    padding-top: 5rem;
   }
-
-    .project-container {
-      height: clamp(40rem, 80vh, 45rem);
-      padding-left: 8vw;
-      padding-right: 8vw;
-    }
 
     .projects-container h2 {
       margin-left: -2vw;
       margin-top: 0rem;
+      padding-bottom: 3rem;
       font-size: 4.5rem;
     }
 
-    .project-container .title {
-      flex-direction: column;
-    }
+  .project-container {
+    height: clamp(40rem, 80vh, 41rem);
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
 
-      .project-container .title ul {
-        gap: 1.2rem;
-        font-size: 0.8rem;
-      }
+  .project-container .title {
+    flex-direction: column;
+  }
+
+    .project-container .title ul {
+      gap: 1.2rem;
+      font-size: 0.8rem;
+    }
 
     .project-container .title h3 {
       font-size: 2rem;
     }
 
-    .project-container p {
-      font-size: 1rem;
-    }
+  .project-container p {
+    font-size: 1rem;
+  }
 
-    .project-container .buttons {
-      justify-content: space-evenly;
-      gap: 1rem;
-    }
+  .project-container .buttons {
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
 
-    .project-container button {
-      width: 8rem;
-      font-size: 0.9rem;
-    }
+  .project-container button {
+    width: 8rem;
+    font-size: 0.9rem;
+  }
 
-    #code-editor {
-      position: relative;
-      top: 0%;
-      left: -8.9vw;
-      width: 80.5vw;
-    }
+  #code-editor {
+    position: relative;
+    top: 0%;
+    left: -8vw;
+    width: 80vw;
+  }
 
-    #video-game {
-      position: relative;
-      top: 0%;
-      left: -8.9vw;
-      width: 80.5vw;
-    }
+  #video-game {
+    position: relative;
+    top: 0%;
+    left: -8vw;
+    width: 80vw;
+  }
 
   .about-container {
     flex-direction: column;
     height: auto;
-    padding-top: 7rem;
-    margin-top: 7rem;
+    padding-top: 5rem;
+    margin-top: 5rem;
     padding-bottom: 5vh;
   }
 
@@ -490,5 +491,10 @@ h1 {
     .about-container .title {
       align-items: center;
       margin-bottom: 2.8rem;
+      gap: 3rem;
     }
+
+      .about-container .title h2 {
+        font-size: 3.5rem;
+      }
 }

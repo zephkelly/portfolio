@@ -28,7 +28,7 @@ h1[b-t8ds9oklp0] {
   width: 80vw;
   height: 100vh;
 }
-  
+
   .intro-text h1[b-t8ds9oklp0] {
     font-size: 3.5vw;
     width: 60vw;
@@ -81,25 +81,17 @@ h1[b-t8ds9oklp0] {
 
   .projects-container h2[b-t8ds9oklp0] {
     font-size: 10rem;
-    margin-bottom: 6vh;
+    margin-bottom: -6vh;
     margin-top: 6vh;
   }
 
 .page-height[b-t8ds9oklp0] {
   position: relative;
-  height: 100vh;
+  height: auto;
   width: 100vw;
-  min-height: 80rem;
-  max-height: 45rem;
+  min-height: 68rem;
+  max-height: 80rem;
 }
-
-  .container-one[b-t8ds9oklp0] {
-    margin-bottom: 0;
-  }
-
-  .container-two[b-t8ds9oklp0] {
-    margin-bottom: 0;
-  }
 
 .project-container[b-t8ds9oklp0] {
   display: flex;
@@ -110,12 +102,11 @@ h1[b-t8ds9oklp0] {
   bottom: 25%;
   left: 20%;
   right: 12%;
-  width: auto;
-  height: 35vw;
   padding: 2rem;
   padding-left: 4vw;
   padding-right: 4vw;
-  border-radius: 2rem
+  border-radius: 2rem;
+  border-color: rgb(15,15,15);
 }
 
   .project-container .buttons[b-t8ds9oklp0] {
@@ -126,51 +117,50 @@ h1[b-t8ds9oklp0] {
     gap: 2rem;
   }
 
-    .project-container button[b-t8ds9oklp0] {
-        width: 14vw;
-        height: 4rem;
+  .project-container button[b-t8ds9oklp0] {
+    width: 14vw;
+    height: 4rem;
+    background-color: transparent;
+    color: ghostwhite;
+    border-style: solid;
+    border: solid;
+    border-color: ghostwhite;
+  }
 
-        background-color: transparent;
-        color: ghostwhite;
-        border-style: solid;
-        border: solid;
-        border-color: ghostwhite;
-    }
+  .project-container p[b-t8ds9oklp0] {
+    width: 90%;
+    font-size: clamp(0.1rem, 1.5vw, 1.4rem);
+    color: ghostwhite;
+    padding-top: 3rem;
+  }
 
-    .project-container p[b-t8ds9oklp0] {
-        width: 90%;
-        font-size: clamp(1.5vw, 1.5vw, 2vw);
-        color: ghostwhite;
-        padding-top: 3rem;
-    }
+.projects-container h2[b-t8ds9oklp0] {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 5rem;
+}
 
-    .projects-container h2[b-t8ds9oklp0] {
-      font-family: 'Kaushan Script', cursive;
-      font-size: 5rem;
-    }
+.project-container .title[b-t8ds9oklp0] {
+  color: ghostwhite;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
 
-    .project-container .title[b-t8ds9oklp0] {
-      color: ghostwhite;
-      display: flex;
-      flex-direction: row;
-      justify-content: left;
-    }
+.project-container h3[b-t8ds9oklp0] {
+  font-size: 3rem;
+  margin-right: 4rem;
+}
 
-    .project-container h3[b-t8ds9oklp0] {
-      font-size: 3rem;
-      margin-right: 4rem;
-    }
-
-      .project-container ul[b-t8ds9oklp0], li[b-t8ds9oklp0] {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: 4rem;
-        padding: 0px;
-        margin-bottom: 0px;
-        color: dimgrey;
-      }
+.project-container ul[b-t8ds9oklp0], li[b-t8ds9oklp0] {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 4rem;
+  padding: 0px;
+  margin-bottom: 0px;
+  color: dimgrey;
+}
 
 
 #code-editor[b-t8ds9oklp0] {
@@ -214,24 +204,25 @@ h1[b-t8ds9oklp0] {
   .about-container .title[b-t8ds9oklp0] {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
     width: 100%;
+    gap: 6rem;
   }
 
-  .title h2[b-t8ds9oklp0] {
-    font-size: clamp(5rem, 4vw, 5rem);
-    margin-top: 0;
-  }
+.title h2[b-t8ds9oklp0] {
+  font-size: clamp(3.5rem, 4vw, 5rem);
+  margin-top: 0;
+}
 
-    .title img[b-t8ds9oklp0] {
-      width: 16vw;
-      height: auto;
-      max-width: 100rem;
-      min-width: 15rem;
-      border-radius: 20rem;
-      padding-bottom: 1rem;
-    }
+.title img[b-t8ds9oklp0] {
+  width: 16vw;
+  height: auto;
+  max-width: 100rem;
+  min-width: 15rem;
+  border-radius: 20rem;
+  padding-bottom: 1rem;
+}
 
 .introduction[b-t8ds9oklp0] {
   display: flex;
@@ -243,13 +234,9 @@ h1[b-t8ds9oklp0] {
     font-size: clamp(0.8rem, 4vw, 1.7rem);
   }
 
-.contact-container[b-t8ds9oklp0] {
-  
+.contact-container .title[b-t8ds9oklp0] {
+  margin-top: 7rem;
 }
-
-  .contact-container .title[b-t8ds9oklp0] {
-    margin-top: 7rem;
-  }
 /*Sliding boxes*/
 .bg[b-t8ds9oklp0] {
   animation: slide-b-t8ds9oklp0 10s ease-in-out infinite alternate;
@@ -281,37 +268,36 @@ h1[b-t8ds9oklp0] {
   }
 }
 
+/*4k*/
+@media (max-width: 3840px) {
+}
+
 /*Computer*/
 @media (max-width: 1920px) {
   #code-editor[b-t8ds9oklp0] {
-    top: 18vw;
+    top: 40%;
   }
 
   #video-game[b-t8ds9oklp0] {
-    top: 18vw;
+    top: 40%;
   }
 }
 
 /*Small Computer*/
 @media (max-width: 1700px) {
-  .page-height[b-t8ds9oklp0] {
-    height: 90vh;
-  }
-
   .project-container[b-t8ds9oklp0] {
     top: 10%;
     bottom: 60%;
     right: 10%;
     left: 10%;
-    border: solid;
     height: clamp(38rem, 75vw, 46rem);
   }
 
-  .project-container .buttons[b-t8ds9oklp0] {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    flex-direction: row;
-  }
+    .project-container .buttons[b-t8ds9oklp0] {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      flex-direction: row;
+    }
 
   #code-editor[b-t8ds9oklp0] {
     position: relative;
@@ -432,70 +418,70 @@ h1[b-t8ds9oklp0] {
   }
 
   .projects-container[b-t8ds9oklp0] {
-    padding-top: 7rem;
+    padding-top: 5rem;
   }
-
-    .project-container[b-t8ds9oklp0] {
-      height: clamp(30rem, 80vh, 40rem);
-      padding-left: 8vw;
-      padding-right: 8vw;
-    }
 
     .projects-container h2[b-t8ds9oklp0] {
       margin-left: -2vw;
       margin-top: 0rem;
+      padding-bottom: 3rem;
       font-size: 4.5rem;
     }
 
-    .project-container .title[b-t8ds9oklp0] {
-      flex-direction: column;
-    }
+  .project-container[b-t8ds9oklp0] {
+    height: clamp(40rem, 80vh, 41rem);
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
 
-      .project-container .title ul[b-t8ds9oklp0] {
-        gap: 1.2rem;
-        font-size: 0.8rem;
-      }
+  .project-container .title[b-t8ds9oklp0] {
+    flex-direction: column;
+  }
+
+    .project-container .title ul[b-t8ds9oklp0] {
+      gap: 1.2rem;
+      font-size: 0.8rem;
+    }
 
     .project-container .title h3[b-t8ds9oklp0] {
       font-size: 2rem;
     }
 
-    .project-container p[b-t8ds9oklp0] {
-      font-size: 1rem;
-    }
+  .project-container p[b-t8ds9oklp0] {
+    font-size: 1rem;
+  }
 
-    .project-container .buttons[b-t8ds9oklp0] {
-      justify-content: space-evenly;
-      gap: 1rem;
-    }
+  .project-container .buttons[b-t8ds9oklp0] {
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
 
-    .project-container button[b-t8ds9oklp0] {
-      width: 8rem;
-      font-size: 0.9rem;
-    }
+  .project-container button[b-t8ds9oklp0] {
+    width: 8rem;
+    font-size: 0.9rem;
+  }
 
-    #code-editor[b-t8ds9oklp0] {
-      position: relative;
-      top: 0%;
-      left: -8.9vw;
-      width: 80.5vw;
-    }
+  #code-editor[b-t8ds9oklp0] {
+    position: relative;
+    top: 0%;
+    left: -8vw;
+    width: 80vw;
+  }
 
-    #video-game[b-t8ds9oklp0] {
-      position: relative;
-      top: 0%;
-      left: -8.9vw;
-      width: 80.5vw;
-    }
+  #video-game[b-t8ds9oklp0] {
+    position: relative;
+    top: 0%;
+    left: -8vw;
+    width: 80vw;
+  }
 
   .about-container[b-t8ds9oklp0] {
     flex-direction: column;
     height: auto;
-    padding-top: 7rem;
-    margin-top: 7rem;
+    padding-top: 5rem;
+    margin-top: 5rem;
     padding-bottom: 5vh;
   }
-
 
   .about-container[b-t8ds9oklp0] {
     display: flex;
@@ -506,7 +492,12 @@ h1[b-t8ds9oklp0] {
     .about-container .title[b-t8ds9oklp0] {
       align-items: center;
       margin-bottom: 2.8rem;
+      gap: 3rem;
     }
+
+      .about-container .title h2[b-t8ds9oklp0] {
+        font-size: 3.5rem;
+      }
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-y5pde0k6jk] {
@@ -526,7 +517,7 @@ h1[b-t8ds9oklp0] {
   position: fixed;
   background-color: ghostwhite;
   width: 100vw;
-  /*margin-right: 17px;*/
+  height: 3.5rem;
   z-index: 1;
 }
 
@@ -615,6 +606,10 @@ main[b-y5pde0k6jk] {
     position: sticky;
     top: 0;
     z-index: 1;
+  }
+
+  .nav-bar[b-y5pde0k6jk] {
+    margin-right: 17px;
   }
 
   .top-row[b-y5pde0k6jk], article[b-y5pde0k6jk] {

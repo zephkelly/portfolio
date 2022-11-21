@@ -15,7 +15,7 @@
   position: fixed;
   background-color: ghostwhite;
   width: 100vw;
-  /*margin-right: 17px;*/
+  height: 3.5rem;
   z-index: 1;
 }
 
@@ -104,6 +104,10 @@ main[b-y5pde0k6jk] {
     position: sticky;
     top: 0;
     z-index: 1;
+  }
+
+  .nav-bar[b-y5pde0k6jk] {
+    margin-right: 17px;
   }
 
   .top-row[b-y5pde0k6jk], article[b-y5pde0k6jk] {
