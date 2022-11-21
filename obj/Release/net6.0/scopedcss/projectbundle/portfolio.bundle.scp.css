@@ -379,12 +379,12 @@ h1[b-t8ds9oklp0] {
 
     .intro-text h1[b-t8ds9oklp0] {
       width: 85vw;
-      font-size: 1.9rem;
-      margin-top: 3rem;
+      font-size: 1.6rem;
+      margin-top: 3.4rem;
     }
 
     .intro-text h2[b-t8ds9oklp0] {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
   .logos[b-t8ds9oklp0] {
@@ -396,7 +396,6 @@ h1[b-t8ds9oklp0] {
   .logo[b-t8ds9oklp0] {
     margin-top: 0.4rem;
     font-family: 'Roboto', sans-serif;
-    font-size: 2px;
     font-weight: 300;
     display: flex;
     flex-direction: column;
@@ -404,8 +403,12 @@ h1[b-t8ds9oklp0] {
     width: 1.5rem;
   }
 
+    .logo img[b-t8ds9oklp0] {
+      width: 1.3rem;
+    }
+
     .logo h3[b-t8ds9oklp0] {
-      font-size: 12px;
+      font-size: 0.8rem;
       padding-left: 0;
     }
 

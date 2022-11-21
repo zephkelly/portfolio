@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\development\portfolio\bin\Release\net6.0\browser-wasm\publish\</_PublishTargetUrl>
-    <History>True|2022-11-21T03:18:36.7686292Z;</History>
+    <History>True|2022-11-21T06:30:30.5252511Z;True|2022-11-21T17:22:10.7473049+11:00;True|2022-11-21T14:18:36.7686292+11:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
