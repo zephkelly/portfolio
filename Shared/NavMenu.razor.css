@@ -23,6 +23,10 @@ div {
   color: ghostwhite;
 }
 
+.d-flex {
+  background-color: ghostwhite;
+}
+
 .nav-item {
   font-size: 1rem;
   padding: 4px;
@@ -55,7 +59,7 @@ div {
   }
 
   .nav-item ::deep a {
-    background-color: rgba(15, 15, 15, 0);
+    background-color: rgba(15, 15, 15, 1);
   }
 
   .collapse {
