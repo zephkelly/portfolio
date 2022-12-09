@@ -804,6 +804,8 @@ C:\development\portfolio\obj\Release\net6.0\build-gz\yIgg+Jmj.gz
 C:\development\portfolio\obj\Release\net6.0\blazor.boot.json
 C:\development\portfolio\obj\Release\net6.0\staticwebassets.build.json
 C:\development\portfolio\obj\Release\net6.0\staticwebassets.development.json
+C:\development\portfolio\obj\Release\net6.0\scopedcss\Pages\Contact.razor.rz.scp.css
+C:\development\portfolio\obj\Release\net6.0\scopedcss\Pages\FetchData.razor.rz.scp.css
 C:\development\portfolio\obj\Release\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
 C:\development\portfolio\obj\Release\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\development\portfolio\obj\Release\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
@@ -814,5 +816,3 @@ C:\development\portfolio\obj\Release\net6.0\portfolio.dll
 C:\development\portfolio\obj\Release\net6.0\refint\portfolio.dll
 C:\development\portfolio\obj\Release\net6.0\portfolio.pdb
 C:\development\portfolio\obj\Release\net6.0\ref\portfolio.dll
-C:\development\portfolio\obj\Release\net6.0\scopedcss\Pages\Contact.razor.rz.scp.css
-C:\development\portfolio\obj\Release\net6.0\scopedcss\Pages\FetchData.razor.rz.scp.css
