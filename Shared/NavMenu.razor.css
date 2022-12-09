@@ -1,7 +1,10 @@
+
+
 .top-row {
   height: 4rem;
   background-color: rgba(15,15,15);
   z-index: 2;
+  overflow: hidden;
 }
 
 div {
@@ -31,6 +34,7 @@ div {
   font-size: 1rem;
   padding: 4px;
   display: flex;
+  background-color: ghostwhite;
 }
 
   .nav-item ::deep a {
@@ -41,9 +45,9 @@ div {
     align-items: center;
   }
 
-    .nav-item ::deep a.active {
-      color: rgb(15,15,15);
-    }
+      .nav-item ::deep a.active {
+        color: rgb(15,15,15);
+      }
 
     .nav-item ::deep a:hover {
       color: rgb(40,40,40);
@@ -56,10 +60,6 @@ div {
 
   .navbar-toggler {
     display: none;
-  }
-
-  .nav-item ::deep a {
-    background-color: rgba(15, 15, 15, 1);
   }
 
   .collapse {

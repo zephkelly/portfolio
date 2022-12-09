@@ -1,7 +1,10 @@
+
+
 .top-row[b-u603n3jyus] {
   height: 4rem;
   background-color: rgba(15,15,15);
   z-index: 2;
+  overflow: hidden;
 }
 
 div[b-u603n3jyus] {
@@ -31,6 +34,7 @@ div[b-u603n3jyus] {
   font-size: 1rem;
   padding: 4px;
   display: flex;
+  background-color: ghostwhite;
 }
 
   .nav-item[b-u603n3jyus]  a {
@@ -41,9 +45,9 @@ div[b-u603n3jyus] {
     align-items: center;
   }
 
-    .nav-item[b-u603n3jyus]  a.active {
-      color: rgb(15,15,15);
-    }
+      .nav-item[b-u603n3jyus]  a.active {
+        color: rgb(15,15,15);
+      }
 
     .nav-item[b-u603n3jyus]  a:hover {
       color: rgb(40,40,40);
@@ -56,10 +60,6 @@ div[b-u603n3jyus] {
 
   .navbar-toggler[b-u603n3jyus] {
     display: none;
-  }
-
-  .nav-item[b-u603n3jyus]  a {
-    background-color: rgba(15, 15, 15, 1);
   }
 
   .collapse[b-u603n3jyus] {

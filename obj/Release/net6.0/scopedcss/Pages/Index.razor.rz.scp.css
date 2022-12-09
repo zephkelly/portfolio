@@ -68,7 +68,6 @@ h1[b-t8ds9oklp0] {
 .projects-container[b-t8ds9oklp0] {
   font-family: 'Roboto', sans-serif;
   position: absolute;
-  top: 100vh;
   padding-top: 6rem;
   background-color: ghostwhite;
   width: 100vw;
@@ -76,6 +75,7 @@ h1[b-t8ds9oklp0] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: 100vh;
 }
 
   .projects-container h2[b-t8ds9oklp0] {
@@ -230,7 +230,7 @@ h1[b-t8ds9oklp0] {
 }
 
   .introduction p[b-t8ds9oklp0] {
-    font-size: clamp(0.8rem, 4vw, 1.7rem);
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
   }
 
 .contact-container .title[b-t8ds9oklp0] {

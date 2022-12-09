@@ -17,6 +17,7 @@
   width: 100vw;
   height: 3.5rem;
   z-index: 1;
+  overflow: hidden;
 }
 
 .body {
@@ -40,25 +41,11 @@ article {
   padding-left: 1rem;
   padding-right: 2rem;
   font-style: normal;
-  text-decoration: none;
+  font-size: 1rem;
+  background-color: ghostwhite;
 }
 
-  .site-brand a:link {
-    color: rgb(15,15,15);
-    text-decoration: none;
-  }
-
-  .site-brand a:visited {
-    color: rgb(15,15,15);
-    text-decoration: none;
-  }
-
-  .site-brand a:hover {
-    color: rgb(15,15,15);
-    text-decoration: none;
-  }
-
-  .site-brand a:active {
+  .site-brand a {
     color: rgb(15,15,15);
     text-decoration: none;
   }
@@ -77,6 +64,7 @@ main {
 
   .nav-bar {
     margin-right: 0px;
+    overflow: hidden;
   }
 }
 
@@ -88,6 +76,11 @@ main {
     align-items: center;
     justify-content: center;
     margin-right: 0px;
+    overflow: hidden;
+  }
+
+  .nav-item {
+    background-color: ghostwhite;
   }
 }
 
@@ -113,5 +106,9 @@ main {
   .top-row, article {
     padding-left: 2rem !important;
     padding-right: 1.5rem !important;
+  }
+
+  .nav-item {
+    background-color: ghostwhite;
   }
 }

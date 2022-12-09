@@ -814,3 +814,5 @@ C:\development\portfolio\obj\Release\net6.0\portfolio.dll
 C:\development\portfolio\obj\Release\net6.0\refint\portfolio.dll
 C:\development\portfolio\obj\Release\net6.0\portfolio.pdb
 C:\development\portfolio\obj\Release\net6.0\ref\portfolio.dll
+C:\development\portfolio\obj\Release\net6.0\scopedcss\Pages\Contact.razor.rz.scp.css
+C:\development\portfolio\obj\Release\net6.0\scopedcss\Pages\FetchData.razor.rz.scp.css
