@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1TJFpcNyNplIBII/fcgx9a8SZoPIWgWgEptJVq91Stk=",
+  "Hash": "r1hXJqdH7io8zOIcdKuFohVzY55I3eY0BeqEnwuD14Q=",
   "Source": "portfolio",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,15 +31,15 @@
       "AssetTraitValue": "boot",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\maste\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.9\\build\\net6.0\\blazor.webassembly.js"
+      "OriginalItemSpec": "C:\\Users\\Ev\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.9\\build\\net6.0\\blazor.webassembly.js"
     },
     {
-      "Identity": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.conel24403.js",
+      "Identity": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.16aj3op71m.js",
       "SourceId": "portfolio",
       "SourceType": "Computed",
       "ContentRoot": "C:\\development\\portfolio\\obj\\Release\\net6.0\\browser-wasm\\PubTmp\\Out\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.6.0.9.conel24403.js",
+      "RelativePath": "_framework/dotnet.6.0.9.16aj3op71m.js",
       "AssetKind": "Publish",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.conel24403.js"
+      "OriginalItemSpec": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.16aj3op71m.js"
     },
     {
       "Identity": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.timezones.blat",
@@ -170,7 +170,7 @@
       "OriginalItemSpec": "obj\\Release\\net6.0\\blazor.publish.boot.json"
     },
     {
-      "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\+mwfzTk5.gz",
+      "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\2nH0W2qV.gz",
       "SourceId": "portfolio",
       "SourceType": "Computed",
       "ContentRoot": "C:\\development\\portfolio\\obj\\Release\\net6.0\\browser-wasm\\PubTmp\\Out\\wwwroot\\",
@@ -184,24 +184,24 @@
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\+mwfzTk5.gz"
+      "OriginalItemSpec": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\2nH0W2qV.gz"
     },
     {
-      "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\Gj3P4Ja2.gz",
+      "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\NG+dJbM0.gz",
       "SourceId": "portfolio",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\development\\portfolio\\obj\\Release\\net6.0\\browser-wasm\\PubTmp\\Out\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.6.0.9.conel24403.js.gz",
-      "AssetKind": "Publish",
+      "RelativePath": "_framework/blazor.webassembly.js.gz",
+      "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.conel24403.js",
+      "RelatedAsset": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "Never",
+      "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\Gj3P4Ja2.gz"
+      "OriginalItemSpec": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js"
     },
     {
       "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\P1AG5sZU.gz",
@@ -221,21 +221,21 @@
       "OriginalItemSpec": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\P1AG5sZU.gz"
     },
     {
-      "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\yIgg+Jmj.gz",
+      "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\q2s8P+ai.gz",
       "SourceId": "portfolio",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\",
+      "ContentRoot": "C:\\development\\portfolio\\obj\\Release\\net6.0\\browser-wasm\\PubTmp\\Out\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/blazor.webassembly.js.gz",
-      "AssetKind": "All",
+      "RelativePath": "_framework/dotnet.6.0.9.16aj3op71m.js.gz",
+      "AssetKind": "Publish",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "RelatedAsset": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.16aj3op71m.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js"
+      "OriginalItemSpec": "C:\\development\\portfolio\\obj\\Release\\net6.0\\build-gz\\q2s8P+ai.gz"
     },
     {
       "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\compress\\2cwIisua.br",
@@ -372,23 +372,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\development\\portfolio\\obj\\Release\\net6.0\\linked\\System.Collections.dll"
-    },
-    {
-      "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\compress\\58vQQIzH.br",
-      "SourceId": "portfolio",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\development\\portfolio\\obj\\Release\\net6.0\\browser-wasm\\PubTmp\\Out\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.6.0.9.conel24403.js.br",
-      "AssetKind": "Publish",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.conel24403.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "br",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.conel24403.js"
     },
     {
       "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\compress\\7gL+Jxaq.br",
@@ -542,6 +525,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\development\\portfolio\\obj\\Release\\net6.0\\linked\\Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
+      "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\compress\\9v18E3X+.br",
+      "SourceId": "portfolio",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\development\\portfolio\\obj\\Release\\net6.0\\browser-wasm\\PubTmp\\Out\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.6.0.9.16aj3op71m.js.br",
+      "AssetKind": "Publish",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.16aj3op71m.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\development\\portfolio\\bin\\Release\\net6.0\\wwwroot\\_framework\\dotnet.6.0.9.16aj3op71m.js"
     },
     {
       "Identity": "C:\\development\\portfolio\\obj\\Release\\net6.0\\compress\\bwzwpBoj.br",
