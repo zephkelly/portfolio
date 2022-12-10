@@ -89,7 +89,7 @@ h1 {
   height: auto;
   width: 100vw;
   min-height: 68rem;
-  max-height: 80rem;
+  max-height: 90rem;
 }
 
 .project-container {
@@ -269,10 +269,17 @@ h1 {
 
 /*4k*/
 @media (max-width: 3840px) {
+  .page-height {
+    height: 110vh;
+  }
 }
 
 /*Computer*/
 @media (max-width: 1920px) {
+  .page-height {
+    height: 100vh;
+  }
+
   #code-editor {
     top: 40%;
   }
@@ -335,12 +342,17 @@ h1 {
   }
 
   .logo {
+    display: flex;
     flex-direction: column;
     width: 1.4rem;
   }
 
+    .logo h3 {
+      padding-left: 0px;
+    }
+
   .page-height {
-    min-height: 70rem;
+    min-height: 80rem;
     margin-bottom: -10vw;
   }
 
@@ -396,9 +408,7 @@ h1 {
     margin-top: 0.4rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     width: 1.5rem;
   }
 
@@ -426,14 +436,13 @@ h1 {
     .projects-container h2 {
       margin-left: -2vw;
       margin-top: 0rem;
-      padding-bottom: 3rem;
-      font-size: 4.5rem;
+      padding-bottom: 6rem;
+      font-size: 4rem;
     }
 
   .project-container {
-    height: clamp(40rem, 80vh, 41rem);
+    height: clamp(10rem, 80vh, 35rem);
     padding-left: 8vw;
-    padding-right: 8vw;
   }
 
   .project-container .title {
@@ -451,11 +460,14 @@ h1 {
 
   .project-container p {
     font-size: 1rem;
+    padding-top: 1rem;
   }
 
   .project-container .buttons {
     justify-content: space-evenly;
     gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 
   .project-container button {
@@ -465,7 +477,7 @@ h1 {
 
   #code-editor {
     position: relative;
-    top: 0%;
+    top: 0rem;
     left: -8vw;
     width: 80vw;
   }
