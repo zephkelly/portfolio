@@ -3,8 +3,8 @@
 .top-row[b-u603n3jyus] {
   height: 4rem;
   background-color: rgba(15,15,15);
-  z-index: 2;
-  overflow: hidden;
+  z-index: 1;
+  padding-top: 0rem;
 }
 
 div[b-u603n3jyus] {
