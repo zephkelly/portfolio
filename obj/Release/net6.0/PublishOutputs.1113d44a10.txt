@@ -1,1 +1,0 @@
-C:\development\portfolio\obj\Release\net6.0\browser-wasm\PubTmp\Out\web.config
