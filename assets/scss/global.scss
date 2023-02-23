@@ -1,0 +1,19 @@
+:root {
+  --p-c-dark: #0c0c0d;
+
+  --p-c-light: white;
+}
+
+:root {
+  --background-color: var(--p-c-dark);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: var(--p-c-light);
+  }
+}
+
+body {
+  margin: 0;
+}
