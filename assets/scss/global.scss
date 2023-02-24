@@ -1,11 +1,17 @@
 :root {
   --p-c-dark: #0c0c0d;
 
-  --p-c-light: white;
+  --p-c-light: rgb(245, 245, 245);
+}
+
+:root {
+  --gradient-start: 80%;
+  --gradient-end: 0%;
 }
 
 :root {
   --background-color: var(--p-c-dark);
+  --text-main-color: var(--p-c-light);
 }
 
 @media (prefers-color-scheme: light) {

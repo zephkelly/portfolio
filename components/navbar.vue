@@ -26,6 +26,7 @@
   }
 
   nav {
+    position: absolute;
     width: 100%;
     box-sizing: border-box;
     padding: 2rem;
