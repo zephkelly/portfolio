@@ -15,6 +15,27 @@
     font-style: italic;
   }
 
+  @font-face {
+    font-family: 'Poppins';
+    src: url('~/assets/fonts/Poppins-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('~/assets/fonts/Poppins-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('~/assets/fonts/Poppins-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+  }
+
   header {
     display: flex;
     justify-content: center;
@@ -23,7 +44,8 @@
 
   main {
     display: flex;
-    height: 100%;
+    flex-direction: column;
+    height: auto;
   }
 
 </style>
@@ -32,6 +54,8 @@
   import navbar from '~/components/navbar.vue'
   import '~/assets/scss/main.scss'
   import '~/assets/fonts/Roboto-BlackItalic.ttf'
+  import '~/assets/fonts/Poppins-Black.ttf'
+  import '~/assets/fonts/Poppins-ExtraBold.ttf'
 
   export default {
     components: {

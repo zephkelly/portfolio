@@ -2,21 +2,19 @@
   --p-c-dark: #0c0c0d;
 
   --p-c-light: rgb(245, 245, 245);
-}
 
-:root {
-  --gradient-start: 80%;
-  --gradient-end: 0%;
+  --p-c-accent: rgb(255,0,0);
 }
 
 :root {
   --background-color: var(--p-c-dark);
   --text-main-color: var(--p-c-light);
+  --accent-color: var(--p-c-accent);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: var(--p-c-light);
+    --background-color-red: var(--p-c-light);
   }
 }
 

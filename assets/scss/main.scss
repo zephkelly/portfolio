@@ -4,9 +4,9 @@
 #__nuxt {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 100vh;
-  height: 100vh;
+  height: auto;
   width: 100%;
   background-color: var(--background-color);
   z-index: -1;
