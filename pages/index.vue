@@ -1,29 +1,48 @@
 <template>
-  <div class="wrapper">
-    <h1>EVAN KELLY</h1>
-  </div>
+  <section class="hero">
+    <heroDescription />
+  </section>
+  <section class="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am a fullstack software developer with a passion for creating beautiful and functional web applications.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="~/assets/images/hero-image.jpg" alt="hero image">
+    </div> 
+  </section>
 </template>
 
 <style lang="scss" scoped>
-  .wrapper {
+  section {
     display: flex;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 900px;
+  }
+
+  section.hero {
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding: 2rem;
-    font-size: 8rem;
-    font-weight: 900;
     font-family: 'Roboto', sans-serif;
-    
-    h1 {
-      font-style: oblique;
-      letter-spacing: 0.5rem;
-      color: transparent;
-      -webkit-text-stroke: 2px white;
-      padding-left: 1rem;
-    }
   }
 </style>
+
+<script>
+  import heroDescription from "~/components/heroDescription.vue"
+
+  export default {
+    components: {
+      heroDescription
+    }
+  }
+</script>
 
 <script setup>
 
