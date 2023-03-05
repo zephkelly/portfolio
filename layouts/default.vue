@@ -1,4 +1,5 @@
 <template>
+  <!-- <link rel="icon" type="image/x-icon" href="~/assets/favicon/favicon.ico" /> -->
   <header>
     <navbar />
   </header>
@@ -49,6 +50,7 @@
     height: auto;
   }
 
+  
 </style>
 
 <script>
@@ -62,6 +64,5 @@
     components: {
       navbar
     },
-
   }
 </script>

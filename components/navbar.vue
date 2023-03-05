@@ -1,20 +1,34 @@
 <template>
-  <nav>
-    <ul>
-      <li>
-        <nuxt-link to="/">Home</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/projects">Projects</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/contact">Contact</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/resume" class="resume-button">Resume</nuxt-link>
-      </li>
-    </ul>
-  </nav>
+  <section class="navbar">
+    <div class="logo">
+      <!-- <img src="~/assets/images/logo.png" alt="Logo"> -->
+      <a><span>E</span>K</a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <nuxt-link to="/">Home</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/projects">Projects</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/contact">Contact</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/resume" class="resume-button">Resume</nuxt-link>
+        </li>
+      </ul>
+    </nav>
+    <div class="socials">
+      <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub">
+        <img class="social-svg github" src="~/assets/images/svg/github.svg" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/evan-kelly/" target="_blank" alt="My LinkedIn">
+        <img class="social-svg linkedin" src="~/assets/images/svg/linkedin.svg" alt="LinkedIn">
+      </a>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -25,16 +39,22 @@
     font-style: normal;
   }
 
-  nav {
-    position: absolute;
+  .navbar {
+    display: grid;
+    grid-template-columns: 0.4fr 2fr 0.4fr;
     width: 100%;
-    max-width: 1280px;
+    height: 5rem;
+    max-width: 1000px;
     box-sizing: border-box;
-    padding: 2rem;
+    padding: 1rem;
+
+    nav > * {
+      height: 100%;
+    }
 
     ul {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       gap: 4rem;
       list-style: none;
       padding: 0;
@@ -43,7 +63,7 @@
       li {
         font-family: 'Roboto', sans-serif;
         font-weight: 800;
-        font-size: 1.2rem;
+        font-size: 1rem;
         
         a {
           color: var(--text-main-color);
@@ -52,28 +72,87 @@
           text-decoration: none;
           padding: 1rem;
           transition: color 0.15s ease-out;
+          border-radius: 0.5rem;
           opacity: 0.8;
 
           &:hover {
-            color: var(--accent-color);
+            color: white;
+            background-color: #1f1f21;
           }
         }
+      }
+    }
+  }
 
-        .resume-button {
-          width: 5rem;
-          border: 2px solid var(--accent-color);
-          border-radius: 1rem;
-          transition: color 0.15s ease-out, background-color 0.15s ease-out, border-color 0.15s ease-out, box-shadow 0.15s ease-out;
-          color: var(--text-main-color);
-          //-webkit-mask-image: linear-gradient(10deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8));
-          opacity: 0.9;
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-          &:hover {
-            box-shadow: 0rem 0rem 1.6rem 0rem #ff660045;
-            -webkit-mask-image: none;
-            color: var(--text-main-color);
-          }
-        }
+    img {
+      height: 1.7rem;
+    }
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 3.4rem;
+      padding-left: 0.05em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 800;
+      font-size: 1.8rem;
+      font-style: italic;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: opacity 0.15s ease-out;
+      color: var(--background-color);
+      // background-image: linear-gradient(145deg, #d9d9d9, #6b6b6b);
+      background-image: linear-gradient(260deg, #ffe522, #ffab2c);
+      background-clip: text;
+      background-size: 150% 100%;
+      -webkit-text-stroke: 4px transparent;
+      
+      &:hover {
+        opacity: 1;
+      }
+      
+      span {
+        font-size: 2.05rem;
+        margin-right: 0.05em;
+        display: inline-block;
+        color: transparent;
+        background-size: 145% 145%;
+        -webkit-text-stroke: 1px transparent;
+        -webkit-background-clip: text;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+
+    .social-svg {
+      filter: grayscale(100%) invert(100%);
+      opacity: 0.8;
+      height: 1.6rem;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .social-svg.github {
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 1;
       }
     }
   }
@@ -81,6 +160,6 @@
 
 <script>
 export default {
-
+  name: 'Navbar'
 }
 </script>

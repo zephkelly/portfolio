@@ -1,7 +1,9 @@
 :root {
-  --p-c-dark: #0c0c0d;
+  --p-c-dark: #1f1f22;
 
-  --p-c-light: rgb(245, 245, 245);
+  --p-c-light: rgb(220, 220, 220);
+
+  --p-c-highlight: rgb(255, 255, 255);
 
   --p-c-accent: #ff6700;
 }
@@ -9,12 +11,15 @@
 :root {
   --background-color: var(--p-c-dark);
   --text-main-color: var(--p-c-light);
+  --text-highlight-color: var(--p-c-highlight);
   --accent-color: var(--p-c-accent);
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --background-color-red: var(--p-c-light);
+    color-scheme: light;
   }
 }
 

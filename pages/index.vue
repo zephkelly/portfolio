@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <heroTitle />
+    <heroDescription />
   </section>
   <section class="about">
     <div class="about-text">
@@ -18,9 +18,9 @@
 <style lang="scss" scoped>
   section {
     display: flex;
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1000px;
     box-sizing: border-box;
     height: 100vh;
     min-height: 900px;
@@ -35,11 +35,11 @@
 </style>
 
 <script>
-  import heroTitle from "~/components/heroTitle.vue"
+  import heroDescription from "~/components/heroDescription.vue"
 
   export default {
     components: {
-      heroTitle
+      heroDescription
     }
   }
 </script>
