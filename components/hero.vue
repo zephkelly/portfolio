@@ -3,15 +3,16 @@
     <img src="~/assets/images/profile2.png" alt="profile image"></div>
   <h1>Hi, welcome to my site! <span>👋</span></h1>
   <p>
-    I'm <a ref="heroLink" class="hero-link">Evan</a>, a fullstack software developer 
-    with a passion for creating beautiful, functional web apps. 
-    I'm currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
+    I'm <span>Evan</span>, a fullstack software developer 
+    with a passion for creating beautiful, functional apps. 
+    I'm currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>,
+    and I'm open to job opportunities, just <NuxtLink href="/contact">reach out!</NuxtLink>
   </p>
 </template>
 
 <style lang="scss" scoped>
   .profile {
-    margin-top: 10rem;
+    margin-top: 14rem;
     width: 124px;
     height: 124px;
     border-radius: 100%;
@@ -78,25 +79,31 @@
       text-decoration: none;
       z-index: 1;
 
-      &:last-of-type::after {
+      &::after {
         content: '';
         position: absolute;
         width: 100%;
-        top: 1.3rem;
+        top: 1.25rem;
         right: 0rem;
-        bottom: -0.25rem;
+        bottom: -0.08em;
         background-color: #ffc83d;
         transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-        opacity: 0.4;
+        opacity: 0.5;
         z-index: -1;
       }
 
       &:hover::after {
-        top: 0;
+        top: -0.04em;
       }
+    }
+
+    span {
+      color: white;
+      font-weight: 600;
     }
   }
 </style>
 
 <script setup>
+
 </script>
