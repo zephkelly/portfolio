@@ -1,18 +1,16 @@
 <template>
   <div class="profile">
-    <img src="~/assets/images/profile2.png" alt="profile image"></div>
-  <h1>Hi, welcome to my site! <span>👋</span></h1>
+    <img src="~/assets/images/profile.png" alt="profile image" ref="pfp"></div>
+  <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
-    I'm <span>Evan</span>, a fullstack software developer 
-    with a passion for creating beautiful, functional apps. 
-    I'm currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>,
-    and I'm open to job opportunities, just <NuxtLink href="/contact">reach out!</NuxtLink>
+    I'm <NuxtLink href="/about">Evan</NuxtLink>, a fullstack software developer with a passion for creating beautiful, functional apps. 
+    Currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
+    I'm seeking new opportunities to leverage my skills and contribute to impactful projects. Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
   </p>
 </template>
 
 <style lang="scss" scoped>
   .profile {
-    margin-top: 14rem;
     width: 124px;
     height: 124px;
     border-radius: 100%;
@@ -20,10 +18,9 @@
     background-color: #070707;
 
     img {
-      width: 110%;
-      height: 110%;
+      width: 100%;
+      height: 100%;
       filter: brightness(1);
-      //transform: rotate(-10deg);
     }
   }
 
@@ -42,6 +39,8 @@
       animation: shake 7s infinite;
       animation-timing-function: cubic-bezier(0.36, 0.07, 0.19, 0.97);
       margin-left: 0.5rem;
+      transition: translate3d 0.1s ease-out;
+      cursor: pointer;
 
       @keyframes shake {
         10%, 90% {
@@ -67,43 +66,99 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
-    line-height: 1.3em;
-    color: rgb(156 163 175);
+    line-height: 1.4em;
+    color: var(--text-secondary-color);
     opacity: 0.8;
 
     a {
       position: relative;
       cursor: pointer;
-      color: white;
+      color: var(--text-main-color);
+      transition: color 0.05s ease-out;
       font-weight: 600;
       text-decoration: none;
       z-index: 1;
+      white-space: nowrap;
 
       &::after {
         content: '';
         position: absolute;
-        width: 100%;
         top: 1.25rem;
-        right: 0rem;
+        right: -0.1rem;
+        left: -0.1rem;
         bottom: -0.08em;
-        background-color: #ffc83d;
+        background-color: #fbca50;
         transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-        opacity: 0.5;
+        opacity: 0.6;
+        transition: opacity 0.1 ease-out;
         z-index: -1;
       }
 
       &:hover::after {
-        top: -0.04em;
+        top: -0.08em;
+        opacity: 1;
+      }
+
+      &:nth-child(2):hover::after {
+        top: -0.1em;
+        bottom: -0.14em;
+      }
+
+      &:hover {
+        color: var(--text-main-color-reverse);
       }
     }
 
     span {
       color: white;
       font-weight: 600;
+      opacity: 1;
     }
+  }
+
+  .spacer {
+    margin-top: 4rem;
+    width: 100%;
+    border-bottom: 1px solid var(--text-secondary-color);
+    opacity: 0.1;
   }
 </style>
 
-<script setup>
+<script>
+const pfp = ref(null);
+const waveEmoji = ref(null);
 
+export default {
+  setup() {
+    onMounted(() => {
+    const pfpEl = pfp.value;
+
+    pfpEl.addEventListener('mouseenter', () => {
+      pfpEl.src = '/_nuxt/assets/images/profile_effect.png';
+    });
+    
+    pfpEl.addEventListener('mouseleave', () => {
+      pfpEl.src = '/_nuxt/assets/images/profile.png';
+    });
+
+    waveEmoji.value.addEventListener('click', toggleWaveEmoji);
+    })
+
+    return {
+      pfp,
+      waveEmoji,
+    }
+  },
+}
+
+let isWaving = true;
+function toggleWaveEmoji() {
+  isWaving = !isWaving;
+
+  if (isWaving) {
+    waveEmoji.value.style.animationPlayState = 'running';
+  } else {
+    waveEmoji.value.style.animationPlayState = 'paused';
+  }
+}
 </script>
