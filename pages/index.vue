@@ -1,47 +1,43 @@
 <template>
   <section class="hero">
-    <heroDescription />
+    <hero />
   </section>
-  <section class="about">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I am a fullstack software developer with a passion for creating beautiful and functional web applications.
-      </p>
-    </div>
-    <div class="about-image">
-      <img src="~/assets/images/hero-image.jpg" alt="hero image">
-    </div> 
+  <section class="work">
+    <work />
   </section>
 </template>
 
 <style lang="scss" scoped>
   section {
     display: flex;
-    padding: 1rem;
+    padding: 1rem 2rem;
     width: 100%;
     max-width: 1000px;
     box-sizing: border-box;
-    height: 100vh;
-    min-height: 900px;
+    height: auto;
+    // min-height: 900px;
   }
 
   section.hero {
+    margin-top: 18rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    font-family: 'Roboto', sans-serif;
+
+    @media (max-width: 768px) {
+      margin-top: 14rem;
+    }
+  }
+
+  section.work {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+    height: 2000px;
   }
 </style>
 
 <script>
-  import heroDescription from "~/components/heroDescription.vue"
-
-  export default {
-    components: {
-      heroDescription
-    }
-  }
 </script>
 
 <script setup>

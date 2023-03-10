@@ -1,7 +1,6 @@
 <template>
-  <!-- <link rel="icon" type="image/x-icon" href="~/assets/favicon/favicon.ico" /> -->
   <header>
-    <navbar />
+    <Navbar />
   </header>
   <main>
     <slot />
@@ -54,15 +53,8 @@
 </style>
 
 <script>
-  import navbar from '~/components/navbar.vue'
   import '~/assets/scss/main.scss'
   import '~/assets/fonts/Roboto-BlackItalic.ttf'
   import '~/assets/fonts/Poppins-Black.ttf'
   import '~/assets/fonts/Poppins-ExtraBold.ttf'
-
-  export default {
-    components: {
-      navbar
-    },
-  }
 </script>
