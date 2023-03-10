@@ -1,9 +1,9 @@
 <template>
   <section class="hero">
-    <Hero />
+    <hero />
   </section>
-  <section class="about">
-    <h2>My Work</h2>
+  <section class="work">
+    <work />
   </section>
 </template>
 
@@ -19,14 +19,20 @@
   }
 
   section.hero {
+    margin-top: 18rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-bottom: 6rem;
+
+    @media (max-width: 768px) {
+      margin-top: 14rem;
+    }
   }
 
-  .about {
-    margin-top: 6rem;
+  section.work {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
     height: 2000px;
   }
 </style>

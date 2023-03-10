@@ -1,5 +1,5 @@
 <template>
-  <section ref="navSection" class="navbar">
+  <section ref="navSection" class="navbar active">
     <div v-show="renderElements" ref="navButton" class="button" style="display: none;">
       <button>
         <img class="nav-svg" src="~/assets/images/svg/menu.svg" alt="Menu">
@@ -11,19 +11,13 @@
     <nav v-show="renderElements" ref="navLinks">
       <ul>
         <li>
-          <nuxt-link to="/">Home</nuxt-link>
+          <nuxt-link to="/work">Work</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/projects">Projects</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/blog">Blog</nuxt-link>
+          <nuxt-link to="/about">About me</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/contact">Contact</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/resume" class="resume-button">Resume</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -50,6 +44,8 @@
   }
 
   .button {
+    min-width: 3.7rem;
+
     button {
       background: none;
       border: none;
@@ -78,9 +74,10 @@
     max-width: 1000px;
     box-sizing: border-box;
     padding: 1rem 2rem;
-    background-color: #1f1f22ec;
-    backdrop-filter: blur(4px);
+    background-color: var(--b-c-dark-opaque);
+    backdrop-filter: blur(6px);
     z-index: 1;
+    transition: transform 0.2s ease-out;
 
     nav  {
       display: flex;
@@ -100,7 +97,7 @@
 
         li {
           font-family: 'Roboto', sans-serif;
-          font-weight: 800;
+          font-weight: 500;
           font-size: 1rem;
           
           a {
@@ -141,7 +138,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      width: 3.4rem;
+      width: 2.8rem;
       padding-left: 0.05em;
       font-family: 'Roboto', sans-serif;
       font-weight: 800;
@@ -153,7 +150,7 @@
       transition: opacity 0.15s ease-out;
       color: var(--background-color);
       // background-image: linear-gradient(145deg, #d9d9d9, #6b6b6b);
-      background-image: linear-gradient(260deg, #ffe522, #ffab2c);
+      background-image: linear-gradient(260deg, #ffe203, #ffbb55);
       background-clip: text;
       background-size: 150% 100%;
       -webkit-text-stroke: 4px transparent;
@@ -178,6 +175,10 @@
     width: 100%;
     height: 100%;
 
+    @media (max-width: 786px) {
+      gap: 0.5rem;
+    }
+
     .social-svg {
       filter: grayscale(100%) invert(100%);
       opacity: 0.8;
@@ -201,41 +202,30 @@
 <script>
 import { ref } from 'vue'
 
-let renderElements = false;
 const navSection = ref(null);
 const navButton = ref(null);
-const navLogo = ref(null);
-const navLogoMobile = ref(null);
 const navLinks = ref(null);
 const navRefs = ref(null);
+const navLogo = ref(null);
+const navLogoMobile = ref(null);
 
 export default {
   setup() {
-    function handleResize() {
-      if (window.innerWidth < 1000) {
-        navButton.value.style.display = "flex";
-        navLogo.value.style.display = "none";
-        navLinks.value.style.display = "none";
-        navLogoMobile.value.style.display = "flex";
-      } else {
-        navButton.value.style.display = "none";
-        navLogo.value.style.display = "flex";
-        navLinks.value.style.display = "flex";
-        navLogoMobile.value.style.display = "none";
-      }
-    }
-
     onMounted(() => {
       renderElements = true;
       navRefs.value.style.display = "flex";
 
       handleResize();
       window.addEventListener('resize', handleResize)
+
+      lastScrollY = window.scrollY;
+      window.addEventListener('scroll', toggleNavMobile)
     })
 
     onUnmounted(() => {
-      handleResize();
       window.removeEventListener('resize', handleResize)
+
+      window.removeEventListener('scroll', toggleNavMobile)
     })
 
     return {
@@ -249,4 +239,36 @@ export default {
     }
   }
 };
+
+let renderElements = false;
+function handleResize() {
+  if (window.innerWidth < 1000) {
+    navButton.value.style.display = "flex";
+    navLogo.value.style.display = "none";
+    navLinks.value.style.display = "none";
+    navLogoMobile.value.style.display = "flex";
+  } else {
+    navSection.value.style.transform = "";
+    navButton.value.style.display = "none";
+    navLogo.value.style.display = "flex";
+    navLinks.value.style.display = "flex";
+    navLogoMobile.value.style.display = "none";
+  }
+}
+
+let lastScrollY = 0;
+function toggleNavMobile() {
+  const windowSize = window.innerWidth;
+  const scrollY = window.scrollY;
+
+  if (windowSize > 1000) return;
+
+  if (scrollY > lastScrollY) {
+    navSection.value.style.transform = "translateY(-100%)";
+  } else {
+    navSection.value.style.transform = "";
+  }
+  
+  lastScrollY = scrollY;
+}
 </script>

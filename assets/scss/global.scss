@@ -1,16 +1,26 @@
 :root {
-  --p-c-dark: #1f1f22;
+  --b-c-dark: #1c1c20;
+
+  --b-c-dark-opaque: #1c1c20dd;
 
   --p-c-light: rgb(220, 220, 220);
 
+  --p-c-dark: rgb(30, 30, 30);
+  
   --p-c-highlight: rgb(255, 255, 255);
+
+  --p-c-unhighlight: rgb(156 163 175);
 
   --p-c-accent: #ff6700;
 }
 
 :root {
-  --background-color: var(--p-c-dark);
+  --background-color: var(--b-c-dark);
   --text-main-color: var(--p-c-light);
+  --text-main-color-dark: var(--p-c-dark);
+  --text-main-color-light: var(--p-c-light);
+  --text-main-color-reverse: var(--p-c-dark);
+  --text-secondary-color: var(--p-c-unhighlight);
   --text-highlight-color: var(--p-c-highlight);
   --accent-color: var(--p-c-accent);
   color-scheme: dark;
@@ -18,7 +28,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color-red: var(--p-c-light);
+    --text-main-color: var(--p-c-dark);
+    --text-main-color-reverse: var(--p-c-light);
     color-scheme: light;
   }
 }
