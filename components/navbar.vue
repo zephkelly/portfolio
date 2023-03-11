@@ -2,7 +2,7 @@
   <section ref="navSection" class="navbar active">
     <div v-show="renderElements" ref="navButton" class="button" style="display: none;">
       <button>
-        <img class="nav-svg" src="~/assets/images/svg/menu.svg" alt="Menu">
+        <img class="nav-svg" src="/images/svg/menu.svg" alt="Menu">
       </button>
     </div>
     <div v-show="renderElements" ref="navLogo" class="logo">
@@ -26,10 +26,10 @@
     </div>
     <div ref="navRefs" class="socials" style="display: none;">
       <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub">
-        <img class="social-svg github" src="~/assets/images/svg/github.svg" alt="GitHub">
+        <img class="social-svg github" src="/images/svg/github.svg" alt="GitHub">
       </a>
       <a href="https://www.linkedin.com/in/evan-kelly/" target="_blank" alt="My LinkedIn">
-        <img class="social-svg linkedin" src="~/assets/images/svg/linkedin.svg" alt="LinkedIn">
+        <img class="social-svg linkedin" src="/images/svg/linkedin.svg" alt="LinkedIn">
       </a>
     </div>
   </section>

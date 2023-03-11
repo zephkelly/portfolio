@@ -2,7 +2,7 @@
   <section class="card">
     <section class="cover">
       <div class="technologies" :class="project.class">
-        <img v-for="tech in project.technologies" class="technology" :key="tech.name" :title="tech.name" :alt="tech.name" :src="tech.url"  />
+       <img v-for="tech in project.technologies" :key="tech.alt" :title="tech.alt" :alt="tech.alt" :src="tech.url" />
       </div>
       <div class="wrapper" :class="project.class">
         <img :src="project.image" alt="project image" />
@@ -49,7 +49,7 @@
       gap: 0.5rem;
       height: 1.2rem;
 
-      img.technology {
+      img {
         width: 1.2rem;
         height: 1.2rem;
       }
@@ -57,7 +57,7 @@
 
     .wrapper {
       height: 100%;
-      width: 55%;
+      width: 15.5rem;
       overflow: hidden;
 
       img {
@@ -66,17 +66,35 @@
         height: 100%;
         object-fit: cover;
         border-radius: 0.4rem 0.4rem 0rem 0rem;
+        box-shadow: 0rem 2rem 0rem rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .wrapper.lipstick {
+      height: 16rem;
+      width: 20rem;
+      margin-top: 6rem;
+
+      img {
+        margin-top: 0rem;
       }
     }
 
     .wrapper.gam {
-      height: 85%;
-      width: 85%;
-      margin-top: 4rem;
+      height: 16rem;
+      width: 22rem;
+      margin-top: 6rem;
 
       img {
+        margin-top: 1rem;
         border-radius: 0.6rem 0.6rem 0rem 0rem;
       }
+    }
+
+    .wrapper.portfolio {
+      height: 100%;
+      width: 20rem;
+      margin-top: 4rem;
     }
   }
 
@@ -88,7 +106,7 @@
     padding: 0rem 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       height: auto;
       min-height: auto;
     }
@@ -120,8 +138,8 @@
       }
 
       span.Personal {
-        background-color: rgba(255, 145, 0, 0.1);
-        border: 1px solid rgba(255, 236, 182, 0.5);
+        background-color: rgba(255, 180, 0, 0.12);
+        border: 1px solid rgba(255, 210, 182, 0.5);
       }
     }
 

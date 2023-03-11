@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 8rem;
-    height: 2000px;
+    margin-bottom: 14rem;
   }
 </style>
 
