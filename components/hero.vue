@@ -87,7 +87,7 @@
         right: -0.1rem;
         left: -0.1rem;
         bottom: -0.08em;
-        background-color: #fbca50;
+        background-color: var(--accent-color);
         transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
         opacity: 0.6;
         transition: opacity 0.1 ease-out;

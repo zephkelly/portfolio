@@ -1,8 +1,56 @@
 <template>
-  <div>
+  <section class="backlink">
+    <nuxt-link to="/">Home</nuxt-link>
+    <span>/</span>
+    <nuxt-link class="slug-link" to="">{{ $route.params.slug }}</nuxt-link>
+  </section>
+  <section class="overview">
     <cover :data="coverData" />
-  </div>
+  </section>
 </template>
+
+<style lang="scss" scoped>
+  section {
+    display: flex;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  section.backlink {
+    margin-top: 12rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+
+    a {
+      font-size: 1rem;
+      text-transform: capitalize;
+      text-decoration: none;
+
+      &:last-of-type {
+        margin-left: 0.8em;
+        opacity: 0.6;
+
+      }
+    }
+
+    span {
+      font-size: 1.2rem;
+      margin-left: 0.8em;
+    }
+
+    * {
+       color: var(--text-secondary-color);
+    }
+  }
+
+  section.overview {
+    flex-direction: column;
+    margin-top: 0rem;
+  }
+</style>
 
 <script>
 import Cover from '@/components/cover.vue'

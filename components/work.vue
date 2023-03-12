@@ -61,7 +61,7 @@ export default {
           class: "ochre",
           description: "A fullstack blogging website made without a framework. For plant-based recipes and holistic lifestyle tips",
           image: "/images/ochre-cover.JPG",
-          technologies: [t.ts, t.css, t.vite, t.mongodb, t.express, t.nginx],
+          technologies: [ t.vite, t.ts, t.css, t.mongodb, t.express, t.nginx],
           type: "Client"
         },
         {

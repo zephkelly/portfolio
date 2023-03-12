@@ -2,5 +2,49 @@
   {
     "id": 1,
     "slug": "ochre-and-ivy"
+  },
+  {
+    "id": 2,
+    "slug": "galactic-asteroid-miner"
+  },
+  {
+    "id": 3,
+    "slug": "the-lipstick-hippy"
+  },
+  {
+    "id": 4,
+    "slug": "portfolio",
+    "content": {
+      "title": "Portfolio",
+      "time": "2 Weeks",
+      "type": "Personal",
+      "github": {
+        "label": "zephkelly/portfolio",
+        "url": "https://github.com/zephkelly/portfolio"
+      },
+      "link": {
+        "label": "evankelly.dev",
+        "url": "https://evankelly.dev"
+      },
+      "technologies": {
+        "vue": {
+          "label": "Vue3",
+          "url": "/images/svg/vue.png"
+        },
+        "nuxt": {
+          "label": "Nuxt3",
+          "url": "/images/svg/nuxt.png"
+        },
+        "typescript": {
+          "label": "TypeScript",
+          "url": "/images/svg/typescript.png"
+        },
+        "sass": {
+          "label": "Sass",
+          "url": "/images/svg/sass.png"
+        }
+      },
+      "overview": "Wanting to branch out and learn new frameworks, I picked a rather overkill stack for a simple portfolio site. Having previously used Vite tooling in a production build, I was naturally drawn to the Vue ecosystem. Nuxt3 provides something unique that Vue3 alone doesn't, and that's being able to mix elements of both SSR and SPA to maximise SEO and performance."
+    }
   }
 ]

@@ -15,7 +15,6 @@
     max-width: 1000px;
     box-sizing: border-box;
     height: auto;
-    // min-height: 900px;
   }
 
   section.hero {
