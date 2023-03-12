@@ -28,6 +28,7 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 0.5rem;
     min-height: 400px;
+    min-width: 300px;
 
     h3 {
       padding: 2rem;
@@ -41,46 +42,12 @@
 
 <script>
 import projectCard from "@/components/projectCard.vue";
+import technologies from "@/assets/json/technologies.json";
 
-const typescript = {
-  name: "Typescript",
-  url: "/_nuxt/assets/images/svg/typescript.png",
-}
-
-const html5 = {
-  name: "HTML5",
-  url: "/_nuxt/assets/images/svg/html5.png",
-}
-
-const css3 = {
-  name: "CSS3",
-  url: "/_nuxt/assets/images/svg/css3.png",
-}
-
-const express = {
-  name: "Express",
-  url: "/_nuxt/assets/images/svg/express.png",
-}
-
-const mongodb = {
-  name: "MongoDB",
-  url: "/_nuxt/assets/images/svg/mongodb.png",
-}
-
-const unity = {
-  name: "Unity",
-  url: "/_nuxt/assets/images/svg/unity3d.png",
-}
-
-const csharp = {
-  name: "C#",
-  url: "/_nuxt/assets/images/svg/csharp.png",
-}
-
-const dotnet = {
-  name: ".NET 2.1",
-  url: "/_nuxt/assets/images/svg/dotnet2-1.png",
-}
+const t = technologies.reduce((acc, tech) => {
+  acc[tech.name] = tech;
+  return acc;
+}, {});
 
 export default {
   components: {
@@ -92,19 +59,35 @@ export default {
         {
           title: "Ochre & Ivy",
           class: "ochre",
-          description: "A blogging website for plant-based recipes and holistic lifestyle tips",
-          image: "/_nuxt/assets/images/ochre-cover.JPG",
-          technologies: [typescript, html5, css3, mongodb, express],
+          description: "A fullstack blogging website made without a framework. For plant-based recipes and holistic lifestyle tips",
+          image: "/images/ochre-cover.JPG",
+          technologies: [t.ts, t.css, t.vite, t.mongodb, t.express, t.nginx],
+          type: "Client"
+        },
+        {
+          title: 'The Lipstick Hippy',
+          class: "lipstick",
+          description: "An online retail store for natural and organic beauty products, developed using WYSIWYG editor Wix",
+          image: "/images/lipstick-cover.JPG",
+          technologies: [t.wix],
           type: "Client"
         },
         {
           title: "Galactic Asteroid Miner",
           class: "gam",
-          description: "An infinite procedurally-generated 2D physics game made in Unity",
-          image: "/_nuxt/assets/images/gam-cover.JPG",
-          technologies: [unity, csharp, dotnet],
+          description: "An infinite, procedurally-generated, 2D physics game made in Unity3D",
+          image: "/images/gam-cover.JPG",
+          technologies: [t.unity, t.csharp, t.dotnet],
           type: "Personal"
-        }
+        },
+        {
+          title: "Portfolio",
+          class: "portfolio",
+          description: "This portfolio you're on right now! Built with Nuxt3 and Vue3",
+          image: "/images/portfolio-cover.JPG",
+          technologies: [t.ts, t.sass, t.vue3, t.nuxt3],
+          type: "Personal"
+        },
       ]
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <img src="~/assets/images/profile.png" alt="profile image" ref="pfp"></div>
+    <img src="/images/profile.png" alt="profile image" ref="pfp"></div>
   <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
     I'm <NuxtLink href="/about">Evan</NuxtLink>, a fullstack software developer with a passion for creating beautiful, functional apps. 
@@ -134,11 +134,11 @@ export default {
     const pfpEl = pfp.value;
 
     pfpEl.addEventListener('mouseenter', () => {
-      pfpEl.src = '/_nuxt/assets/images/profile_effect.png';
+      pfpEl.src = '/images/profile_effect.png';
     });
     
     pfpEl.addEventListener('mouseleave', () => {
-      pfpEl.src = '/_nuxt/assets/images/profile.png';
+      pfpEl.src = '/images/profile.png';
     });
 
     waveEmoji.value.addEventListener('click', toggleWaveEmoji);

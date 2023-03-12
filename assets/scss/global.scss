@@ -1,4 +1,6 @@
 :root {
+  --b-c-light: rgb(255, 255, 255);
+
   --b-c-dark: #1c1c20;
 
   --b-c-dark-opaque: #1c1c20dd;
@@ -28,6 +30,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --background-color: var(--b-c-dark);
     --text-main-color: var(--p-c-dark);
     --text-main-color-reverse: var(--p-c-light);
     color-scheme: light;
