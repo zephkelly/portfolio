@@ -2,9 +2,9 @@
   <section class="backlink">
     <nuxt-link to="/">Home</nuxt-link>
     <span>/</span>
-    <nuxt-link class="slug-link" to="">{{ $route.params.slug }}</nuxt-link>
+    <nuxt-link class="slug-link" to="">{{ coverData.content.title }}</nuxt-link>
   </section>
-  <section class="overview">
+  <section class="content">
     <cover :data="coverData" />
   </section>
 </template>
@@ -46,9 +46,10 @@
     }
   }
 
-  section.overview {
+  section.content {
     flex-direction: column;
     margin-top: 0rem;
+    margin-bottom: 14rem;
   }
 </style>
 

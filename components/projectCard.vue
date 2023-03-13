@@ -9,14 +9,16 @@
       </div>
     </section>
     <section class="content">
-      <div class="wrapper">
-        <h3>{{ project.title }}</h3>
-        <span class="label" :class="project.type"><p>{{ project.type }}</p></span>
+      <div>
+        <div class="wrapper">
+          <nuxt-link :to="project.cover" class="card-title-link"><h3 class="card-title">{{ project.title }}</h3></nuxt-link>
+          <span class="label" :class="project.type"><p>{{ project.type }}</p></span>
+        </div>
+        <p>{{ project.description }}</p>
       </div>
-      <p>{{ project.description }}</p>
-      <button>
-        <img src="" alt="github icon" />
-      </button>
+      <div class="links">
+        <NuxtLink :to="project.cover">Learn More</NuxtLink>
+      </div>
     </section>
   </section>
 </template>
@@ -41,6 +43,10 @@
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.12);
 
+    @media (prefers-color-scheme: light) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
     .technologies {
       position: absolute;
       top: 1rem;
@@ -52,6 +58,11 @@
       img {
         width: 1.2rem;
         height: 1.2rem;
+
+        @media (prefers-color-scheme: light) {
+          filter: invert(1);
+          opacity: 0.8;
+        }
       }
     }
 
@@ -99,12 +110,19 @@
   }
 
   .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 35%;
     min-height: 140px;
     width: stretch;
     margin: 0rem 0rem 1rem;
     padding: 0rem 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    @media (prefers-color-scheme: light) {
+      border-top: 1px solid rgba(0, 0, 0, 0.326);
+    }
 
     @media (max-width: 1000px) {
       height: auto;
@@ -129,25 +147,47 @@
           font-size: 0.9rem;
           font-weight: 600;
           opacity: 0.8;
+
+          @media (prefers-color-scheme: light) {
+            color: var(--text-main-color-dark);
+          }
         }
       }
 
       span.Client {
         background-color: rgba(47, 255, 0, 0.1);
         border: 1px solid rgb(182, 255, 195, 0.5);
+
+        @media (prefers-color-scheme: light) {
+          background-color: rgba(45, 190, 16, 0.318);
+          border: 1px solid rgba(29, 68, 36, 0.5);
+        }
       }
 
       span.Personal {
         background-color: rgba(255, 180, 0, 0.12);
         border: 1px solid rgba(255, 210, 182, 0.5);
+
+        @media (prefers-color-scheme: light) {
+          background-color: rgba(254, 156, 8, 0.372);
+          border: 1px solid rgba(123, 56, 14, 0.5);
+        }
       }
     }
 
-    h3 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 500;
-      margin: 1em 0rem 0.5em 0rem;
+    a.card-title-link {
+      text-decoration: none;
+      
+      & * {
+        color: var(--text-main-color);
+      }
+
+      .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin: 1em 0rem 0.5em 0rem;
+      }
     }
 
     p {
@@ -158,8 +198,32 @@
       color: var(--text-secondary-color);
     }
 
-    button {
+    .links {
       margin-top: 2rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+
+      a {
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: var(--text-main-color);
+          text-decoration: underline;
+        }
+      }
+
+      img {
+        filter: invert(1);
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
   }
 </style>

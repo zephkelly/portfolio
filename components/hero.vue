@@ -15,12 +15,11 @@
     height: 124px;
     border-radius: 100%;
     overflow: hidden;
-    background-color: #070707;
 
     img {
       width: 100%;
       height: 100%;
-      filter: brightness(1);
+      filter: brightness(0.9);
     }
   }
 
@@ -35,12 +34,12 @@
     color: var(--text-main-color);
 
     span {
-      //make the emoji shake back and forth a bit
       animation: shake 7s infinite;
       animation-timing-function: cubic-bezier(0.36, 0.07, 0.19, 0.97);
       margin-left: 0.5rem;
       transition: translate3d 0.1s ease-out;
       cursor: pointer;
+      user-select: none;
 
       @keyframes shake {
         10%, 90% {
@@ -106,6 +105,10 @@
 
       &:hover {
         color: var(--text-main-color-reverse);
+
+        @media (prefers-color-scheme: light) {
+          color: var(--text-main-color);
+        }
       }
     }
 
