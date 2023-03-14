@@ -57,6 +57,10 @@
         width: 2rem;
         height: auto;
         filter: invert(1);
+
+        @media (prefers-color-scheme: light) {
+          filter: invert(0);
+        }
       }
 
       &:hover {

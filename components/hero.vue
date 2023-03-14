@@ -1,9 +1,10 @@
 <template>
   <div class="profile">
-    <img src="/images/profile.png" alt="profile image" ref="pfp"></div>
+    <img src="/images/profile.png" alt="profile image" ref="pfp">
+  </div>
   <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
-    I'm <NuxtLink href="/about">Evan</NuxtLink>, a fullstack software developer with a passion for creating beautiful, functional apps. 
+    I'm <a class="name">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
     Currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
     I'm seeking new opportunities to leverage my skills and contribute to impactful projects. Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
   </p>
@@ -68,6 +69,14 @@
     line-height: 1.4em;
     color: var(--text-secondary-color);
     opacity: 0.8;
+
+    a.name {
+      cursor: default;
+
+      &:hover {
+        cursor: default;
+      }
+    }
 
     a {
       position: relative;

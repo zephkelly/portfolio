@@ -31,7 +31,7 @@
   section.work {
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
+    margin-top: 6rem;
     margin-bottom: 14rem;
   }
 </style>

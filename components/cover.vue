@@ -70,11 +70,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1rem 6rem;
+    gap: 0rem 1rem;
     grid-template-areas:
       "type role github link"
       "technology technology technology technology";
     opacity: 0.8;
+    margin-bottom: 4rem;
 
     @media (prefers-color-scheme: light) {
       background-color: rgba(0, 0, 0, 0.05);

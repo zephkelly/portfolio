@@ -62,22 +62,27 @@
         {
           "label": "Home Desktop",
           "type": "desktop",
-          "url": "/images/covers/ochre/home-desktop.JPG"
+          "url": "/images/covers/ochre/home-desktop.webp"
         },
         {
           "label": "Blog Desktop",
           "type": "desktop",
-          "url": "/images/covers/ochre/blog-desktop.JPG"
+          "url": "/images/covers/ochre/blog-desktop.webp"
         },
         {
           "label": "Home Mobile",
           "type": "mobile",
-          "url": "/images/covers/ochre/home-mobile.JPG"
+          "url": "/images/covers/ochre/home-mobile.webp"
         },
         {
           "label": "Blog Mobile",
           "type": "mobile",
-          "url": "/images/covers/ochre/blog-mobile.JPG"
+          "url": "/images/covers/ochre/blog-mobile.webp"
+        },
+        {
+          "label": "Dashboard Desktop",
+          "type": "desktop",
+          "url": "/images/covers/ochre/dashboard-desktop.webp"
         }
       ]
     }
@@ -265,28 +270,20 @@
       },
       "gallery": [
         {
-          "label": "Home",
-          "url": "/images/portfolio/home.png"
+          "label": "Desktop Dark",
+          "url": "/images/covers/portfolio/desktop-dark.webp"
         },
         {
-          "label": "Home Dark",
-          "url": "/images/portfolio/home-dark.png"
+          "label": "Desktop Light",
+          "url": "/images/covers/portfolio/desktop-light.webp"
         },
         {
-          "label": "Project",
-          "url": "/images/portfolio/project.png"
+          "label": "Desktop Dark",
+          "url": "/images/covers/portfolio/mobile-dark.webp"
         },
         {
-          "label": "Project Dark",
-          "url": "/images/portfolio/project-dark.png"
-        },
-        {
-          "label": "Project Mobile",
-          "url": "/images/portfolio/project-mobile.png"
-        },
-        {
-          "label": "Project Mobile Dark",
-          "url": "/images/portfolio/project-mobile-dark.png"
+          "label": "Deskop Light",
+          "url": "/images/covers/portfolio/mobile-light.webp"
         }
       ]
     }
