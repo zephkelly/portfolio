@@ -30,6 +30,10 @@
     min-height: 400px;
     min-width: 300px;
 
+    @media (prefers-color-scheme: light) {
+      border: 1px solid rgba(0, 0, 0, 0.326);
+    }
+
     h3 {
       padding: 2rem;
     }
@@ -59,10 +63,13 @@ export default {
         {
           title: "Ochre & Ivy",
           class: "ochre",
-          description: "A fullstack blogging website made without a framework. For plant-based recipes and holistic lifestyle tips",
+          description: "A blogging website made without a framework. For plant-based recipes and holistic lifestyle tips",
           image: "/images/ochre-cover.JPG",
-          technologies: [t.ts, t.css, t.vite, t.mongodb, t.express, t.nginx],
-          type: "Client"
+          technologies: [ t.vite, t.ts, t.css, t.mongodb, t.express],
+          type: "Client",
+          cover: "/covers/ochre-and-ivy",
+          github: "https://github.com/zephkelly/ochre-ivy",
+          live: "https://ochreivy.com"
         },
         {
           title: 'The Lipstick Hippy',
@@ -70,7 +77,8 @@ export default {
           description: "An online retail store for natural and organic beauty products, developed using WYSIWYG editor Wix",
           image: "/images/lipstick-cover.JPG",
           technologies: [t.wix],
-          type: "Client"
+          type: "Client",
+          cover: "/covers/the-lipstick-hippy"
         },
         {
           title: "Galactic Asteroid Miner",
@@ -78,7 +86,8 @@ export default {
           description: "An infinite, procedurally-generated, 2D physics game made in Unity3D",
           image: "/images/gam-cover.JPG",
           technologies: [t.unity, t.csharp, t.dotnet],
-          type: "Personal"
+          type: "Personal",
+          cover: "/covers/galactic-asteroid-miner"
         },
         {
           title: "Portfolio",
@@ -86,7 +95,10 @@ export default {
           description: "This portfolio you're on right now! Built with Nuxt3 and Vue3",
           image: "/images/portfolio-cover.JPG",
           technologies: [t.ts, t.sass, t.vue3, t.nuxt3],
-          type: "Personal"
+          type: "Personal",
+          cover: "/covers/portfolio",
+          github: "https://github.com/zephkelly/portfolio",
+          live: "https://evankelly.dev"
         },
       ]
     }

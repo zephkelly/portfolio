@@ -6,18 +6,18 @@
       </button>
     </div>
     <div v-show="renderElements" ref="navLogo" class="logo">
-      <a><span>E</span>K</a>
+      <nuxt-link to="/"><span>E</span>K</nuxt-link>
     </div>
     <nav v-show="renderElements" ref="navLinks">
       <ul>
         <li>
-          <nuxt-link to="/work">Work</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/about">About me</nuxt-link>
+          <nuxt-link to="/">Home</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/contact">Contact</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/resume">Resume</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -57,6 +57,10 @@
         width: 2rem;
         height: auto;
         filter: invert(1);
+
+        @media (prefers-color-scheme: light) {
+          filter: invert(0);
+        }
       }
 
       &:hover {
@@ -74,7 +78,7 @@
     max-width: 1000px;
     box-sizing: border-box;
     padding: 1rem 2rem;
-    background-color: var(--b-c-dark-opaque);
+    background-color: var(--nav-background-color);
     backdrop-filter: blur(6px);
     z-index: 1;
     transition: transform 0.2s ease-out;
@@ -149,11 +153,17 @@
       letter-spacing: 0.1em;
       transition: opacity 0.15s ease-out;
       color: var(--background-color);
-      // background-image: linear-gradient(145deg, #d9d9d9, #6b6b6b);
       background-image: linear-gradient(260deg, #ffe203, #ffbb55);
+      opacity: 0.9;
       background-clip: text;
       background-size: 150% 100%;
       -webkit-text-stroke: 4px transparent;
+
+      @media (prefers-color-scheme: light) {
+        color: rgba(255, 255, 255, 0.753);
+        opacity: 1;
+        background-image: linear-gradient(260deg, #ffe203d9, #ffbb55d3);
+      }
       
       span {
         font-size: 2.05rem;
@@ -183,6 +193,10 @@
       filter: grayscale(100%) invert(100%);
       opacity: 0.8;
       height: 1.6rem;
+
+      @media (prefers-color-scheme: light) {
+        filter: invert(0);
+      }
 
       &:hover {
         opacity: 1;

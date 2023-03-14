@@ -15,7 +15,6 @@
     max-width: 1000px;
     box-sizing: border-box;
     height: auto;
-    // min-height: 900px;
   }
 
   section.hero {
@@ -32,7 +31,7 @@
   section.work {
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
+    margin-top: 6rem;
     margin-bottom: 14rem;
   }
 </style>
