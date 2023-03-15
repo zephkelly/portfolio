@@ -1,6 +1,6 @@
 <template>
   <section class="backlink">
-    <nuxt-link to="/">Home</nuxt-link>
+    <a v-on:click="this.$router.go(-1)">Home</a>
     <span>/</span>
     <nuxt-link class="slug-link" to="">{{ coverData.content.title }}</nuxt-link>
   </section>
@@ -28,6 +28,10 @@
       font-size: 1rem;
       text-transform: capitalize;
       text-decoration: none;
+      
+      &:first-of-type {
+        cursor: pointer;
+      }
 
       &:last-of-type {
         margin-left: 0.8em;

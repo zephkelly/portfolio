@@ -1,8 +1,8 @@
 <template>
-  <section class="card">
+  <section class="card" v-on:click="redirectToPage">
     <section class="cover">
       <div class="technologies" :class="project.class">
-       <img v-for="tech in project.technologies" :key="tech.alt" :title="tech.alt" :alt="tech.alt" :src="tech.url" />
+      <img v-for="tech in project.technologies" :key="tech.alt" :title="tech.alt" :alt="tech.alt" :src="tech.url" />
       </div>
       <div class="wrapper" :class="project.class">
         <img :src="project.image" alt="project image" />
@@ -29,7 +29,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: border-color 0.15s ease-out;
     gap: 0rem;
+
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    @media (prefers-color-scheme: light) {
+      &:hover {
+        box-shadow: 0rem 0rem 1.4rem 0.2rem rgba(0, 0, 0, 0.08);
+      }
+    }
   }
 
   .cover {
@@ -234,6 +246,11 @@ export default {
     project: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    redirectToPage() {
+      this.$router.push(this.project.cover)
     }
   }
 }
