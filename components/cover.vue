@@ -1,29 +1,33 @@
 <template>
   <h1 class="title">{{ data.content.title }}</h1>
   <section class="info-panel">
-    <div class="info">
-      <p class="label">Type</p>
-      <p>{{ data.content.type }}</p>
+    <div class="about">
+      <div class="info">
+        <p class="label">Type</p>
+        <p>{{ data.content.type }}</p>
+      </div>
+      <div class="info">
+        <p class="label">Development</p>
+        <p>{{ data.content.time }}</p>
+      </div>
+      <div class="info github">
+        <p class="label">GitHub</p>
+        <a v-if="data.content.github.url" :href="data.content.github.url">{{ data.content.github.label }}</a>
+        <p v-else>{{ data.content.github.label }}</p>
+      </div>
+      <div class="info live">
+        <p class="label">Live</p>
+        <a :href="data.content.link.url">{{ data.content.link.label }}</a>
+      </div>
     </div>
-    <div class="info">
-      <p class="label">Development</p>
-      <p>{{ data.content.time }}</p>
-    </div>
-    <div class="info">
-      <p class="label">GitHub</p>
-      <a v-if="data.content.github.url" :href="data.content.github.url">{{ data.content.github.label }}</a>
-      <p v-else>{{ data.content.github.label }}</p>
-    </div>
-    <div class="info">
-      <p class="label">Live</p>
-      <a :href="data.content.link.url">{{ data.content.link.label }}</a>
-    </div>
-    <div class="info">
-      <p class="label">Tech</p>
-      <div class="images">
-        <div v-for="tech in data.content.technologies" class="wrapper">
-          <img :src="tech.url"/>
-          <p>{{ tech.label }}</p>
+    <div class="tech" :class="data.class">
+      <div class="info">
+        <p class="label">Tech</p>
+        <div class="images">
+          <div v-for="tech in data.content.technologies" class="wrapper">
+            <img :src="tech.url"/>
+            <p>{{ tech.label }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -68,12 +72,9 @@
     border-radius: 0.6rem;
     padding: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0rem 1rem;
-    grid-template-areas:
-      "type role github link"
-      "technology technology technology technology";
+    gap: 1rem;
     opacity: 0.8;
     margin-bottom: 4rem;
 
@@ -82,15 +83,47 @@
       border: 1px solid rgba(0, 0, 0, 0.12);
     }
 
+    @media (max-width: 768px) {  
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      gap: 2rem;
+
+      .info.github {
+        max-width: 80%;
+      }
+
+      .info.live {
+        max-width: 80%;
+      }
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      height: auto;
+      gap: 1rem;
+
+      @media (max-width: 768px) {
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+    }
+
+    .tech.gam {
+      height: 5.2rem;
+    }
+    
     div {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       text-align: center;
       height: 4rem;
+      max-width: 100%;
 
       &:last-of-type {
-        grid-area: technology;
         height: 5.2rem;
       }
 
@@ -103,6 +136,10 @@
         text-align: start;
         text-decoration: none;
         transition: color 0.2s ease-out, border-bottom 0.2s ease-out;
+
+        @media (max-width: 400px) {
+          font-size: 0.9rem;
+        }
 
         &:hover {
           color: var(--text-main-color);
@@ -125,6 +162,13 @@
         margin-bottom: 0.6rem;
         opacity: 0.6;
       }
+
+      @media (max-width: 768px) {
+        &:last-of-type {
+          height: auto;
+        }
+      }
+
     }
 
     .images {
@@ -135,6 +179,23 @@
       gap: 2rem;
       width: 100%;
       height: 100%;
+
+      @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem 0.5rem;
+
+        .wrapper {
+          img {
+            width: 1rem;
+            height: 1rem;
+          }
+
+          p {
+            font-size: 0.6rem;
+          }
+        }
+      }
 
       .wrapper {
         display: flex;
@@ -179,10 +240,18 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
+
+    @media (max-width: 768px) {
+      margin-top: 1.2rem;
+    }
   }
 
   section.design {
     margin-top: 1.6rem;
+
+    @media (max-width: 400px) {
+      margin-top: 1.6rem;
+    }
   }
 
   section.development {
@@ -192,10 +261,19 @@
   section.gallery {
     margin-top: 1.6rem;
 
+    @media (max-width: 768px) {
+      margin-top: 2.4rem;
+    }
+
     .images {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
 
       .wrapper {
         display: flex;
@@ -206,6 +284,10 @@
         .container {
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 0.5rem;
+
+          @media (max-width: 768px) {
+            max-height: 600px;
+          }
 
          @media (prefers-color-scheme: light) {
             border: 1px solid rgba(0, 0, 0, 0.198);
@@ -232,6 +314,10 @@
 
           @media (prefers-color-scheme: light) {
             border-bottom: 1px solid rgba(0, 0, 0, 0.198);
+          }
+
+          @media (max-width: 768px) {
+            max-height: 400px;
           }
         }
       }

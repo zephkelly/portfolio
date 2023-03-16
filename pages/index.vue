@@ -26,6 +26,10 @@
     @media (max-width: 768px) {
       margin-top: 14rem;
     }
+
+    @media (max-width: 400px) {
+      margin-top: 12rem;
+    }
   }
 
   section.work {
@@ -33,6 +37,11 @@
     flex-direction: column;
     margin-top: 6rem;
     margin-bottom: 14rem;
+
+    @media (max-width: 400px) {
+      margin-top: 6rem;
+      margin-bottom: 8rem;
+    }
   }
 </style>
 

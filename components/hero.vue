@@ -4,9 +4,9 @@
   </div>
   <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
-    I'm <a class="name">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
-    Currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
-    I'm seeking new opportunities to leverage my skills and contribute to impactful projects. Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
+    I'm <a class="name" href="https://www.linkedin.com/in/evan-kelly/">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
+    <span class="extra">Currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
+    I'm seeking new opportunities to leverage my skills and contribute to impactful projects.</span> Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
   </p>
 </template>
 
@@ -69,6 +69,14 @@
           transform: translate3d(2px, -1px, 0) rotate(8deg);
         }
       }
+
+      @media (max-width: 492px) {
+        margin-left: 0rem;
+      }
+
+      @media (max-width: 400px) {
+        margin-right: 0.6rem;
+      }
     }
   }
   
@@ -82,14 +90,6 @@
 
     @media (prefers-color-scheme: light) {
       opacity: 0.9;
-    }
-
-    a.name {
-      cursor: default;
-
-      &:hover {
-        cursor: default;
-      }
     }
 
     a {
@@ -135,10 +135,10 @@
       }
     }
 
-    span {
-      color: white;
-      font-weight: 600;
-      opacity: 1;
+    span.extra {
+      @media (max-width: 400px) {
+        display: none;
+      }
     }
   }
 
