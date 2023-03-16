@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "nodemailer": "^6.9.1",
-    "nuxt-mail": "^3.1.5"
+    "nuxt-mail": "^3.1.5",
+    "nuxt-start": "^2.16.0"
   }
 }
