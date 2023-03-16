@@ -1,35 +1,35 @@
 <template>
   <section ref="navSection" class="navbar active">
-    <div v-show="renderElements" ref="navButton" class="button" style="display: none;">
-      <button>
-        <img class="nav-svg" src="~/assets/images/svg/menu.svg" alt="Menu">
+    <div ref="navButton" class="button" style="display:none;">
+      <button ref="mobileButton" v-on:click="toggleMobileNav" style="background-color: transparent; backdrop-filter: none;">
+        <img class="nav-svg" src="/images/svg/menu.svg" alt="Menu">
       </button>
     </div>
-    <div v-show="renderElements" ref="navLogo" class="logo">
-      <a><span>E</span>K</a>
+    <div ref="navLogo" class="logo">
+      <nuxt-link to="/"><span>E</span>K</nuxt-link>
     </div>
-    <nav v-show="renderElements" ref="navLinks">
+    <nav ref="navLinks" style="display:none;">
       <ul>
-        <li>
-          <nuxt-link to="/work">Work</nuxt-link>
+        <li @click="hideMobileNav">
+          <nuxt-link to="/">Home</nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/about">About me</nuxt-link>
-        </li>
-        <li>
+        <li @click="hideMobileNav">
           <nuxt-link to="/contact">Contact</nuxt-link>
+        </li>
+        <li>
+          <a href="/resume.pdf" target="_blank">Resume</a>
         </li>
       </ul>
     </nav>
-    <div v-show="renderElements" ref="navLogoMobile" class="logo mobile" style="display: none">
+    <div ref="navLogoMobile" class="logo mobile" style="display: none">
       <a><span>E</span>K</a>
     </div>
     <div ref="navRefs" class="socials" style="display: none;">
-      <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub">
-        <img class="social-svg github" src="~/assets/images/svg/github.svg" alt="GitHub">
+      <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub" title="My GitHub">
+        <img class="social-svg github" src="/images/svg/github.svg" alt="GitHub">
       </a>
-      <a href="https://www.linkedin.com/in/evan-kelly/" target="_blank" alt="My LinkedIn">
-        <img class="social-svg linkedin" src="~/assets/images/svg/linkedin.svg" alt="LinkedIn">
+      <a class="linkedin" href="https://www.linkedin.com/in/evan-kelly/" target="_blank" alt="My LinkedIn" title="My LinkedIn">
+        <img class="social-svg linkedin" src="/images/svg/linkedin.svg" alt="LinkedIn">
       </a>
     </div>
   </section>
@@ -43,25 +43,37 @@
     font-style: normal;
   }
 
-  .button {
-    min-width: 3.7rem;
+  button {
+    background: none;
+    border: none;
+    min-width: 3.2rem;
+    max-height: 100%;
+    padding: 0rem;
+    cursor: pointer;
+    opacity: 0.8;
+    position: relative;
+    right: 0.9rem;
+    border-radius: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(6px);
 
-    button {
-      background: none;
-      border: none;
-      padding: 0rem;
-      cursor: pointer;
-      opacity: 0.8;
+    @media (prefers-color-scheme: light) {
+      background-color: rgba(0, 0, 0, 0.1);
+      box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
+    }
 
-      img {
-        width: 2rem;
-        height: auto;
-        filter: invert(1);
+    img {
+      width: 2rem;
+      height: auto;
+      filter: invert(1);
+
+      @media (prefers-color-scheme: light) {
+        filter: invert(0);
       }
+    }
 
-      &:hover {
-        opacity: 1;
-      }
+    &:hover {
+      opacity: 1;
     }
   }
 
@@ -74,7 +86,7 @@
     max-width: 1000px;
     box-sizing: border-box;
     padding: 1rem 2rem;
-    background-color: var(--b-c-dark-opaque);
+    background-color: var(--nav-background-color);
     backdrop-filter: blur(6px);
     z-index: 1;
     transition: transform 0.2s ease-out;
@@ -102,11 +114,13 @@
           
           a {
             color: var(--text-main-color);
-            display: block;
+            display: flex;
             text-align: center;
+            justify-content: center;
+            align-items: center;
             text-decoration: none;
             padding: 1rem;
-            transition: color 0.15s ease-out;
+            transition: background-color 0.15s ease-out;
             border-radius: 0.5rem;
             opacity: 0.8;
 
@@ -114,6 +128,63 @@
               color: white;
               opacity: 1;
               background-color: #303032;
+            }
+
+            @media (prefers-color-scheme: light) {
+              transition: background-color 0.15s ease-out;
+              opacity: 0.9;
+
+              &:hover {
+                background-color: rgba(0, 0, 0, 0.10);
+                color: var(--text-main-color);
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1000px) {
+        display: none;
+        position: absolute;
+        top: 6rem;
+        left: 1rem;
+        background-color: rgba(41, 41, 45, 0.85);
+        padding: 0.8rem;
+        gap: 0.8rem;
+        backdrop-filter: blur(26px);
+        border-radius: 0.6rem;
+        
+        @media (prefers-color-scheme: light) {
+          background-color: rgba(220, 220, 220, 0.8);
+          box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.2);
+        }
+
+        ul {  
+          gap: 1rem;
+          flex-direction: column;
+          
+          li {
+            width: 25rem;
+
+            @media (max-width:400px) {
+              width: 15rem
+            }
+
+            a {
+              border-radius: 0.3rem;
+              height: 2rem;
+
+              @media (max-width:400px) {
+                background-color: rgba(0, 0, 0, 0.35);
+
+                @media (prefers-color-scheme: light) {
+                  background-color: rgba(0, 0, 0, 0.2);
+                }
+              }
+
+              &:hover {
+                background-color: rgba(0, 0, 0, 0.35);
+              }
             }
           }
         }
@@ -129,6 +200,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    max-height: 100%;
 
     img {
       height: 1.7rem;
@@ -149,11 +221,17 @@
       letter-spacing: 0.1em;
       transition: opacity 0.15s ease-out;
       color: var(--background-color);
-      // background-image: linear-gradient(145deg, #d9d9d9, #6b6b6b);
       background-image: linear-gradient(260deg, #ffe203, #ffbb55);
+      opacity: 0.9;
       background-clip: text;
       background-size: 150% 100%;
       -webkit-text-stroke: 4px transparent;
+
+      @media (prefers-color-scheme: light) {
+        color: rgba(255, 255, 255, 0.753);
+        opacity: 1;
+        background-image: linear-gradient(260deg, #ffe203d9, #ffbb55d3);
+      }
       
       span {
         font-size: 2.05rem;
@@ -177,12 +255,20 @@
 
     @media (max-width: 786px) {
       gap: 0.5rem;
+
+      .linkedin {
+        display: none;
+      }
     }
 
     .social-svg {
       filter: grayscale(100%) invert(100%);
       opacity: 0.8;
       height: 1.6rem;
+
+      @media (prefers-color-scheme: light) {
+        filter: invert(0);
+      }
 
       &:hover {
         opacity: 1;
@@ -204,48 +290,59 @@ import { ref } from 'vue'
 
 const navSection = ref(null);
 const navButton = ref(null);
+const mobileButton = ref(null);
 const navLinks = ref(null);
 const navRefs = ref(null);
 const navLogo = ref(null);
 const navLogoMobile = ref(null);
 
+
 export default {
   setup() {
     onMounted(() => {
       renderElements = true;
-      navRefs.value.style.display = "flex";
+      navRefs.value.style.display = "";
+      navLinks.value.style.display = "";
 
       handleResize();
       window.addEventListener('resize', handleResize)
-
+      
       lastScrollY = window.scrollY;
-      window.addEventListener('scroll', toggleNavMobile)
+      window.addEventListener('scroll', toggleHiddenNavMobile)
     })
-
+    
     onUnmounted(() => {
       window.removeEventListener('resize', handleResize)
-
-      window.removeEventListener('scroll', toggleNavMobile)
+      
+      window.removeEventListener('scroll', toggleHiddenNavMobile)
     })
-
+    
     return {
       navSection,
       navButton,
+      mobileButton,
       navLogo,
       navLogoMobile,
       navLinks,
       navRefs,
       renderElements,
+      toggleMobileNav,
     }
+  },
+  methods: {
+    toggleMobileNav,
+    hideMobileNav,
+    handleResize,
+    toggleHiddenNavMobile,
   }
 };
 
 let renderElements = false;
 function handleResize() {
   if (window.innerWidth < 1000) {
+    hideMobileNav();
     navButton.value.style.display = "flex";
     navLogo.value.style.display = "none";
-    navLinks.value.style.display = "none";
     navLogoMobile.value.style.display = "flex";
   } else {
     navSection.value.style.transform = "";
@@ -257,18 +354,52 @@ function handleResize() {
 }
 
 let lastScrollY = 0;
-function toggleNavMobile() {
+function toggleHiddenNavMobile() {
   const windowSize = window.innerWidth;
   const scrollY = window.scrollY;
-
+  
   if (windowSize > 1000) return;
-
-  if (scrollY > lastScrollY) {
+  
+  if (scrollY > lastScrollY && scrollY > 80) {
+    hideMobileNav();
     navSection.value.style.transform = "translateY(-100%)";
   } else {
     navSection.value.style.transform = "";
   }
   
   lastScrollY = scrollY;
+}
+
+function hideMobileNav() {
+  navLinks.value.style.display = "";
+
+  mobileButton.value.style.backgroundColor = "transparent";
+  mobileButton.value.style.backdropFilter = "none";
+  mobileButton.value.style.opacity = "";
+
+  mobileNavOpen = false;
+}
+
+let mobileNavOpen = false;
+function toggleMobileNav() {
+  console.log("Hellow")
+  
+  if (mobileNavOpen) {
+    navLinks.value.style.display = "";
+
+    mobileButton.value.style.backgroundColor = "transparent";
+    mobileButton.value.style.backdropFilter = "none";
+    mobileButton.value.style.opacity = "";
+
+    mobileNavOpen = false;
+  } else {
+    navLinks.value.style.display = "block";
+
+    mobileButton.value.style.backgroundColor = "";
+    mobileButton.value.style.backdropFilter = "";
+    mobileButton.value.style.opacity = "1";
+      
+    mobileNavOpen = true;
+  }
 }
 </script>

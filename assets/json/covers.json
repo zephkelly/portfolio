@@ -1,0 +1,288 @@
+[
+  {
+    "id": 1,
+    "slug": "ochre-and-ivy",
+    "class": "ochre",
+    "content": {
+      "title": "Ochre & Ivy",
+      "time": "2 Months",
+      "type": "Freelance",
+      "github": {
+        "label": "zephkelly/ochre-ivy",
+        "url": "https://github.com/zephkelly/ochre-ivy"
+      },
+      "link": {
+        "label": "ochreivy.com",
+        "url": "https://ochreivy.com"
+      },
+      "technologies": {
+        "vite": {
+          "label": "Vite",
+          "url": "/images/svg/vite.png"
+        },
+        "typescript": {
+          "label": "TypeScript",
+          "url": "/images/svg/typescript.png"
+        },
+        "css": {
+          "label": "CSS3",
+          "url": "/images/svg/css3.png"
+        },
+        "mongodb": {
+          "label": "MongoDB",
+          "url": "/images/svg/mongodb.png"
+        },
+        "express": {
+          "label": "Express",
+          "url": "/images/svg/express.png"
+        },
+        "linux": {
+          "label": "Linux",
+          "url": "/images/svg/linux.png"
+        }
+      },
+      "overview": "Ochre & Ivy is the brainchild of Kylie, a long-time primary school teacher who wanted to create an online presence that would allow her to share her passion for all things natural and organic. Having previously used Squarespace and Wix, I knew from the beginning that these options would be too costly and restrictive for her needs. And so the site is fully custom, written in TypeScript without a framework, with a in-built CMS system and a user-friendly admin panel.",
+      "design": {
+        "descriptions": {
+          "description1": "Like most of my projects, the design had to be simple and minimal. There is not a lot of copy throughout the site, meaning it was important that the content of the blog and recipes was the main focus and easy to digest. Using my previous experience in graphic design, I was able to create a brand identity that was both unique and memorable.",
+          "description2": "Where some might reach for javascript or a library to create carousels and other animations, I opted for CSS wherever I reasonably could. This allowed me to keep the site lightweight and fast, while also allowing me to create a more accessible experience for users with disabilities."
+        }
+      },
+      "development": {
+        "descriptions": {
+          "description1": "Using this product as a learning experience, I decided to build the site from the ground up, without the use of a framework. This allowed me to learn more about the inner workings of how websites function, and how to optimise the site for performance. The site achieves a 100% score on Google's Lighthouse for mobile and desktop.",
+          "description2": "I think the most important thing I learned while creating this product is that I would not attempt to create a client website without a framework again. I found myself writing a lot of boilerplate code. Breaking things into components was a difficult task, especially across the client and server. This was largely due to the fact that the site began as a mixture of SSR and SSG to reduce server load, but I found this becoming very complicated and difficult to maintain. I ended up switching to full SSR and found it was a much better development experience.",
+          "description3": "The site has an in-built CMS system that allows you to create, update, and delete content without leaving the website itself. This was achieved through user authentication, and by integrating a library called EditorJS which allows you to build your own content editor.",
+          "description4": "Editor data is saved to JSON, which is then parsed and rendered on the client. The data also undergoes client and server side validation to prevent malicious code injection. This allows for a flexible, user-friendly experience, giving the client that ability to create content in a system that they are familiar with without the need to learn HTML or markdown."
+        }
+      },
+      "gallery": [
+        {
+          "label": "Home Desktop",
+          "type": "desktop",
+          "url": "/images/covers/ochre/home-desktop.webp"
+        },
+        {
+          "label": "Blog Desktop",
+          "type": "desktop",
+          "url": "/images/covers/ochre/blog-desktop.webp"
+        },
+        {
+          "label": "Home Mobile",
+          "type": "mobile",
+          "url": "/images/covers/ochre/home-mobile.webp"
+        },
+        {
+          "label": "Blog Mobile",
+          "type": "mobile",
+          "url": "/images/covers/ochre/blog-mobile.webp"
+        },
+        {
+          "label": "Dashboard Desktop",
+          "type": "desktop",
+          "url": "/images/covers/ochre/dashboard-desktop.webp"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "galactic-asteroid-miner",
+    "class": "gam",
+    "content": {
+      "title": "Galactic Asteroid Miner",
+      "time": "2 Months",
+      "type": "Personal",
+      "github": {
+        "label": "zephkelly/galactic-asteroid-miner",
+        "url": "https://github.com/zephkelly/galactic-asteroid-miner"
+      },
+      "link": {
+        "label": "itch.io/galactic-asteroid-miner",
+        "url": "https://zephyrmg.itch.io/galactic-asteroid-miner"
+      },
+      "technologies": {
+        "unity": {
+          "label": "Unity",
+          "url": "/images/svg/unity3d.png"
+        },
+        "csharp": {
+          "label": "C#",
+          "url": "/images/svg/csharp.png"
+        },
+        "dotnet": {
+          "label": ".NET 2.1",
+          "url": "/images/svg/dotnet2-1.png"
+        }
+      },
+      "overview": "Galactic Asteroid Miner is a 2D space mining game created in Unity3D. It's a simple arcade-style game where you control a mining ship and must collect as many asteroids as you can as you try to manage your fuel and health. The game was created as a learning experience, and was my first released title after having tinkered in Unity for over 6 years.",
+      "design": {
+        "descriptions": {
+          "description1": "I initially had an idea of exactly how I wanted the game to look, before I knew anything about the gameplay. Since my main focus for this title was the programming side, I kept everything very simplistic, making use of solid colours where I could. I think the game has a unique aesthetic and reviews from players included comments such as 'smooth gameplay, and a nostalgic experience'."
+        }
+      },
+      "development": {
+        "descriptions": {
+          "description1": "The game was created using Unity3D, and was built using C# and .NET 2.1. I used the Unity UI system to create the menus, and used the in-built physics system with specific tuning to match newtons theory of gravity. All code tries to follow SOLID and DRY principals.",
+          "description2": "The most notable features implemented to realise this project were: infinite procedural generation without using a pseudo-random generator such as perlin noise, occlusion culling system which only renders gameobjects within a certian view radius, spatial hashing to split content into small reasonably sized chunks. And a clean code architecture which allows for easy extensibility and maintainability in the future.",
+          "description3": "I am quite happy with the result. Currently I am implementing a multiplayer system with Mirror which involves a ground-up rewrite of the networking system, I hope to release this by the end of the year."
+        }
+      },
+      "gallery": [
+        {
+          "label": "Main Menu",
+          "type": "desktop",
+          "url": "/images/covers/gam/main-menu.JPG"
+        },
+        {
+          "label": "Red Dwarf",
+          "type": "desktop",
+          "url": "/images/covers/gam/red-dwarf.jpg"
+        },
+        {
+          "label": "White Dwarf",
+          "type": "desktop",
+          "url": "/images/covers/gam/white-dwarf.jpg"
+        },
+        {
+          "label": "Shop UI",
+          "type": "desktop",
+          "url": "/images/covers/gam/shop-ui.JPG"
+        },
+        {
+          "label": "Asteroid Field",
+          "type": "desktop",
+          "url": "/images/covers/gam/asteroid-field.JPG"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "slug": "the-lipstick-hippy",
+    "class": "lipstick",
+    "content": {
+      "title": "The Lipstick Hippy",
+      "time": "7 Months",
+      "type": "Freelance",
+      "github": {
+        "label": "Wix... 😭"
+      },
+      "link": {
+        "label": "thelipstickhippy.com.au (dev link)",
+        "url": "https://kylie5620.wixsite.com/thelipstickhippy"
+      },
+      "technologies": {
+        "wix": {
+          "label": "Wix",
+          "url": "/images/svg/wix.png"
+        }
+      },
+      "overview": "The Lipstick Hippy (now defunct), was an online store that sold natural and organic health food products. The site was built using Wix, which was a good learning experience, but I would not recommend it for any clients requiring a custom experience or low long-term costs as you are esentially renting a website.",
+      "design": {
+        "descriptions": {
+          "description1": "The website began as a template, which I then customised to fit the client's needs and to give a unified brand identify. This process was quite easy and took rougly 2-3 weeks. Throughout my 7 months of working with the client on this project, all brand work was done by myself, including logo design, colour palette, graphic design, and email marketing campains. Because I was unable to integrate a custom recipe builder into the website I had to create a custom template in photoshop for the client to use when sending out recipes to customers."
+        }
+      },
+      "development": {
+        "descriptions": {
+          "description1": "The site was built using Wix's low-code editor. This was to allow the client to have full control over the website to make changes without needing to contact me at an additional cost. I was able to rapidly prototype the design and functionality of the site, and worked with the client to teach them the platform and make larger changes. Overall, developing with Wix was an awful developer experience, and in hidesight it was a costly choice for the client. You must make the sacrifice of up front costs for long-term savings, and Wix is expensive for small businesses requiring more than just a brochure-like site.",
+          "description2": "There were many services that required plugins and regular maintenance, which I was able to provide for the client. These plugins included email marketing campains, a blogging system, a full store with custom shipping and payment options, an authentication and logging system, and a in-built portal as a subscription only zone."
+        }
+      },
+      "gallery": [
+        {
+          "label": "Home Desktop",
+          "type": "desktop",
+          "url": "/images/covers/lipstick/home-desktop.JPG"
+        },
+        {
+          "label": "Recipes Desktop",
+          "type": "desktop",
+          "url": "/images/covers/lipstick/blog-desktop.JPG"
+        },
+        {
+          "label": "Home Mobile",
+          "type": "mobile",
+          "url": "/images/covers/lipstick/home-mobile.JPG"
+        },
+        {
+          "label": "Blog Mobile",
+          "type": "mobile",
+          "url": "/images/covers/lipstick/blog-mobile.JPG"
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "slug": "portfolio",
+    "class": "portfolio",
+    "content": {
+      "title": "Portfolio",
+      "time": "2 Weeks",
+      "type": "Personal",
+      "github": {
+        "label": "zephkelly/portfolio",
+        "url": "https://github.com/zephkelly/portfolio"
+      },
+      "link": {
+        "label": "evankelly.dev",
+        "url": "https://evankelly.dev"
+      },
+      "technologies": {
+        "vue": {
+          "label": "Vue3",
+          "url": "/images/svg/vue.png"
+        },
+        "nuxt": {
+          "label": "Nuxt3",
+          "url": "/images/svg/nuxt.png"
+        },
+        "typescript": {
+          "label": "TypeScript",
+          "url": "/images/svg/typescript.png"
+        },
+        "sass": {
+          "label": "Sass",
+          "url": "/images/svg/sass.png"
+        },
+        "linux": {
+          "label": "Linux",
+          "url": "/images/svg/linux.png"
+        }
+      },
+      "overview": "Wanting to branch out and learn new frameworks and technologies, I picked a rather overkill stack for a simple portfolio site. Having previously used Vite tooling in a production build, I was naturally drawn to the Vue ecosystem. Nuxt3 provides something unique that Vue3 alone doesn't, and that's being able to mix elements of both SSR and SPA to maximise SEO and performance. This would be handy if I ever decided to add a blog in the future.",
+      "design": {
+        "descriptions": {
+          "description1": "What you're seeing now is the 4th revision of my portfolio. Previous designs were too busy, and had that sense of already feeling dated. I needed something timeless, while keeping a bit of personality. Something that would be easy on the eyes, and most importantly accessible.",
+          "description2": "Dark mode was built in from the start (as 80% of users have dark mode enabled), but I wanted to give users the option to change. All animations are done through CSS, and are subtle and purely aesthetic. The site is fully responsive and works on all devices, from mobile to desktop. This was largely achieved by setting a reasonable max-width for readability and through the thoughtful use of CSS to create a responsive layout."
+        }
+      },
+      "development": {
+        "descriptions": {
+          "description1": "The site is built using Nuxt3, which is a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA.",
+          "description2": "Having previously built websites with vanilla JavaScript (well really TypeScript), I very quickly learned the benefits of using a framework. Nuxt3 allows you to take advantage of Vue3's composition API to create reusable components on both the server and client side. This increased workflow 100x, as I could now focus on building the site, rather than writing boilerplate code and reinventing my own, worse, framework."
+        }
+      },
+      "gallery": [
+        {
+          "label": "Desktop Dark",
+          "url": "/images/covers/portfolio/desktop-dark.webp"
+        },
+        {
+          "label": "Desktop Light",
+          "url": "/images/covers/portfolio/desktop-light.webp"
+        },
+        {
+          "label": "Desktop Dark",
+          "url": "/images/covers/portfolio/mobile-dark.webp"
+        },
+        {
+          "label": "Deskop Light",
+          "url": "/images/covers/portfolio/mobile-light.webp"
+        }
+      ]
+    }
+  }
+]

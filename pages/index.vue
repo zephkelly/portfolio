@@ -15,7 +15,6 @@
     max-width: 1000px;
     box-sizing: border-box;
     height: auto;
-    // min-height: 900px;
   }
 
   section.hero {
@@ -27,13 +26,22 @@
     @media (max-width: 768px) {
       margin-top: 14rem;
     }
+
+    @media (max-width: 400px) {
+      margin-top: 12rem;
+    }
   }
 
   section.work {
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
-    height: 2000px;
+    margin-top: 6rem;
+    margin-bottom: 14rem;
+
+    @media (max-width: 400px) {
+      margin-top: 6rem;
+      margin-bottom: 8rem;
+    }
   }
 </style>
 

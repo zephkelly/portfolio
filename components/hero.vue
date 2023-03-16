@@ -1,26 +1,36 @@
 <template>
   <div class="profile">
-    <img src="~/assets/images/profile.png" alt="profile image" ref="pfp"></div>
+    <img src="/images/profile.png" alt="profile image" ref="pfp">
+  </div>
   <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
-    I'm <NuxtLink href="/about">Evan</NuxtLink>, a fullstack software developer with a passion for creating beautiful, functional apps. 
-    Currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
-    I'm seeking new opportunities to leverage my skills and contribute to impactful projects. Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
+    I'm <a class="name" href="https://www.linkedin.com/in/evan-kelly/">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
+    <span class="extra">Currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
+    I'm seeking new opportunities to leverage my skills and contribute to impactful projects.</span> Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
   </p>
 </template>
 
 <style lang="scss" scoped>
   .profile {
+    user-select: none;
     width: 124px;
     height: 124px;
     border-radius: 100%;
     overflow: hidden;
-    background-color: #070707;
 
     img {
+      user-select: none;
       width: 100%;
       height: 100%;
-      filter: brightness(1);
+      filter: brightness(0.9);
+
+      @media (prefers-color-scheme: light){
+        filter: brightness(1);
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -35,12 +45,12 @@
     color: var(--text-main-color);
 
     span {
-      //make the emoji shake back and forth a bit
       animation: shake 7s infinite;
       animation-timing-function: cubic-bezier(0.36, 0.07, 0.19, 0.97);
       margin-left: 0.5rem;
       transition: translate3d 0.1s ease-out;
       cursor: pointer;
+      user-select: none;
 
       @keyframes shake {
         10%, 90% {
@@ -59,6 +69,14 @@
           transform: translate3d(2px, -1px, 0) rotate(8deg);
         }
       }
+
+      @media (max-width: 492px) {
+        margin-left: 0rem;
+      }
+
+      @media (max-width: 400px) {
+        margin-right: 0.6rem;
+      }
     }
   }
   
@@ -69,6 +87,10 @@
     line-height: 1.4em;
     color: var(--text-secondary-color);
     opacity: 0.8;
+
+    @media (prefers-color-scheme: light) {
+      opacity: 0.9;
+    }
 
     a {
       position: relative;
@@ -87,7 +109,7 @@
         right: -0.1rem;
         left: -0.1rem;
         bottom: -0.08em;
-        background-color: #fbca50;
+        background-color: var(--accent-color);
         transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
         opacity: 0.6;
         transition: opacity 0.1 ease-out;
@@ -106,13 +128,17 @@
 
       &:hover {
         color: var(--text-main-color-reverse);
+
+        @media (prefers-color-scheme: light) {
+          color: var(--text-main-color);
+        }
       }
     }
 
-    span {
-      color: white;
-      font-weight: 600;
-      opacity: 1;
+    span.extra {
+      @media (max-width: 400px) {
+        display: none;
+      }
     }
   }
 
@@ -134,11 +160,11 @@ export default {
     const pfpEl = pfp.value;
 
     pfpEl.addEventListener('mouseenter', () => {
-      pfpEl.src = '/_nuxt/assets/images/profile_effect.png';
+      pfpEl.src = '/images/profile_effect.png';
     });
     
     pfpEl.addEventListener('mouseleave', () => {
-      pfpEl.src = '/_nuxt/assets/images/profile.png';
+      pfpEl.src = '/images/profile.png';
     });
 
     waveEmoji.value.addEventListener('click', toggleWaveEmoji);
