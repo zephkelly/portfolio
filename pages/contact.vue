@@ -78,6 +78,10 @@ export default {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 
+    @media (max-width: 768px) {
+      margin-top: 8rem;
+    }
+
     a {
       font-size: 1rem;
       text-transform: capitalize;
@@ -102,6 +106,7 @@ export default {
 
   section.contact {
     flex-direction: column;
+    margin-bottom: 8rem;
 
     h1 {
       font-family: 'Poppins', sans-serif;

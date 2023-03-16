@@ -2,6 +2,7 @@
   {
     "id": 1,
     "slug": "ochre-and-ivy",
+    "class": "ochre",
     "content": {
       "title": "Ochre & Ivy",
       "time": "2 Months",
@@ -38,10 +39,6 @@
         "linux": {
           "label": "Linux",
           "url": "/images/svg/linux.png"
-        },
-        "nginx": {
-          "label": "Nginx",
-          "url": "/images/svg/nginx.png"
         }
       },
       "overview": "Ochre & Ivy is the brainchild of Kylie, a long-time primary school teacher who wanted to create an online presence that would allow her to share her passion for all things natural and organic. Having previously used Squarespace and Wix, I knew from the beginning that these options would be too costly and restrictive for her needs. And so the site is fully custom, written in TypeScript without a framework, with a in-built CMS system and a user-friendly admin panel.",
@@ -55,7 +52,8 @@
         "descriptions": {
           "description1": "Using this product as a learning experience, I decided to build the site from the ground up, without the use of a framework. This allowed me to learn more about the inner workings of how websites function, and how to optimise the site for performance. The site achieves a 100% score on Google's Lighthouse for mobile and desktop.",
           "description2": "I think the most important thing I learned while creating this product is that I would not attempt to create a client website without a framework again. I found myself writing a lot of boilerplate code. Breaking things into components was a difficult task, especially across the client and server. This was largely due to the fact that the site began as a mixture of SSR and SSG to reduce server load, but I found this becoming very complicated and difficult to maintain. I ended up switching to full SSR and found it was a much better development experience.",
-          "description3": "The site has an in-built CMS system that allows you to create, update, and delete content without leaving the website itself. This was achieved through user authentication, and by integrating a library called EditorJS which allows you to build your own content editor. Editor data is saved to JSON, which is then parsed and rendered on the client. The data also undergoes client and server side validation to prevent malicious code injection. This allows for a flexible, user-friendly experience, giving the client that ability to create content in a system that they are familiar with without the need to learn HTML or markdown."
+          "description3": "The site has an in-built CMS system that allows you to create, update, and delete content without leaving the website itself. This was achieved through user authentication, and by integrating a library called EditorJS which allows you to build your own content editor.",
+          "description4": "Editor data is saved to JSON, which is then parsed and rendered on the client. The data also undergoes client and server side validation to prevent malicious code injection. This allows for a flexible, user-friendly experience, giving the client that ability to create content in a system that they are familiar with without the need to learn HTML or markdown."
         }
       },
       "gallery": [
@@ -90,6 +88,7 @@
   {
     "id": 2,
     "slug": "galactic-asteroid-miner",
+    "class": "gam",
     "content": {
       "title": "Galactic Asteroid Miner",
       "time": "2 Months",
@@ -161,6 +160,7 @@
   {
     "id": 3,
     "slug": "the-lipstick-hippy",
+    "class": "lipstick",
     "content": {
       "title": "The Lipstick Hippy",
       "time": "7 Months",
@@ -217,6 +217,7 @@
   {
     "id": 4,
     "slug": "portfolio",
+    "class": "portfolio",
     "content": {
       "title": "Portfolio",
       "time": "2 Weeks",
@@ -249,10 +250,6 @@
         "linux": {
           "label": "Linux",
           "url": "/images/svg/linux.png"
-        },
-        "nginx": {
-          "label": "Nginx",
-          "url": "/images/svg/nginx.png"
         }
       },
       "overview": "Wanting to branch out and learn new frameworks and technologies, I picked a rather overkill stack for a simple portfolio site. Having previously used Vite tooling in a production build, I was naturally drawn to the Vue ecosystem. Nuxt3 provides something unique that Vue3 alone doesn't, and that's being able to mix elements of both SSR and SPA to maximise SEO and performance. This would be handy if I ever decided to add a blog in the future.",

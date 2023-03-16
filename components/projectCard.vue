@@ -39,7 +39,7 @@
 
     @media (prefers-color-scheme: light) {
       &:hover {
-        box-shadow: 0rem 0rem 1.4rem 0.2rem rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.66);
       }
     }
   }
@@ -56,7 +56,7 @@
     background-color: rgba(0, 0, 0, 0.12);
 
     @media (prefers-color-scheme: light) {
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: rgba(0, 0, 0, 0.08);
     }
 
     .technologies {
@@ -101,6 +101,24 @@
       img {
         margin-top: 0rem;
       }
+
+      @media (max-width: 1000px) {
+        height: 16rem;
+        width: 80%;
+        margin-top:7rem;
+      }
+
+      @media (max-width: 768px) {
+        height: 20rem;
+        width: 60%;
+        margin-top: 7rem;
+      }
+
+      @media (max-width: 400px) {
+        height: 16rem;
+        width: 80%;
+        margin-top: 5rem;
+      }
     }
 
     .wrapper.gam {
@@ -112,12 +130,35 @@
         margin-top: 1rem;
         border-radius: 0.6rem 0.6rem 0rem 0rem;
       }
+
+      @media (max-width: 1000px) {
+        height: 15rem;
+        width: 80%;
+        margin-top:7rem;
+      }
+
+      @media (max-width: 400px) {
+        height: 12rem;
+        margin-top: 3.5rem;
+      }
     }
 
     .wrapper.portfolio {
       height: 100%;
       width: 20rem;
       margin-top: 4rem;
+
+      @media (max-width: 1000px) {
+        height: 22rem;
+        width: 80%;
+        margin-top:2rem;
+      }
+
+      @media (max-width: 400px) {
+        height: 17rem;
+        width: 80%;
+        margin-top: 1rem;
+      }
     }
   }
 

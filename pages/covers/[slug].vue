@@ -24,6 +24,10 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 
+    @media (max-width: 768px) {
+      margin-top: 8rem;
+    }
+
     a {
       font-size: 1rem;
       text-transform: capitalize;
@@ -54,6 +58,10 @@
     flex-direction: column;
     margin-top: 0rem;
     margin-bottom: 14rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 8rem;
+    }
   }
 </style>
 

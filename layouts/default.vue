@@ -48,8 +48,6 @@
     align-items: center;
     height: auto;
   }
-
-  
 </style>
 
 <script>
