@@ -17,7 +17,7 @@
           <nuxt-link to="/contact">Contact</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/resume">Resume</nuxt-link>
+          <a href="/resume.pdf" target="_blank">Resume</a>
         </li>
       </ul>
     </nav>
@@ -25,10 +25,10 @@
       <a><span>E</span>K</a>
     </div>
     <div ref="navRefs" class="socials" style="display: none;">
-      <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub">
+      <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub" title="My GitHub">
         <img class="social-svg github" src="/images/svg/github.svg" alt="GitHub">
       </a>
-      <a href="https://www.linkedin.com/in/evan-kelly/" target="_blank" alt="My LinkedIn">
+      <a href="https://www.linkedin.com/in/evan-kelly/" target="_blank" alt="My LinkedIn" title="My LinkedIn">
         <img class="social-svg linkedin" src="/images/svg/linkedin.svg" alt="LinkedIn">
       </a>
     </div>
@@ -118,6 +118,16 @@
               color: white;
               opacity: 1;
               background-color: #303032;
+            }
+
+            @media (prefers-color-scheme: light) {
+              transition: background-color 0.15s ease-out;
+              opacity: 0.9;
+
+              &:hover {
+                background-color: rgba(0, 0, 0, 0.10);
+                color: var(--text-main-color);
+              }
             }
           }
         }

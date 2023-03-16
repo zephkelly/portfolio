@@ -12,15 +12,25 @@
 
 <style lang="scss" scoped>
   .profile {
+    user-select: none;
     width: 124px;
     height: 124px;
     border-radius: 100%;
     overflow: hidden;
 
     img {
+      user-select: none;
       width: 100%;
       height: 100%;
       filter: brightness(0.9);
+
+      @media (prefers-color-scheme: light){
+        filter: brightness(1);
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -69,6 +79,10 @@
     line-height: 1.4em;
     color: var(--text-secondary-color);
     opacity: 0.8;
+
+    @media (prefers-color-scheme: light) {
+      opacity: 0.9;
+    }
 
     a.name {
       cursor: default;
