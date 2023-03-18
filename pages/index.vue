@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Title>Evan Kelly - Home</Title>
+  </Head>
   <section class="hero">
     <hero />
   </section>

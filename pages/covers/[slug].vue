@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Title>More About - {{ coverData.content.title }}</Title>
+  </Head>
   <section class="backlink">
     <a v-on:click="this.$router.go(-1)">Home</a>
     <span>/</span>
