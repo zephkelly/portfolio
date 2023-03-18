@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <img src="/images/profile.png" alt="profile image" ref="pfp">
+    <img src="/images/profile.webp" alt="profile image" ref="pfp">
   </div>
   <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
@@ -160,7 +160,7 @@ export default {
     const pfpEl = pfp.value;
 
     pfpEl.addEventListener('mouseenter', () => {
-      pfpEl.src = '/images/profile_effect.png';
+      pfpEl.src = '/images/profile_effect.webp';
     });
     
     pfpEl.addEventListener('mouseleave', () => {

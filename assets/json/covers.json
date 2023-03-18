@@ -194,22 +194,22 @@
         {
           "label": "Home Desktop",
           "type": "desktop",
-          "url": "/images/covers/lipstick/home-desktop.JPG"
+          "url": "/images/covers/lipstick/home-desktop.webp"
         },
         {
           "label": "Recipes Desktop",
           "type": "desktop",
-          "url": "/images/covers/lipstick/blog-desktop.JPG"
+          "url": "/images/covers/lipstick/blog-desktop.webp"
         },
         {
           "label": "Home Mobile",
           "type": "mobile",
-          "url": "/images/covers/lipstick/home-mobile.JPG"
+          "url": "/images/covers/lipstick/home-mobile.webp"
         },
         {
           "label": "Blog Mobile",
           "type": "mobile",
-          "url": "/images/covers/lipstick/blog-mobile.JPG"
+          "url": "/images/covers/lipstick/blog-mobile.webp"
         }
       ]
     }
