@@ -27,7 +27,7 @@
   .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     cursor: pointer;
     transition: border-color 0.15s ease-out;
@@ -49,7 +49,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: fit-available;
     width: 100%;
     min-height: 350px;
     overflow: hidden;
@@ -96,6 +96,8 @@
     }
 
     .wrapper.ochre {
+      height: 22rem;
+
       @media (max-width: 400px) {
         height: 18rem;
         width: 15.5rem;
@@ -173,9 +175,9 @@
     }
 
     .wrapper.portfolio {
-      height: 100%;
+      height: 22rem;
       width: 20rem;
-      margin-top: 4rem;
+      margin-top: 0rem;
 
       @media (max-width: 1000px) {
         height: 22rem;
