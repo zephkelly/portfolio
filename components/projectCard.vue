@@ -98,6 +98,8 @@
     .wrapper.ochre {
       @media (max-width: 400px) {
         margin-top: 8rem;
+        height: 22rem;
+        width: 15.5rem;
 
         img {
           height: 22rem;
@@ -184,7 +186,7 @@
         width: 15.5rem;
 
         img {
-          height: 16rem;
+          height: 22rem;
           width: 15.5rem;
         }
       }

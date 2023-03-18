@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Title>Contact Me</Title>
+  </Head>
   <section class="backlink">
     <nuxt-link to="/">Home</nuxt-link>
     <span>/</span>
