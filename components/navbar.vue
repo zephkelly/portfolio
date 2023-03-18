@@ -1,14 +1,14 @@
 <template>
   <section ref="navSection" class="navbar active">
-    <div ref="navButton" class="button" style="display:none;">
+    <div v-show="renderElements" ref="navButton" class="button" style="display:none;">
       <button ref="mobileButton" v-on:click="toggleMobileNav" style="background-color: transparent; backdrop-filter: none;">
         <img class="nav-svg" src="/images/svg/menu.svg" alt="Menu">
       </button>
     </div>
-    <div ref="navLogo" class="logo">
+    <div v-show="renderElements" ref="navLogo" class="logo">
       <nuxt-link to="/"><span>E</span>K</nuxt-link>
     </div>
-    <nav ref="navLinks" style="display:none;">
+    <nav v-show="renderElements" ref="navLinks" style="display:none;">
       <ul>
         <li @click="hideMobileNav">
           <nuxt-link to="/">Home</nuxt-link>
@@ -21,10 +21,10 @@
         </li>
       </ul>
     </nav>
-    <div ref="navLogoMobile" class="logo mobile" style="display: none">
+    <div v-show="renderElements" ref="navLogoMobile" class="logo mobile" style="display: none">
       <a><span>E</span>K</a>
     </div>
-    <div ref="navRefs" class="socials" style="display: none;">
+    <div v-show="renderElements" ref="navRefs" class="socials" style="display: none;">
       <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub" title="My GitHub">
         <img class="social-svg github" src="/images/svg/github.svg" alt="GitHub">
       </a>
@@ -89,7 +89,7 @@
     background-color: var(--nav-background-color);
     backdrop-filter: blur(6px);
     z-index: 1;
-    transition: transform 0.2s ease-out;
+    transition: transform 0.25s ease-out;
 
     nav  {
       display: flex;
@@ -296,6 +296,7 @@ const navRefs = ref(null);
 const navLogo = ref(null);
 const navLogoMobile = ref(null);
 
+let renderElements = false;
 
 export default {
   setup() {
@@ -337,7 +338,6 @@ export default {
   }
 };
 
-let renderElements = false;
 function handleResize() {
   if (window.innerWidth < 1000) {
     hideMobileNav();
