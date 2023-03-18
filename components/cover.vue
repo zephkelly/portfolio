@@ -64,6 +64,11 @@
     font-size: 3rem;
     color: var(--text-main-color);
     margin-bottom: 1.4rem;
+
+    @media (max-width: 400px) {
+      font-size: 2.6rem;
+      margin-bottom: 2rem;
+    }
   }
 
   .info-panel {
@@ -96,6 +101,11 @@
       .info.live {
         max-width: 80%;
       }
+    }
+
+    @media (max-width: 400px) {
+      padding: 1.5rem;
+      gap: 1.5rem;
     }
 
     .about {
@@ -152,7 +162,6 @@
         font-weight: 600;
         font-size: 1rem;
         color: var(--text-main-color);
-        margin-bottom: 0.2rem;
         text-align: start;
       }
 
