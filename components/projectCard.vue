@@ -97,12 +97,13 @@
 
     .wrapper.ochre {
       @media (max-width: 400px) {
-        margin-top: 8rem;
-        height: 22rem;
+        height: 18rem;
         width: 15.5rem;
+        margin-top: 6rem;
 
         img {
-          height: 22rem;
+          margin-top: 0rem;
+          height: 18rem;
           width: 15.5rem;
         }
       }
@@ -135,6 +136,7 @@
         margin-top: 6rem;
 
         img {
+          margin-top: 0rem;
           height: 16rem;
           width: 15.5rem;
         }
@@ -158,11 +160,12 @@
       }
 
       @media (max-width: 400px) {
-        margin-top: 5rem;
+        margin-top: 6rem;
         height: 17rem;
         width: 15.5rem;
 
         img {
+          margin-top: 0rem;
           height: 17rem;
           width: 15.5rem;
         }
@@ -181,12 +184,13 @@
       }
 
       @media (max-width: 400px) {
-        margin-top: 4.5rem;
-        height: 22rem;
+        margin-top: 6rem;
+        height: 17rem;
         width: 15.5rem;
 
         img {
-          height: 22rem;
+          margin-top: 0rem;
+          height: 17rem;
           width: 15.5rem;
         }
       }
@@ -200,7 +204,7 @@
     height: 35%;
     min-height: 140px;
     width: stretch;
-    margin: 0rem 0rem 1rem;
+    margin: 0rem 0rem 1.2rem;
     padding: 0rem 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 
@@ -270,7 +274,7 @@
         font-family: 'Poppins', sans-serif;
         font-size: 1.3rem;
         font-weight: 500;
-        margin: 1em 0rem 0.5em 0rem;
+        margin: 1.5rem 0rem 0.5em 0rem;
       }
     }
 

@@ -140,23 +140,14 @@ export default {
     div {
       display: flex;
       flex-direction: column;
-
-      &:nth-child(1) {
-
-        margin-bottom: 1rem;
-      }
-
-      &:nth-child(2) {
-
-        margin-bottom: 3rem;
-      }
+      margin-bottom: 1rem;
 
       label {
         font-family: 'Inter', sans-serif;
         color: var(--text-secondary-color);
         font-weight: 400;
         font-size: 1rem;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.4rem;
       }
     }
 
@@ -192,7 +183,6 @@ export default {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       font-size: 1rem;
-      margin-top: 1.6rem;
       height: 2rem;
       width: 4.5rem;
       background-color: #292830;
