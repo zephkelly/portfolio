@@ -51,7 +51,6 @@
     align-items: center;
     height: auto;
     width: 100%;
-    max-height: 350px;
     min-height: 350px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.12);
@@ -80,7 +79,7 @@
     }
 
     .wrapper {
-      height: 100%;
+      height: auto;
       width: 15.5rem;
       display: flex;
       position: relative;
@@ -98,7 +97,12 @@
 
     .wrapper.ochre {
       @media (max-width: 400px) {
-        margin-top:5.5rem;
+        margin-top: 8rem;
+
+        img {
+          height: 22rem;
+          width: 15.5rem;
+        }
       }
     }
 
@@ -125,8 +129,13 @@
 
       @media (max-width: 400px) {
         height: 16rem;
-        width: 80%;
+        width: 15.5rem;
         margin-top: 6rem;
+
+        img {
+          height: 16rem;
+          width: 15.5rem;
+        }
       }
     }
 
@@ -148,7 +157,13 @@
 
       @media (max-width: 400px) {
         margin-top: 5rem;
-        height: 78%;
+        height: 17rem;
+        width: 15.5rem;
+
+        img {
+          height: 17rem;
+          width: 15.5rem;
+        }
       }
     }
 
@@ -164,12 +179,13 @@
       }
 
       @media (max-width: 400px) {
-        height: 100%;
-        width: 80%;
         margin-top: 4.5rem;
+        height: 22rem;
+        width: 15.5rem;
 
         img {
-          height: 76%;
+          height: 16rem;
+          width: 15.5rem;
         }
       }
     }
