@@ -149,6 +149,14 @@ export default {
         font-size: 1rem;
         margin-bottom: 0.4rem;
       }
+      
+      @media (max-width: 400px) {
+        &:nth-child(3) {
+          label {
+            margin-bottom: 0.5rem;
+          }
+        } 
+      }
     }
 
     input, textarea {
@@ -185,6 +193,7 @@ export default {
       font-size: 1rem;
       height: 2rem;
       width: 4.5rem;
+      color: var(--text-main-color);
       background-color: #292830;
       border: 1px solid rgba(255, 255, 255, 0.20);
       border-radius: 0.4rem;

@@ -133,7 +133,7 @@
       @media (max-width: 400px) {
         height: 16rem;
         width: 15.5rem;
-        margin-top: 6rem;
+        margin-top: 5.5rem;
 
         img {
           margin-top: 0rem;
