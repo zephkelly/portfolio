@@ -49,9 +49,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: auto;
     width: 100%;
     max-height: 350px;
+    min-height: 350px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.12);
 
@@ -81,6 +82,8 @@
     .wrapper {
       height: 100%;
       width: 15.5rem;
+      display: flex;
+      position: relative;
       overflow: hidden;
 
       img {
@@ -90,6 +93,12 @@
         object-fit: cover;
         border-radius: 0.4rem 0.4rem 0rem 0rem;
         box-shadow: 0rem 2rem 0rem rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .wrapper.ochre {
+      @media (max-width: 400px) {
+        margin-top:5.5rem;
       }
     }
 
@@ -117,7 +126,7 @@
       @media (max-width: 400px) {
         height: 16rem;
         width: 80%;
-        margin-top: 5rem;
+        margin-top: 6rem;
       }
     }
 
@@ -138,8 +147,8 @@
       }
 
       @media (max-width: 400px) {
-        height: 12rem;
-        margin-top: 3.5rem;
+        margin-top: 5rem;
+        height: 78%;
       }
     }
 
@@ -155,9 +164,13 @@
       }
 
       @media (max-width: 400px) {
-        height: 17rem;
+        height: 100%;
         width: 80%;
-        margin-top: 1rem;
+        margin-top: 4.5rem;
+
+        img {
+          height: 76%;
+        }
       }
     }
   }

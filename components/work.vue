@@ -22,6 +22,10 @@
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
+
+    @media (max-width: 400px) {
+      gap: 3rem;
+    }
   }
 
   .card {
