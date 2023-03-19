@@ -22,7 +22,7 @@
       </ul>
     </nav>
     <div v-show="renderElements" ref="navLogoMobile" class="logo mobile" style="display: none">
-      <a><span>E</span>K</a>
+      <nuxt-link to="/""><span>E</span>K</nuxt-link>
     </div>
     <div v-show="renderElements" ref="navRefs" class="socials" style="display: none;">
       <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub" title="My GitHub">
@@ -47,20 +47,14 @@
     background: none;
     border: none;
     min-width: 3.2rem;
-    max-height: 100%;
+    min-height: 3.2rem;
     padding: 0rem;
     cursor: pointer;
     opacity: 0.8;
     position: relative;
     right: 0.9rem;
     border-radius: 0.6rem;
-    background-color: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(6px);
-
-    @media (prefers-color-scheme: light) {
-      background-color: rgba(0, 0, 0, 0.1);
-      box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.1);
-    }
 
     img {
       width: 2rem;
@@ -393,9 +387,13 @@ function toggleMobileNav() {
 
     mobileNavOpen = false;
   } else {
-    navLinks.value.style.display = "block";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      mobileButton.value.style.backgroundColor = "rgba(0, 0, 0, 0.08)";
+    } else {
+      mobileButton.value.style.backgroundColor = "rgba(255, 255, 255, 0.06)";
+    }
 
-    mobileButton.value.style.backgroundColor = "";
+    navLinks.value.style.display = "block";
     mobileButton.value.style.backdropFilter = "";
     mobileButton.value.style.opacity = "1";
       

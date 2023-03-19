@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <img src="/images/profile.webp" alt="profile image" ref="pfp">
+    <img src="/images/profile.webp" alt="Profil image" title="Well hello there" ref="pfp">
   </div>
   <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
@@ -88,6 +88,10 @@
     color: var(--text-secondary-color);
     opacity: 0.8;
 
+    @media (max-width: 400px) {
+      opacity: 1;
+    }
+
     @media (prefers-color-scheme: light) {
       opacity: 0.9;
     }
@@ -164,7 +168,7 @@ export default {
     });
     
     pfpEl.addEventListener('mouseleave', () => {
-      pfpEl.src = '/images/profile.png';
+      pfpEl.src = '/images/profile.webp';
     });
 
     waveEmoji.value.addEventListener('click', toggleWaveEmoji);

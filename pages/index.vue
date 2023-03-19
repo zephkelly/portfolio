@@ -1,6 +1,7 @@
 <template>
   <Head>
     <Title>Evan Kelly - Home</Title>
+    <meta name="description" content="Evan, fullstack dev & CS student. Passionate about crafting elegant, functional apps. Seeking opportunities to contribute to impactful projects. Let's chat!" />
   </Head>
   <section class="hero">
     <hero />
@@ -31,7 +32,7 @@
     }
 
     @media (max-width: 400px) {
-      margin-top: 12rem;
+      margin-top: 12.5rem;
     }
   }
 
