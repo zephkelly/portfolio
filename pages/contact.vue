@@ -1,6 +1,7 @@
 <template>
   <Head>
     <Title>Contact Me</Title>
+    <meta name="description" content="Hi there! I'm excited to hear from you. If you have a project in mind, feel free to reach out through my contact page. Let's work together to bring your ideas to life. Fill out the form and let's start the conversation today.">
   </Head>
   <section class="backlink">
     <nuxt-link to="/">Home</nuxt-link>

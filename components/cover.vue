@@ -49,7 +49,7 @@
     <div class="images">
       <div v-for="image in data.content.gallery" class="wrapper">
         <div class="container">
-          <img :class="image.type" :src="image.url"/>
+          <img :class="image.type" :src="image.url" loading="lazy"/>
           <p>{{ image.label }}</p>
         </div>
       </div>

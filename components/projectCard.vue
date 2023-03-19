@@ -2,10 +2,10 @@
   <section class="card" v-on:click="redirectToPage">
     <section class="cover">
       <div class="technologies" :class="project.class">
-      <img v-for="tech in project.technologies" :key="tech.alt" :title="tech.alt" :alt="tech.alt" :src="tech.url" />
+      <img v-for="tech in project.technologies" :key="tech.alt" :title="tech.alt" :alt="tech.alt" :src="tech.url" loading="lazy"/>
       </div>
       <div class="wrapper" :class="project.class">
-        <img :src="project.image" alt="project image" />
+        <img :src="project.image" alt="Project cover image" loading="lazy"/>
       </div>
     </section>
     <section class="content">
@@ -17,7 +17,7 @@
         <p>{{ project.description }}</p>
       </div>
       <div class="links">
-        <NuxtLink :to="project.cover">Learn More</NuxtLink>
+        <NuxtLink :to="project.cover">Read the story</NuxtLink>
       </div>
     </section>
   </section>
@@ -86,7 +86,7 @@
       overflow: hidden;
 
       img {
-        margin-top: 4rem;
+        margin-top: 5rem;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -112,9 +112,9 @@
     }
 
     .wrapper.lipstick {
-      height: 16rem;
+      height: 17rem;
       width: 20rem;
-      margin-top: 6rem;
+      margin-top: 5rem;
 
       img {
         margin-top: 0rem;
@@ -146,12 +146,12 @@
     }
 
     .wrapper.gam {
-      height: 16rem;
+      height: 17rem;
       width: 22rem;
-      margin-top: 6rem;
+      margin-top: 5rem;
 
       img {
-        margin-top: 1rem;
+        margin-top: 0rem;
         border-radius: 0.6rem 0.6rem 0rem 0rem;
       }
 

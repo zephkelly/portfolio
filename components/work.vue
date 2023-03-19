@@ -78,7 +78,7 @@ export default {
         {
           title: 'The Lipstick Hippy',
           class: "lipstick",
-          description: "An online retail store for natural and organic beauty products, developed using WYSIWYG editor Wix",
+          description: "An online retail store for natural and organic beauty products, developed using online editor Wix",
           image: "/images/lipstick-cover.webp",
           technologies: [t.wix],
           type: "Client",
