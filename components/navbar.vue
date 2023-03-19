@@ -22,7 +22,7 @@
       </ul>
     </nav>
     <div v-show="renderElements" ref="navLogoMobile" class="logo mobile" style="display: none">
-      <nuxt-link to="/""><span>E</span>K</nuxt-link>
+      <nuxt-link to="/"><span>E</span>K</nuxt-link>
     </div>
     <div v-show="renderElements" ref="navRefs" class="socials" style="display: none;">
       <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub" title="My GitHub">
