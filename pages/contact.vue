@@ -43,11 +43,16 @@ export default {
   methods: {
     async send() {
       try {
+        if (!this.name || !this.email || !this.message) {
+          alert('Please fill out all fields!')
+          return;
+        }
+
         const { $mail } = useNuxtApp()
 
         $mail.send({
-          from: `${this.name} <${this.email}>`,
-          subject: `${this.name}: from Portfolio`,
+          from: `${this.name}`,
+          subject: `${this.name}: <${this.email}>`,
           text: `${this.message}`,
         })
 
@@ -132,6 +137,7 @@ export default {
 
     .status {
       color: var(--accent-color);
+      margin-top: 1rem;
     }
   }
 
