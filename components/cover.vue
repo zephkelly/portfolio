@@ -354,7 +354,6 @@ export default {
   },
   mounted() {
     const content = this.$props.data.content;
-
   }
 }
 </script>
