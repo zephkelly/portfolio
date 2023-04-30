@@ -41,7 +41,7 @@
           "url": "/images/svg/linux.png"
         }
       },
-      "overview": "Ochre & Ivy is the brainchild of Kylie, a long-time primary school teacher who wanted to create an online presence that would allow her to share her passion for all things natural and organic. Having previously used Squarespace and Wix, I knew from the beginning that these options would be too costly and restrictive for her needs. And so the site is fully custom, written in TypeScript without a framework, with a in-built CMS system and a user-friendly admin panel.",
+      "overview": "Ochre & Ivy was created for a school teacher who wanted an online presence that would allow them to share their passion for all things natural and organic. Having previously used Squarespace and Wix, I knew from the beginning that these options would be too costly and restrictive for their needs. And so the site is fully custom, written in TypeScript without a framework, with an in-built CMS system and a user-friendly admin panel.",
       "design": {
         "descriptions": {
           "description1": "Like most of my projects, the design had to be simple and minimal. There is not a lot of copy throughout the site, meaning it was important that the content of the blog and recipes was the main focus and easy to digest. Using my previous experience in graphic design, I was able to create a brand identity that was both unique and memorable.",
@@ -118,7 +118,7 @@
       "overview": "Galactic Asteroid Miner is a 2D space mining game created in Unity3D. It's a simple arcade-style game where you control a mining ship and must collect as many asteroids as you can as you try to manage your fuel and health. The game was created as a learning experience, and was my first released title after having tinkered in Unity for over 6 years.",
       "design": {
         "descriptions": {
-          "description1": "I initially had an idea of exactly how I wanted the game to look, before I knew anything about the gameplay. Since my main focus for this title was the programming side, I kept everything very simplistic, making use of solid colours where I could. I think the game has a unique aesthetic and reviews from players included comments such as 'smooth gameplay, and a nostalgic experience'."
+          "description1": "I initially had an idea of how I wanted the game to look before I knew anything about the gameplay. Since my main focus for this title was programming, I kept all the art simplistic, making use of solid colours where I could. I think the game has a unique aesthetic and reviews from players included comments such as 'smooth gameplay, and a nostalgic experience'."
         }
       },
       "development": {
