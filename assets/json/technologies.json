@@ -63,5 +63,10 @@
     "name": "wix",
     "alt": "Wix",
     "url": "/images/svg/wix.png"
+  },
+  {
+    "name": "postgresql",
+    "alt": "PostgreSQL",
+    "url": "/images/svg/postgresql.png"
   }
 ]

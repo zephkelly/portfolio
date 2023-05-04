@@ -65,6 +65,17 @@ export default {
     return {
       projects: [
         {
+          title: "Upbranched",
+          class: "upbranched",
+          description: "A social media platform built around the idea of branching communities. Created as an alternative to Reddit",
+          image: "/images/upbranched-cover.JPG",
+          technologies: [ t.nuxt3, t.vue3, t.vite, t.sass, t.ts, t.postgresql],
+          type: "Personal",
+          cover: "/covers/upbranched",
+          github: "https://github.com/zephkelly/upbranched",
+          live: "https://upbranched.com"
+        },
+        {
           title: "Ochre & Ivy",
           class: "ochre",
           description: "A blogging website made without a framework. For plant-based recipes and holistic lifestyle tips",
@@ -76,15 +87,6 @@ export default {
           live: "https://ochreivy.com"
         },
         {
-          title: 'The Lipstick Hippy',
-          class: "lipstick",
-          description: "An online retail store for natural and organic beauty products, developed using online editor Wix",
-          image: "/images/lipstick-cover.webp",
-          technologies: [t.wix],
-          type: "Client",
-          cover: "/covers/the-lipstick-hippy"
-        },
-        {
           title: "Galactic Asteroid Miner",
           class: "gam",
           description: "An infinite, procedurally-generated, 2D physics game made in Unity3D",
@@ -92,6 +94,15 @@ export default {
           technologies: [t.unity, t.csharp, t.dotnet],
           type: "Personal",
           cover: "/covers/galactic-asteroid-miner"
+        },
+        {
+          title: 'The Lipstick Hippy',
+          class: "lipstick",
+          description: "An online retail store for natural and organic beauty products, developed using online editor Wix",
+          image: "/images/lipstick-cover.webp",
+          technologies: [t.wix],
+          type: "Client",
+          cover: "/covers/the-lipstick-hippy"
         },
         {
           title: "Portfolio",
