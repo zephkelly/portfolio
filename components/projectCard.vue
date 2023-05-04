@@ -95,6 +95,15 @@
       }
     }
 
+    .wrapper.upbranched {
+      height: 22rem;
+      width: 20rem;
+
+      img {
+        margin-top: 5.5rem;
+      }
+    }
+
     .wrapper.ochre {
       height: 22rem;
 

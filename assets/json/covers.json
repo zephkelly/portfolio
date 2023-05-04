@@ -1,6 +1,115 @@
 [
   {
     "id": 1,
+    "slug": "upbranched",
+    "class": "upbranched",
+    "content": {
+      "title": "Upbranched",
+      "time": "In-progress",
+      "type": "Personal",
+      "github": {
+        "label": "zephkelly/upbranched",
+        "url": "https://github.com/zephkelly/upbranched"
+      },
+      "link": {
+        "label": "Under development",
+        "url": "https://upbranched.com"
+      },
+      "technologies": {
+        "nuxt": {
+          "label": "Nuxt3",
+          "url": "/images/svg/nuxt.png"
+        },
+        "vue": {
+          "label": "Vue3",
+          "url": "/images/svg/vue.png"
+        },
+        "vite": {
+          "label": "Vite",
+          "url": "/images/svg/vite.png"
+        },
+        "typescript": {
+          "label": "TypeScript",
+          "url": "/images/svg/typescript.png"
+        },
+        "sass": {
+          "label": "Sass",
+          "url": "/images/svg/sass.png"
+        },
+        "postgresql": {
+          "label": "PostgreSQL",
+          "url": "/images/svg/postgresql.png"
+        }
+      },
+      "overview": "Upbranched is a lightweight social media platform built for independant communities. It allows users to create and join 'branches' which are collections of user-moderated groups. Users can create posts of various type like text, videos, and images, which can be shared with the community. Users can interact with posts through likes and dislikes and can leave nested comments. The site is currently in development, and will be released in the near future.",
+      "design": {
+        "descriptions": {
+          "description1": "Using Reddit as my inspiration, I wanted to focus on all the areas I felt like it was lacking. I wanted to create a site that was more visually appealing, and easier to navigate with more options for customizability.",
+          "description2": "By leveraging the power of Nuxt3, I was able to create a site that is fast, responsive, and easy to maintain. A blend of both SSG and SPA means the site is always responsive and is very SEO friendly. I used Vite as the build tool, which allowed me to use the latest features of Vue3 and TypeScript. I also used Sass for nested styling."
+        }
+      },
+      "development": {
+        "descriptions": {
+          "description1": "As I already have experience using non-relational databases, the nature of a social media platform requires more structured data. PostgreSQL was my tool of choice and has been a pleasure to use. All queries are made with plain SQL, and all user submitted content is run through validation and sanitization to prevent SQL injection.",
+          "description2": "Un-moderated platforms will tend to quickly degrade into toxicity, which is why I integreated Google's 'Perspective' API for comment moderation. Other features include full Auth0 integration with Google and Github, a custom image uploader and compressor, and an imgur web-scrapper for cross-posting content and easing the load on Upbranched data storage."
+        }
+      },
+      "gallery": [
+        {
+          "label": "Branch Dekstop",
+          "type": "desktop",
+          "url": "/images/covers/upbranched/branch-desktop.JPG"
+        },
+        {
+          "label": "Branch Dekstop - Light",
+          "type": "desktop",
+          "url": "/images/covers/upbranched/branch-desktop-light.JPG"
+        },
+        {
+          "label": "Branch Mobile",
+          "type": "desktop",
+          "url": "/images/covers/upbranched/branch-mobile.JPG"
+        },
+        {
+          "label": "Branch Mobile - Light",
+          "type": "desktop",
+          "url": "/images/covers/upbranched/branch-mobile-light.JPG"
+        },
+        {
+          "label": "Home Desktop",
+          "type": "desktop",
+          "url": "/images/covers/upbranched/home-desktop.JPG"
+        },
+        {
+          "label": "Home Desktop - Light",
+          "type": "desktop",
+          "url": "/images/covers/upbranched/home-desktop-light.JPG"
+        },
+        {
+          "label": "Create Dekstop",
+          "type": "dekstop",
+          "url": "/images/covers/upbranched/create-desktop.JPG"
+        },
+        {
+          "label": "Create Dekstop - Light",
+          "type": "dekstop",
+          "url": "/images/covers/upbranched/create-desktop-light.JPG"
+        },
+        {
+          "label": "Branch Edit Desktop",
+          "type": "desktop",
+          "url": "/images/covers/upbranched/branch-edit-desktop.JPG"
+        },
+        {
+          "label": "Branch Edit Desktop - Light",
+          "type": "desktop",
+          "url": "/images/covers/upbranched/branch-edit-desktop-light.JPG"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
     "slug": "ochre-and-ivy",
     "class": "ochre",
     "content": {
@@ -35,10 +144,6 @@
         "express": {
           "label": "Express",
           "url": "/images/svg/express.png"
-        },
-        "linux": {
-          "label": "Linux",
-          "url": "/images/svg/linux.png"
         }
       },
       "overview": "Ochre & Ivy was created for a school teacher who wanted an online presence that would allow them to share their passion for all things natural and organic. Having previously used Squarespace and Wix, I knew from the beginning that these options would be too costly and restrictive for their needs. And so the site is fully custom, written in TypeScript without a framework, with an in-built CMS system and a user-friendly admin panel.",
@@ -86,7 +191,7 @@
     }
   },
   {
-    "id": 2,
+    "id": 3,
     "slug": "galactic-asteroid-miner",
     "class": "gam",
     "content": {
@@ -158,7 +263,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 4,
     "slug": "the-lipstick-hippy",
     "class": "lipstick",
     "content": {
@@ -215,7 +320,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 5,
     "slug": "portfolio",
     "class": "portfolio",
     "content": {
@@ -246,10 +351,6 @@
         "sass": {
           "label": "Sass",
           "url": "/images/svg/sass.png"
-        },
-        "linux": {
-          "label": "Linux",
-          "url": "/images/svg/linux.png"
         }
       },
       "overview": "Wanting to branch out and learn new frameworks and technologies, I picked a rather overkill stack for a simple portfolio site. Having previously used Vite tooling in a production build, I was naturally drawn to the Vue ecosystem. Nuxt3 provides something unique that Vue3 alone doesn't, and that's being able to mix elements of both SSR and SPA to maximise SEO and performance. This would be handy if I ever decided to add a blog in the future.",
