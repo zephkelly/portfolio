@@ -58,52 +58,52 @@
         {
           "label": "Branch Dekstop",
           "type": "desktop",
-          "url": "/images/covers/upbranched/branch-desktop.JPG"
+          "url": "/images/covers/upbranched/branch-desktop.webp"
         },
         {
-          "label": "Branch Dekstop - Light",
+          "label": "Branch Dekstop Light",
           "type": "desktop",
-          "url": "/images/covers/upbranched/branch-desktop-light.JPG"
+          "url": "/images/covers/upbranched/branch-desktop-light.webp"
         },
         {
           "label": "Branch Mobile",
           "type": "desktop",
-          "url": "/images/covers/upbranched/branch-mobile.JPG"
+          "url": "/images/covers/upbranched/branch-mobile.webp"
         },
         {
-          "label": "Branch Mobile - Light",
+          "label": "Branch Mobile Light",
           "type": "desktop",
-          "url": "/images/covers/upbranched/branch-mobile-light.JPG"
+          "url": "/images/covers/upbranched/branch-mobile-light.webp"
         },
         {
           "label": "Home Desktop",
           "type": "desktop",
-          "url": "/images/covers/upbranched/home-desktop.JPG"
+          "url": "/images/covers/upbranched/home-desktop.webp"
         },
         {
-          "label": "Home Desktop - Light",
+          "label": "Home Desktop Light",
           "type": "desktop",
-          "url": "/images/covers/upbranched/home-desktop-light.JPG"
+          "url": "/images/covers/upbranched/home-desktop-light.webp"
         },
         {
           "label": "Create Dekstop",
           "type": "dekstop",
-          "url": "/images/covers/upbranched/create-desktop.JPG"
+          "url": "/images/covers/upbranched/create-desktop.webp"
         },
         {
-          "label": "Create Dekstop - Light",
+          "label": "Create Dekstop Light",
           "type": "dekstop",
-          "url": "/images/covers/upbranched/create-desktop-light.JPG"
+          "url": "/images/covers/upbranched/create-desktop-light.webp"
         },
         {
           "label": "Branch Edit Desktop",
           "type": "desktop",
-          "url": "/images/covers/upbranched/branch-edit-desktop.JPG"
+          "url": "/images/covers/upbranched/branch-edit-desktop.webp"
         },
         {
-          "label": "Branch Edit Desktop - Light",
+          "label": "Branch Edit Desktop Light",
           "type": "desktop",
-          "url": "/images/covers/upbranched/branch-edit-desktop-light.JPG"
+          "url": "/images/covers/upbranched/branch-edit-desktop-light.webp"
         }
       ]
     }
@@ -237,27 +237,27 @@
         {
           "label": "Main Menu",
           "type": "desktop",
-          "url": "/images/covers/gam/main-menu.JPG"
+          "url": "/images/covers/gam/main-menu.webp"
         },
         {
           "label": "Red Dwarf",
           "type": "desktop",
-          "url": "/images/covers/gam/red-dwarf.jpg"
+          "url": "/images/covers/gam/red-dwarf.webp"
         },
         {
           "label": "White Dwarf",
           "type": "desktop",
-          "url": "/images/covers/gam/white-dwarf.jpg"
+          "url": "/images/covers/gam/white-dwarf.webp"
         },
         {
           "label": "Shop UI",
           "type": "desktop",
-          "url": "/images/covers/gam/shop-ui.JPG"
+          "url": "/images/covers/gam/shop-ui.webp"
         },
         {
           "label": "Asteroid Field",
           "type": "desktop",
-          "url": "/images/covers/gam/asteroid-field.JPG"
+          "url": "/images/covers/gam/asteroid-field.webp"
         }
       ]
     }
@@ -376,11 +376,11 @@
           "url": "/images/covers/portfolio/desktop-light.webp"
         },
         {
-          "label": "Desktop Dark",
+          "label": "Mobile Dark",
           "url": "/images/covers/portfolio/mobile-dark.webp"
         },
         {
-          "label": "Deskop Light",
+          "label": "Mobile Light",
           "url": "/images/covers/portfolio/mobile-light.webp"
         }
       ]

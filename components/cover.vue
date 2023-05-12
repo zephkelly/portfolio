@@ -1,6 +1,6 @@
 <template>
   <h1 class="title">{{ data.content.title }}</h1>
-  <section class="info-panel">
+  <section class="info-panel" :class="data.class">
     <div class="about">
       <div class="info">
         <p class="label">Type</p>
@@ -120,6 +120,17 @@
         gap: 2rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+      }
+    }
+    &.upbranched {
+      .about {
+        gap: 1rem 1.5rem;
+
+        .github {
+          a {
+            font-size: 0.8rem;
+          }
+        }
       }
     }
 

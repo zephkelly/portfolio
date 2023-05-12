@@ -68,7 +68,7 @@ export default {
           title: "Upbranched",
           class: "upbranched",
           description: "A social media platform built around the idea of branching communities. Created as an alternative to Reddit",
-          image: "/images/upbranched-cover.JPG",
+          image: "/images/upbranched-cover.webp",
           technologies: [ t.nuxt3, t.vue3, t.vite, t.sass, t.ts, t.postgresql],
           type: "Personal",
           cover: "/covers/upbranched",

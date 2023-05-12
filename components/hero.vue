@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <img src="/images/profile.webp" alt="Profil image" title="Well hello there" ref="pfp">
+    <img src="/images/profile.webp" alt="Profile image" title="Why hello there" ref="pfp">
   </div>
   <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
@@ -19,10 +19,16 @@
     overflow: hidden;
 
     img {
+      display: flex;
       user-select: none;
       width: 100%;
+      min-width: 100%;
+      min-height: 100%;
       height: 100%;
+      justify-content: center;
+      align-items: center;
       filter: brightness(0.9);
+      background-color: var(--nav-background-color);
 
       @media (prefers-color-scheme: light){
         filter: brightness(1);

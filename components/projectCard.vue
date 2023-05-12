@@ -102,6 +102,18 @@
       img {
         margin-top: 5.5rem;
       }
+
+      @media (max-width: 400px) {
+        height: 18rem;
+        width: 15.5rem;
+        margin-top: 6rem;
+
+        img {
+          margin-top: 0rem;
+          height: 18rem;
+          width: 15.5rem;
+        }
+      }
     }
 
     .wrapper.ochre {
@@ -144,7 +156,7 @@
       @media (max-width: 400px) {
         height: 16rem;
         width: 15.5rem;
-        margin-top: 5.5rem;
+        margin-top: 6rem;
 
         img {
           margin-top: 0rem;
