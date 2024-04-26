@@ -2,7 +2,7 @@
     <h2>My Education</h2>
     <p class="degree">📚 Bachelor of Computer Science, Software Development Major </p>
     <div class="image">
-        <img src="/images/education-griffith.JPG">
+        <img src="/images/education-griffith.webp">
     </div>
     <p class="location">📍 Griffith University. Gold Coast, Australia</p>
     <p class="info">Ever since I was a child, I have always been fascinated by computers.My dream was to create my own video games, a goal which I have now come to realise after I began my studies of computer programming.</p>
