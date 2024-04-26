@@ -1,6 +1,94 @@
 [
   {
     "id": 1,
+    "slug": "pennyprojects",
+    "class": "pennyprojects",
+    "content": {
+      "title": "Penny Projects",
+      "time": "8 Months",
+      "type": "Client",
+      "github": {
+        "label": "zephkelly/penny-projects",
+        "url": "https://github.com/zephkelly/penny-projects"
+      },
+      "link": {
+        "label": "https://pennyprojects.org",
+        "url": "https://pennyprojects.org"
+      },
+      "technologies": {
+        "nuxt": {
+          "label": "Nuxt3",
+          "url": "/images/svg/nuxt.png"
+        },
+        "vue": {
+          "label": "Vue3",
+          "url": "/images/svg/vue.png"
+        },
+        "vite": {
+          "label": "Vite",
+          "url": "/images/svg/vite.png"
+        },
+        "typescript": {
+          "label": "TypeScript",
+          "url": "/images/svg/typescript.png"
+        },
+        "sass": {
+          "label": "Sass",
+          "url": "/images/svg/sass.png"
+        }
+      },
+      "overview": "Penny Projects is a non-profit organisation that aims to raise funds to make a last impact on the Riverside Secondary Highschool located in Zambia, and the surrounding community.",
+      "design": {
+        "descriptions": {
+          "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+        }
+      },
+      "development": {
+        "descriptions": {
+          "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+        }
+      },
+      "gallery": [
+        {
+          "label": "Desktop landing page",
+          "type": "desktop",
+          "url": "/images/covers/pennyprojects/desktop-hero.webp"
+        },
+        {
+          "label": "Information section",
+          "type": "desktop",
+          "url": "/images/covers/pennyprojects/desktop-approach.JPG"
+        },
+        {
+          "label": "More advanced CSS techniques",
+          "type": "desktop",
+          "url": "/images/covers/pennyprojects/desktop-founder.JPG"
+        },
+        {
+            "label": "Desktop donation modal",
+            "type": "desktop",
+            "url": "/images/covers/pennyprojects/desktop-modal.JPG"
+        },
+        {
+          "label": "Mobile landing page",
+          "type": "mobile",
+          "url": "/images/covers/pennyprojects/mobile-hero.JPG"
+        },
+        {
+          "label": "Mobile donation section",
+          "type": "mobile",
+          "url": "/images/covers/pennyprojects/mobile-donation.JPG"
+        },
+        {
+          "label": "Mobile donation modal",
+          "type": "mobile",
+          "url": "/images/covers/pennyprojects/mobile-modal.JPG"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
     "slug": "upbranched",
     "class": "upbranched",
     "content": {
@@ -12,7 +100,7 @@
         "url": "https://github.com/zephkelly/upbranched"
       },
       "link": {
-        "label": "Under development",
+        "label": "https://upbranched.com",
         "url": "https://upbranched.com"
       },
       "technologies": {
@@ -109,7 +197,7 @@
     }
   },
   {
-    "id": 2,
+    "id": 3,
     "slug": "ochre-and-ivy",
     "class": "ochre",
     "content": {
@@ -191,7 +279,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 4,
     "slug": "galactic-asteroid-miner",
     "class": "gam",
     "content": {
@@ -263,7 +351,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 5,
     "slug": "the-lipstick-hippy",
     "class": "lipstick",
     "content": {
@@ -271,7 +359,7 @@
       "time": "7 Months",
       "type": "Freelance",
       "github": {
-        "label": "Wix 😭"
+        "label": "Wix"
       },
       "link": {
         "label": "lipstickhippy.com (dev link)",
@@ -320,7 +408,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 6,
     "slug": "portfolio",
     "class": "portfolio",
     "content": {

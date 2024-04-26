@@ -13,8 +13,8 @@
 <style lang="scss" scoped>
   .profile {
     user-select: none;
-    width: 124px;
-    height: 124px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     overflow: hidden;
 
@@ -22,9 +22,7 @@
       display: flex;
       user-select: none;
       width: 100%;
-      min-width: 100%;
       min-height: 100%;
-      height: 100%;
       justify-content: center;
       align-items: center;
       filter: brightness(0.9);
@@ -165,26 +163,26 @@ const pfp = ref(null);
 const waveEmoji = ref(null);
 
 export default {
-  setup() {
-    onMounted(() => {
-    const pfpEl = pfp.value;
+//   setup() {
+//     onMounted(() => {
+//     const pfpEl = pfp.value;
 
-    pfpEl.addEventListener('mouseenter', () => {
-      pfpEl.src = '/images/profile_effect.webp';
-    });
+//     pfpEl.addEventListener('mouseenter', () => {
+//       pfpEl.src = '/images/profile_effect.webp';
+//     });
     
-    pfpEl.addEventListener('mouseleave', () => {
-      pfpEl.src = '/images/profile.webp';
-    });
+//     pfpEl.addEventListener('mouseleave', () => {
+//       pfpEl.src = '/images/profile.webp';
+//     });
 
-    waveEmoji.value.addEventListener('click', toggleWaveEmoji);
-    })
+//     waveEmoji.value.addEventListener('click', toggleWaveEmoji);
+//     })
 
-    return {
-      pfp,
-      waveEmoji,
-    }
-  },
+//     return {
+//       pfp,
+//       waveEmoji,
+//     }
+//   },
 }
 
 let isWaving = true;
