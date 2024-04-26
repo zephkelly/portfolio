@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <img src="/images/profile.webp" alt="Profile image" title="Why hello there" ref="pfp">
+    <img src="/images/profile2.webp" alt="Profile image" title="Why hello there" ref="pfp">
   </div>
   <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
   <p>
