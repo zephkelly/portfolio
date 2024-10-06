@@ -9,12 +9,6 @@
   <section class="work">
     <work />
   </section>
-    <section class="education">
-        <education />
-    </section>
-    <section class="skills">
-        <skills />
-    </section>
 </template>
 
 <style lang="scss" scoped>
