@@ -39,7 +39,31 @@
   section.work {
     display: flex;
     flex-direction: column;
-    margin-top: 6rem;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+
+    @media (max-width: 400px) {
+      margin-top: 6rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  section.education {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0rem;
+    margin-bottom: 10rem;
+
+    @media (max-width: 400px) {
+      margin-top: 6rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  section.skills {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0rem;
     margin-bottom: 14rem;
 
     @media (max-width: 400px) {

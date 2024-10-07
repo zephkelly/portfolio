@@ -95,6 +95,27 @@
       }
     }
 
+    .wrapper.pennyprojects {
+        height: 22rem;
+        width: 24rem;
+    
+        img {
+            margin-top: 5.5rem;
+        }
+    
+        @media (max-width: 400px) {
+            height: 18rem;
+            width: 15.5rem;
+            margin-top: 6rem;
+    
+            img {
+            margin-top: 0rem;
+            height: 18rem;
+            width: 15.5rem;
+            }
+        }
+    }
+
     .wrapper.upbranched {
       height: 22rem;
       width: 20rem;

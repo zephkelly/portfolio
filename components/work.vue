@@ -65,6 +65,17 @@ export default {
     return {
       projects: [
         {
+          title: "Penny Projects",
+          class: "pennyprojects",
+          description: "A non-profit organization based in Zambia that helps students and the wider community by providing them with essential supplies and funding",
+          image: "/images/pennyprojects-cover.webp",
+          technologies: [ t.nuxt3, t.vue3, t.vite, t.sass, t.ts, t.postgresql],
+          type: "Client",
+          cover: "/covers/pennyprojects",
+          github: "https://github.com/zephkelly/upbranched",
+          live: "https://upbranched.com"
+        },
+        {
           title: "Upbranched",
           class: "upbranched",
           description: "A social media platform built around the idea of branching communities. Created as an alternative to Reddit",
