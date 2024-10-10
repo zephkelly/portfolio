@@ -1,8 +1,8 @@
 <template>
   <div class="profile">
-    <img src="/images/profile2.webp" alt="Profile image" title="Why hello there" ref="pfp">
+    <img src="/images/profile2.webp" alt="Profile image" ref="pfp">
   </div>
-  <h1>Hi, welcome to my site! <span ref="waveEmoji">👋</span></h1>
+  <h1>Hi, welcome to my site! <span ref="waveEmoji" @click="toggleWaveEmoji()">👋</span></h1>
   <p>
     I'm <a class="name" href="https://www.linkedin.com/in/evan-kelly/">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
     <span class="extra">Currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
@@ -117,7 +117,7 @@
         right: -0.1rem;
         left: -0.1rem;
         bottom: -0.08em;
-        background-color: var(--accent-color);
+        background-color: var(--accent-color-alternate);
         transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
         opacity: 0.6;
         transition: opacity 0.1 ease-out;
@@ -158,32 +158,9 @@
   }
 </style>
 
-<script>
+<script setup>
 const pfp = ref(null);
 const waveEmoji = ref(null);
-
-export default {
-//   setup() {
-//     onMounted(() => {
-//     const pfpEl = pfp.value;
-
-//     pfpEl.addEventListener('mouseenter', () => {
-//       pfpEl.src = '/images/profile_effect.webp';
-//     });
-    
-//     pfpEl.addEventListener('mouseleave', () => {
-//       pfpEl.src = '/images/profile.webp';
-//     });
-
-//     waveEmoji.value.addEventListener('click', toggleWaveEmoji);
-//     })
-
-//     return {
-//       pfp,
-//       waveEmoji,
-//     }
-//   },
-}
 
 let isWaving = true;
 function toggleWaveEmoji() {

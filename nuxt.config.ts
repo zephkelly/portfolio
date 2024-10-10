@@ -18,9 +18,11 @@ export default defineNuxtConfig({
             },
         }],
     ],
-    head: {
-        htmlAttrs: {
-            lang: 'en'
+    app: {
+        head: {
+            htmlAttrs: {
+                lang: 'en',
+            },
         }
     }
 })
