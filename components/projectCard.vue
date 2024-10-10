@@ -5,7 +5,7 @@
       <img v-for="tech in project.technologies" :key="tech.alt" :title="tech.alt" :alt="tech.alt" :src="tech.url" loading="lazy"/>
       </div>
       <div class="wrapper" :class="project.class">
-        <img :src="project.image" loading="lazy"/>
+        <img :src="project.image" :alt="project.imageAlt" loading="lazy"/>
       </div>
     </section>
     <section class="content">
