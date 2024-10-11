@@ -17,9 +17,11 @@
 
   --p-c-unhighlight-light: rgb(40, 42, 45);
 
-  --p-c-accent: #fbca50;
+  --p-c-accent: #cb940a;
 
-  --p-c-accent-light: #bb830a;
+  --p-c-accent-light: #7C4603;
+
+  --p-c-accent-light-alternate: #bb830a;
 }
 
 :root {
@@ -32,6 +34,7 @@
   --text-secondary-color: var(--p-c-unhighlight-dark);
   --text-highlight-color: var(--p-c-highlight);
   --accent-color: var(--p-c-accent);
+  --accent-color-alternate: var(--p-c-accent);
   color-scheme: dark;
 }
 
@@ -43,6 +46,7 @@
     --text-main-color-reverse: var(--p-c-light);
     --text-secondary-color: var(--p-c-unhighlight-light);
     --accent-color: var(--p-c-accent-light);
+    --accent-color-alternate: var(--p-c-accent-light-alternate);
     color-scheme: light;
   }
 }
