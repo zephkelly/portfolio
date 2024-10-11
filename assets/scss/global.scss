@@ -1,0 +1,50 @@
+@import './reset.scss';
+
+@font-face {
+    font-display: auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./../fonts/roboto-500-latin.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./../fonts/roboto-900-latin.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./../fonts/poppins-500-latin.woff2') format('woff2');
+}
+
+:root {
+    --font-family-main: 'Roboto', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    --font-family-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+section.component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0rem 1rem;
+
+    .container {
+        position: relative;
+        max-width: 1000px;
+        width: 100%;
+    }
+}
