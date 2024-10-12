@@ -131,6 +131,7 @@ header {
             display: inline-block;
             color: transparent;
             background-size: 145% 145%;
+            background-clip: text;
             -webkit-text-stroke: 1px transparent;
             -webkit-background-clip: text;
         }
