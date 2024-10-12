@@ -9,32 +9,33 @@
                     </NuxtLink>
                 </div>
                 <div class="menu">
-                    <ul>
+                    <button tabindex="1" @click="toggleMenu()" :class="{ active: menuActive }">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+                    </button>
+                    <ul :class="{ active: menuActive }">
                         <li>
-                            <BButton class="menu-link" variant="flat" to="/">
+                            <BButton class="menu-link" variant="flat" holdable to="/">
                                 Home
                             </BButton>
                         </li>
                         <li>
-                            <BButton class="menu-link" variant="flat" to="/contact">
+                            <BButton class="menu-link" variant="flat" holdable to="/contact">
                                 Contact
                             </BButton>
                         </li>
                         <li>
-                            <BButton class="menu-link" variant="flat" to="/contact">
+                            <BButton class="menu-link" variant="flat" holdable to="/resume">
                                 Resume
                             </BButton>
                         </li>
                     </ul>
                 </div>
                 <div class="socials">
-                    <a href="https://github.com/zephkelly" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile" tabindex="0">
-                        <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z" />
-                        </svg>
+                    <a href="https://github.com/zephkelly" class="github" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/evan-kelly/" target="_blank" rel="noopener noreferrer" aria-label="Connect with me on LinkedIn" tabindex="0">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 50 50">
+                    <a href="https://www.linkedin.com/in/evan-kelly/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="Connect with me on LinkedIn" tabindex="0">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
                             <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
                         </svg>
                     </a>
@@ -45,6 +46,26 @@
 </template>
 
 <script setup lang="ts">
+const menuActive: Ref<boolean> = ref(false);
+
+function debounce(func: any, timeout: any) {
+    let timeoutId: any;
+    return (...args: any) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            func(...args);
+        }, timeout);
+    };
+}
+
+const toggleMenu = debounce(() => {
+    menuActive.value = !menuActive.value;
+    console.log(menuActive.value);
+}, 100);
+
+const route = useRoute();
+const isHome = computed(() => route.path === '/');
+
 definePageMeta({
     layout: 'default',
 })
@@ -75,6 +96,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 50px;
+    order: 1;
 
     a {
         width: 3.2rem;
@@ -90,7 +112,7 @@ header {
         letter-spacing: 0.1em;
         transition: opacity 0.15s ease-out;
         color: var(--background);
-        background-image: linear-gradient(260deg, #ffe203, #fbb346);
+        background-image: linear-gradient(260deg, var(--accent-main), var(--accent-secondary));
         opacity: 0.9;
         background-clip: text;
         background-size: 150% 100%;
@@ -105,7 +127,7 @@ header {
         }
 
         span.fill {
-            font-size: 2.05rem;
+            font-size: 2.04rem;
             display: inline-block;
             color: transparent;
             background-size: 145% 145%;
@@ -125,6 +147,33 @@ header {
 }
 
 .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    height: 44px;
+
+    button {
+        background-color: transparent;
+        border: none;
+        height: 100%;
+        width: 44px;
+        padding: 0;
+        display: none;
+        cursor: pointer;
+        border-radius: 6px;
+
+        svg {
+            width: 36px;
+            height: 36px;
+            fill: var(--foreground);
+        }
+
+        &.active {
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+    }
+
     ul {
         display: flex;
         flex-direction: row;
@@ -133,7 +182,7 @@ header {
 
     .menu-link {
         width: 82px;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         font-weight: 500;
         font-size: 1rem;
     }
@@ -145,14 +194,15 @@ header {
     align-items: center;
     gap: 1.5rem;
     height: 100%;
+    order: 3;
 
     a {
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        height: 26px;
-        width: 26px;
+        height: 28px;
+        width: 28px;
         border-radius: 6px;
 
         &:focus {
@@ -162,6 +212,10 @@ header {
         &:focus-visible {
             outline: 2px solid var(--foreground);
             box-shadow: 0 0 0 5px var(--background); 
+        }
+
+        &.linkedin {
+            transform: scale(1.05);
         }
     }
 
@@ -174,13 +228,102 @@ header {
         &:hover {
             opacity: 1;
         }
+    }
 
-        &.github {
+    @media (prefers-color-scheme: light) {
+        svg {
             opacity: 0.9;
-      
+        }
+    }
+}
+
+:root[data-color-scheme="light"] {
+    .socials svg {
+        opacity: 0.9;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        order: 2;
+    }
+
+    .menu {
+        width: 44px;
+        order: 1;
+
+        button {
+            display: block;
+            background-color: transparent;
+
             &:hover {
-                opacity: 1;
+                background-color: var(--background-hover);
             }
+
+            &.active {
+                background-color: var(--menu-mobile-background);
+            }
+        }
+
+        ul {
+            flex-direction: column;
+            position: absolute;
+            top: 76px;
+            left: 0rem;
+            right: 0rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(26px);
+            background-color: var(--menu-mobile-background);
+            max-width: 500px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+
+            li {
+                border-radius: 6px;
+                width: 100%;
+
+                a.menu-link {
+                    box-sizing: border-box;
+                    height: 64px;
+                    width: 100%;
+                    transition: border-color 0.1s ease, background-color 0.1s ease, box-shadow 0.1s ease;
+
+                    &:hover {
+                        background-color: var(--background-active);
+                        border-color: var(--background-active);
+                    }
+
+                    &.breeze-button--active {
+                        background-color: var(--background-active-secondary);
+                        border-color: var(--background-active-secondary);
+                    }
+                }
+            }
+
+            &.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+
+    .socials {
+        width: 44px;
+
+        a {
+            width: 44px;
+            height: 44px;
+
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        a.linkedin {
+            display: none;
         }
     }
 }
