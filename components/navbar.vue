@@ -15,8 +15,16 @@
                         </NuxtLink>
                     </div>
                     <div class="menu">
-                        <button tabindex="1" @click="toggleMenu()" :class="{ active: menuActive }">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+                        <button 
+                            tabindex="0" 
+                            @click="toggleMenu()" 
+                            :class="{ active: menuActive }"
+                            aria-label="Toggle navigation menu"
+                            :aria-expanded="menuActive"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" width="48" height="48" aria-hidden="true" focusable="false">
+                                <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                            </svg>
                         </button>
                         <ul :class="{ active: menuActive }">
                             <li v-if="isHome === false">
@@ -164,10 +172,12 @@ section {
     z-index: 100;
 
     &.component {
-        transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        will-change: transform, opacity;
 
         &.nav-hidden {
             transform: translateY(-100%);
+            opacity: 0;
         }
     }
 }
@@ -308,7 +318,7 @@ header {
         }
 
         &.linkedin {
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
 
         &:hover {
