@@ -29,6 +29,10 @@
     --font-family-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
+html {
+    scrollbar-width: thin;
+}
+
 body {
     background-color: var(--background);
     text-rendering: optimizeLegibility;

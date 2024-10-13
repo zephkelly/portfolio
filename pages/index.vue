@@ -19,4 +19,10 @@ const { applySystemColorScheme } = useColorScheme()
 h1 {
     margin-top: 8rem;
 }
+
+.component {
+    min-height: 200vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 </style>

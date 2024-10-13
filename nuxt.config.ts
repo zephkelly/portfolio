@@ -12,4 +12,14 @@ export default defineNuxtConfig({
     },
 
     css: ['~/assets/scss/global.scss'],
+
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    api: 'modern-compiler',
+                },
+            },
+        },
+    },
 })
