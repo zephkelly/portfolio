@@ -204,12 +204,12 @@ header {
         width: 3.2rem;
         display: flex;
         justify-content: center;
-        gap: 0.1rem;
+        gap: 0.05rem;
         align-items: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto';
         font-weight: 900;
         font-size: 1.8rem;
-        font-style: italic;
+        font-style: normal;
         text-decoration: none;
         letter-spacing: 0.1em;
         transition: opacity 0.15s ease-out;
@@ -229,7 +229,7 @@ header {
         }
 
         span.fill {
-            font-size: 2.04rem;
+            font-size: 2rem;
             display: inline-block;
             color: transparent;
             background-size: 145% 145%;
@@ -257,18 +257,20 @@ header {
     height: 44px;
     
     button {
+        display: none;
         background-color: transparent;
         border: none;
         height: 100%;
         width: 44px;
         padding: 0;
-        display: none;
         cursor: pointer;
         border-radius: 6px;
+        align-items: center;
+        justify-content: center;
         
         svg {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             fill: var(--foreground);
         }
         
@@ -355,19 +357,16 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
-    transition: opacity 0.3s ease;
     z-index: 99;
 }
 
 .overlay-active {
-    opacity: 0.8;
     cursor: default;
     pointer-events: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .logo {
         order: 2;
     }
@@ -377,7 +376,7 @@ header {
         order: 1;
 
         button {
-            display: block;
+            display: flex;
             background-color: transparent;
 
             &:hover {
@@ -441,8 +440,8 @@ header {
             height: 44px;
 
             svg {
-                width: 32px;
-                height: 32px;
+                width: 28px;
+                height: 28px;
             }
         }
 

@@ -1,0 +1,72 @@
+[
+    {
+        "id": "ts",
+        "label": "Typescript",
+        "logoUrl": "/images/svg/typescript.png"
+    },
+    {
+        "id": "vite",
+        "label": "Vite",
+        "logoUrl": "/images/svg/vite.png"
+    },
+    {
+        "id": "css",
+        "label": "CSS3",
+        "logoUrl": "/images/svg/css3.png"
+    },
+    {
+        "id": "sass",
+        "label": "Sass",
+        "logoUrl": "/images/svg/sass.png"
+    },
+    {
+        "id": "vue3",
+        "label": "Vue3",
+        "logoUrl": "/images/svg/vue.png"
+    },
+    {
+        "id": "nuxt3",
+        "label": "Nuxt3",
+        "logoUrl": "/images/svg/nuxt.png"
+    },
+    {
+        "id": "express",
+        "label": "Express",
+        "logoUrl": "/images/svg/express.png"
+    },
+    {
+        "id": "mongodb",
+        "label": "MongoDB",
+        "logoUrl": "/images/svg/mongodb.png"
+    },
+    {
+        "id": "unity",
+        "label": "Unity3D",
+        "logoUrl": "/images/svg/unity3d.png"
+    },
+    {
+        "id": "csharp",
+        "label": "C#",
+        "logoUrl": "/images/svg/csharp.png"
+    },
+    {
+        "id": "dotnet",
+        "label": ".NET 2.1",
+        "logoUrl": "/images/svg/dotnet2-1.png"
+    },
+    {
+        "id": "nginx",
+        "label": "Nginx",
+        "logoUrl": "/images/svg/nginx.png"
+    },
+    {
+        "id": "wix",
+        "label": "Wix",
+        "logoUrl": "/images/svg/wix.png"
+    },
+    {
+        "id": "postgresql",
+        "label": "PostgreSQL",
+        "logoUrl": "/images/svg/postgresql.png"
+    }
+]

@@ -9,19 +9,19 @@
 }
 
 @font-face {
-    font-display: swap;
+    font-display: auto;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
-    src: url('./../fonts/roboto-900-latin.woff2') format('woff2');
+    src: url('./../fonts/roboto-900-i-latin.woff2') format('woff2');
 }
 
 @font-face {
     font-display: auto;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
-    src: url('./../fonts/poppins-500-latin.woff2') format('woff2');
+    font-weight: 700;
+    src: url('./../fonts/poppins-700-latin.woff2') format('woff2');
 }
 
 :root {
@@ -49,7 +49,7 @@ section.component {
 
     .container {
         position: relative;
-        max-width: 1000px;
+        max-width: calc(1000px - 1rem);
         width: 100%;
     }
 }
