@@ -50,6 +50,10 @@ section.work-card {
         border-color: var(--border-color-hover);
 
         .cover {
+            :deep(.technology-icon svg) {
+                fill: var(--text-foreground);
+            }
+
             .wrapper {
                 img {
                     border-color: var(--border-color-hover);
@@ -79,9 +83,10 @@ section.cover {
     .technologies {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         gap: 2%;
         margin-bottom: 2rem;
-        height: 24px;
+        height: 20px;
     }
 
     .wrapper {

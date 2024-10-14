@@ -1,29 +1,23 @@
 [
     {
         "id": 1,
-        "slug": "pennyprojects",
+        "slug": "work/pennyprojects",
         "title": "Penny Projects",
         "type": "client",
         "githubLink": "https://github.com/zephkelly/penny-projects",
         "githubLabel": "zephkelly/penny-projects",
         "link": "https://pennyprojects.org",
-        "linkLabel": "https://pennyprojects.org",
+        "linkLabel": "pennyprojects.org",
         "overview": "Penny Projects is a non-profit organisation that aims to raise funds to make a last impact on the Riverside Secondary Highschool located in Zambia, and the surrounding community.",
         "coverImageUrl": "images/works/pennyprojects/penny-projects-cover.webp",
         "coverImageAlt": "Penny Projects desktop hero section",
         "technologies": {
             "ts": "ts",
-            "nuxt3": "nuxt3",
             "vue3": "vue3",
-            "scss": "scss",
+            "nuxt3": "nuxt3",
+            "sass": "sass",
             "nginx": "nginx",
-            "pm2": "pm2",
-            "postgresql": "postgresql",
-            "express": "express",
-            "wix": "wix",
-            "css": "css",
-            "csharp": "csharp",
-            "unity3d": "unity3d"
+            "postgresql": "postgresql"
         },
         "descriptionSections": {
             "design": {
@@ -44,29 +38,23 @@
     },
     {
         "id": 2,
-        "slug": "pennyprojects",
-        "title": "Penny Projects Is The Name Of THis Work BRuh",
-        "type": "client",
-        "githubLink": "https://github.com/zephkelly/penny-projects",
-        "githubLabel": "zephkelly/penny-projects",
-        "link": "https://pennyprojects.org",
-        "linkLabel": "https://pennyprojects.org",
-        "overview": "Penny Projects is a non-profit organisation that aims to raise funds to make a last impact on the Riverside Secondary Highschool located in Zambia, and the surrounding community.",
-        "coverImageUrl": "images/works/pennyprojects/penny-projects-cover.webp",
+        "slug": "work/upbranched",
+        "title": "UpBranched",
+        "type": "personal",
+        "githubLink": "https://github.com/zephkelly/upbranched",
+        "githubLabel": "zephkelly/upbranched",
+        "link": "https://upbranched.com",
+        "linkLabel": "upbranched.com",
+        "overview": "Upbranched is a lightweight social media platform built for independant communities. It allows users to create and join 'branches' which are collections of user-moderated groups.",
+        "coverImageUrl": "images/works/upbranched/upbranched-cover.webp",
         "coverImageAlt": "Penny Projects desktop hero section",
         "technologies": {
             "ts": "ts",
             "nuxt3": "nuxt3",
             "vue3": "vue3",
-            "scss": "scss",
+            "sass": "sass",
             "nginx": "nginx",
-            "pm2": "pm2",
-            "postgresql": "postgresql",
-            "express": "express",
-            "wix": "wix",
-            "css": "css",
-            "csharp": "csharp",
-            "unity3d": "unity3d"
+            "postgresql": "postgresql"
         },
         "descriptionSections": {
             "design": {
