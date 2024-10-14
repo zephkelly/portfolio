@@ -217,8 +217,27 @@ header {
         background-clip: text;
         background-size: 150% 100%;
         -webkit-text-stroke: 4px transparent;
+        user-select: none;
         cursor: pointer;
         border-radius: 6px;
+
+        @media (prefers-color-scheme: light) {
+            gap: 0.15rem;
+            -webkit-text-stroke: 8px transparent;
+
+            .outline {
+                font-size: 1.42rem;
+            }
+        }
+
+        :root[data-color-scheme="light"] & {
+            gap: 0.15rem;
+            -webkit-text-stroke: 8px transparent;
+
+            .outline {
+                font-size: 1.42rem;
+            }
+        }
 
         span {
             position: relative;
@@ -330,6 +349,12 @@ header {
                 opacity: 0.9;
             }
         }
+
+        :root[data-color-scheme="light"] & {
+            &:hover {
+                opacity: 0.9;
+            }
+        }
     }
 
     svg {
@@ -337,14 +362,6 @@ header {
         height: 100%;
         fill: var(--foreground);
 
-    }
-}
-
-:root[data-color-scheme="light"] {
-    .socials a {
-        &:hover {
-            opacity: 0.9;
-        }
     }
 }
 
@@ -364,6 +381,7 @@ header {
     pointer-events: none;
 }
 
+//Mobile menu
 @media (max-width: 1000px) {
     .logo {
         order: 2;

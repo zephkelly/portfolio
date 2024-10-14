@@ -1,9 +1,11 @@
 <template>
     <hero class="hero" />
     <work class="work" />
+    <BButton @click="applySystemColorScheme" class="color-scheme-button">Apply system color scheme</BButton>
 </template>
 
 <script setup lang="ts">
+const { applySystemColorScheme } = useColorScheme();
 </script>
 
 <style lang="scss" scoped>

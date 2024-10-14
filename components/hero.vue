@@ -1,7 +1,7 @@
 <template>
     <section class="component">
         <div class="container">
-            <img src="~/assets/images/profile.webp" />
+            <img src="~/assets/images/profile.webp" alt="Evan Kelly, creator of this portfolio!"/>
             <h1>Hi, welcome to my site! <span data-v-1baf8294="">👋</span></h1>
             <p>
                 I'm <a class="name" href="https://www.linkedin.com/in/evan-kelly/">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
@@ -40,6 +40,10 @@ p {
     }
 
     @media (prefers-color-scheme: light) {
+        opacity: 0.9;
+    }
+
+    :root[data-color-scheme="light"] & {
         opacity: 0.9;
     }
 

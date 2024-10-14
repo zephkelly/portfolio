@@ -19,7 +19,7 @@
                 <p class="overview">{{ workCard.overview }}</p>
             </div>
             <div class="link">
-                <NuxtLink :to="workCard.slug">Read the story</NuxtLink>
+                <p>Read the story</p>
             </div>
         </section>
     </section>
@@ -41,7 +41,7 @@ const technologies: Technology[] = getTechnologies(props.workCard);
 
 <style lang="scss" scoped>
 section.work-card {
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: border-color 0.2s ease;
     overflow: hidden;
@@ -103,6 +103,14 @@ section.cover {
             will-change: filter;
             border-bottom: none;
             filter: grayscale(100%);
+
+            @media (prefers-color-scheme: light) {
+                box-shadow: 0 18px 20px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            :root[data-color-scheme="light"] & {
+                box-shadow: 0 18px 20px 0 rgba(0, 0, 0, 0.2);
+            }
         }
     }
 }
@@ -117,6 +125,8 @@ section.content {
     padding: 1rem;
     padding-top: 1.5rem;
     height: stretch;
+    height: 250px;
+    box-sizing: border-box;
 
     .wrapper.title {
         display: flex;
@@ -128,19 +138,48 @@ section.content {
     .work-title {
         font-family: var(--font-family-secondary);
         font-size: 1.3rem;
-        margin-right: 1rem;
+        margin-right: 2rem;
     }
 
     .type-label {
+        &.client {
+            background-color: var(--green-100);
+            border: 1px solid var(--green-200-invert);
+            color: var(--green-200-invert);
+            padding: 0.3rem 0.5rem;
+            border-radius: 6px;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: var(--green-300);
+                border: 1px solid var(--green-100-invert);
+                color: var(--green-100-invert);
+            }
+
+            :root[data-color-scheme="dark"] & {
+                background-color: var(--green-300);
+                border: 1px solid var(--green-100-invert);
+                color: var(--green-100-invert);
+            }
+        }
+
         p {
             text-transform: capitalize;
         }
     }
 
     .overview {
-        color: var(--text-foreground-secondary);
-        font-size: 1rem;
+        font-family: arial, sans-serif, var(--font-system);
+        font-size: 1.2rem;
+        font-weight: 400;
         line-height: 1.4rem;
+        color: var(--text-foreground-secondary);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .link {
+        font-size: 1.2rem;
+        color: var(--accent-accessible);
     }
 }
 </style>
