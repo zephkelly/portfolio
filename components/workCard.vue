@@ -129,10 +129,6 @@ section.content {
         font-family: var(--font-family-secondary);
         font-size: 1.3rem;
         margin-right: 1rem;
-        
-        h3 {
-        }
-
     }
 
     .type-label {
