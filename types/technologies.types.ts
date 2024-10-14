@@ -4,6 +4,6 @@ export type TechnologiesLabel = 'Typescript' | 'Css' | 'Scss' | 'Vue 3' | 'Nuxt 
 export type Technology = {
     id: TechnologiesId;
     label: TechnologiesLabel;
-    logoUrl: string;
+    logoSvg: string;
     // logoAlt: string;
 };

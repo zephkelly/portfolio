@@ -3,13 +3,56 @@
         "id": 1,
         "slug": "pennyprojects",
         "title": "Penny Projects",
-        "type": "Client",
+        "type": "client",
         "githubLink": "https://github.com/zephkelly/penny-projects",
         "githubLabel": "zephkelly/penny-projects",
         "link": "https://pennyprojects.org",
         "linkLabel": "https://pennyprojects.org",
         "overview": "Penny Projects is a non-profit organisation that aims to raise funds to make a last impact on the Riverside Secondary Highschool located in Zambia, and the surrounding community.",
-        "coverImageUrl": "assets/images/works/pennyprojects/cover.webp",
+        "coverImageUrl": "images/works/pennyprojects/penny-projects-cover.webp",
+        "coverImageAlt": "Penny Projects desktop hero section",
+        "technologies": {
+            "ts": "ts",
+            "nuxt3": "nuxt3",
+            "vue3": "vue3",
+            "scss": "scss",
+            "nginx": "nginx",
+            "pm2": "pm2",
+            "postgresql": "postgresql",
+            "express": "express",
+            "wix": "wix",
+            "css": "css",
+            "csharp": "csharp",
+            "unity3d": "unity3d"
+        },
+        "descriptionSections": {
+            "design": {
+                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+            },
+            "development": {
+                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+            }
+        },
+        "imageGallery": {
+            "Home Desktop": {
+                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
+                "imageAlt": "Penny Projects desktop hero section",
+                "imageLabel": "Penny Projects desktop hero section",
+                "imageType": "desktop"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "slug": "pennyprojects",
+        "title": "Penny Projects Is The Name Of THis Work BRuh",
+        "type": "client",
+        "githubLink": "https://github.com/zephkelly/penny-projects",
+        "githubLabel": "zephkelly/penny-projects",
+        "link": "https://pennyprojects.org",
+        "linkLabel": "https://pennyprojects.org",
+        "overview": "Penny Projects is a non-profit organisation that aims to raise funds to make a last impact on the Riverside Secondary Highschool located in Zambia, and the surrounding community.",
+        "coverImageUrl": "images/works/pennyprojects/penny-projects-cover.webp",
         "coverImageAlt": "Penny Projects desktop hero section",
         "technologies": {
             "ts": "ts",

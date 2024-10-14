@@ -2,71 +2,71 @@
     {
         "id": "ts",
         "label": "Typescript",
-        "logoUrl": "/images/svg/typescript.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "vite",
         "label": "Vite",
-        "logoUrl": "/images/svg/vite.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "css",
         "label": "CSS3",
-        "logoUrl": "/images/svg/css3.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "sass",
         "label": "Sass",
-        "logoUrl": "/images/svg/sass.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "vue3",
         "label": "Vue3",
-        "logoUrl": "/images/svg/vue.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "nuxt3",
         "label": "Nuxt3",
-        "logoUrl": "/images/svg/nuxt.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "express",
         "label": "Express",
-        "logoUrl": "/images/svg/express.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "mongodb",
         "label": "MongoDB",
-        "logoUrl": "/images/svg/mongodb.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "unity",
         "label": "Unity3D",
-        "logoUrl": "/images/svg/unity3d.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "csharp",
         "label": "C#",
-        "logoUrl": "/images/svg/csharp.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "dotnet",
         "label": ".NET 2.1",
-        "logoUrl": "/images/svg/dotnet2-1.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "nginx",
         "label": "Nginx",
-        "logoUrl": "/images/svg/nginx.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "wix",
         "label": "Wix",
-        "logoUrl": "/images/svg/wix.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     },
     {
         "id": "postgresql",
         "label": "PostgreSQL",
-        "logoUrl": "/images/svg/postgresql.png"
+        "logoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 96 960 960\" width=\"48\" height=\"48\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z\"/></svg>"
     }
 ]

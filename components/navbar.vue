@@ -22,9 +22,7 @@
                             aria-label="Toggle navigation menu"
                             :aria-expanded="menuActive"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" width="48" height="48" aria-hidden="true" focusable="false">
-                                <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" width="48" height="48" aria-hidden="true" focusable="false"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
                         </button>
                         <ul :class="{ active: menuActive }">
                             <li v-if="isHome === false">

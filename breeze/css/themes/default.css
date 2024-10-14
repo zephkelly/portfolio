@@ -5,6 +5,7 @@
     --foreground-hover-dark: #c5c5c5;
     --foreground-active-dark: #959595;
 
+    --background-darker-dark: #151518;
     --background-dark: #1c1c20;
     --background-dark-translucent: #1c1c20e1;
     --background-hover-dark: #2a2a2e;
@@ -24,6 +25,9 @@
 
     --accent-main-dark: #ffe203;
     --accent-secondary-dark: #fbb346;
+
+    --border-color-dark: #3a3a3a;
+    --border-color-hover-dark: #5f5f5f;
 }
 
 /* Light Scheme */
@@ -33,6 +37,7 @@
     --foreground-hover-light: #242427;
     --foreground-active-light: #2c2c2f;
 
+    --background-darker-light: #f5f5f5;
     --background-light: #fafafa;
     --background-light-translucent: #fafafad7;
     --background-hover-light: #e9e9e9;
@@ -52,7 +57,11 @@
 
     --accent-main-light: #ffd000;
     --accent-secondary-light: #ff9d1e;
+
+    --border-color-light: #e0e0e0;
+    --border-color-hover-light: #d2d2d2;
     
+    --background-darker: var(--background-darker-light);
     --background-active-secondary: var(--background-active-secondary-light);
     --background-translucent: var(--background-light-translucent);
     --menu-mobile-background: var(--menu-mobile-background-light);
@@ -61,6 +70,9 @@
     --accent-secondary: var(--accent-secondary-light);
 
     --text-foreground-secondary: var(--text-foreground-secondary-light);
+
+    --border-color: var(--border-color-light);
+    --border-color-hover: var(--border-color-hover-light);
 }
 
 /* Common */
@@ -94,6 +106,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --background-darker: var(--background-darker-dark);
         --background-active-secondary: var(--background-active-secondary-dark);
         --background-translucent: var(--background-dark-translucent);
         --menu-mobile-background: var(--menu-mobile-background-dark);
@@ -102,10 +115,14 @@
         --accent-secondary: var(--accent-secondary-dark);
 
         --text-foreground-secondary: var(--text-foreground-secondary-dark);
+
+        --border-color: var(--border-color-dark);
+        --border-color-hover: var(--border-color-hover-dark);
     }
 }
 
 :root[data-color-scheme="dark"] {
+    --background-darker: var(--background-darker-dark);
     --background-active-secondary: var(--background-active-secondary-dark);
     --background-translucent: var(--background-dark-translucent);
     --menu-mobile-background: var(--menu-mobile-background-dark);
@@ -114,6 +131,9 @@
     --accent-secondary: var(--accent-secondary-dark);
 
     --text-foreground-secondary: var(--text-foreground-secondary-dark);
+
+    --border-color: var(--border-color-dark);
+    --border-color-hover: var(--border-color-hover-dark);
 }
 
 body {
