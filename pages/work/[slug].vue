@@ -15,18 +15,26 @@
             <h1 class="title">{{ work?.title }}</h1>
             <section class="info-panel">
                 <div class="fields-container">
-                    <div class="misc-fields">
-                        <div class="field type">
-                            <p class="label">Type</p>
-                            <p class="value type">{{ work?.type }}</p>
+                    <div class="wrapper">
+                        <div class="misc-fields">
+                            <div class="field type">
+                                <p class="label">Type</p>
+                                <p class="value type">{{ work?.type }}</p>
+                            </div>
+                            <div class="field" v-if="work?.githubLabel !== ''">
+                                <p class="label">GitHub</p>
+                                <a class="value github-link" aria-label="Navigate to the source code on GitHub" tabindex="0" :href="work?.githubLink">{{  work?.githubLabel }}</a>
+                            </div>
+                            <div class="field">
+                                <p class="label">Live</p>
+                                <a class="value live-link" target="_blank" aria-label="Navigate to the live website" tabindex="0" :href="work?.link">{{  work?.linkLabel }}</a>
+                            </div>
                         </div>
-                        <div class="field" v-if="work?.githubLabel !== ''">
-                            <p class="label">GitHub</p>
-                            <a class="value github-link" aria-label="Navigate to the source code on GitHub" tabindex="0" :href="work?.githubLink">{{  work?.githubLabel }}</a>
-                        </div>
-                        <div class="field">
-                            <p class="label">Live</p>
-                            <a class="value live-link" target="_blank" aria-label="Navigate to the live website" tabindex="0" :href="work?.link">{{  work?.linkLabel }}</a>
+                        <div class="overview-container">
+                            <div class="field">
+                                <p class="label">Overview</p>
+                                <p class="value">{{ work?.overview }}</p>
+                            </div>
                         </div>
                     </div>
                     <div class="tech-fields">
@@ -39,12 +47,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="overview-container">
-                    <div class="field">
-                        <p class="label">Overview</p>
-                        <p class="value">{{ work?.overview }}</p>
                     </div>
                 </div>
             </section>
@@ -146,6 +148,12 @@ h1.title {
         display: flex;
         flex-direction: column;
         gap: 3rem;
+
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+        }
     }
     
     .misc-fields {
@@ -169,17 +177,51 @@ h1.title {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 0.5rem;
+                gap: 0rem;
                 width: 60px;
 
-                .technology-icon {
-                    width: 30px;
-                    height: 30px;
-                }
-                
-                :global(.technology-icon svg) {
-                    width: 30px;
-                    height: 30px;
+                :deep(.technology-icon) {
+                    width: auto;
+                    height: 44px;
+                    margin: 0;
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    &.css {
+                        svg {
+                            width: 36px;
+                            height: 36px;
+                            margin-top: -3px;
+                        }
+
+                    }
+
+                    &.vue3 {
+                        svg {
+                            width: 38px;
+                            height: 38px;
+                            margin-top: -6px;
+                        }
+                    }
+
+                    &.nuxt3 {
+                        svg {
+                            width: 44px;
+                            height: 44px;
+                            margin-top: -7px;
+                        }
+                    }
+
+                    &.sass {
+                        svg {
+                            width: 44px;
+                            height: 44px;
+                            margin-top: -8px;
+                        }
+                    }
                 }
             }
 
@@ -247,21 +289,28 @@ h1.title {
     @media (max-width: 800px) {
         flex-direction: column;
 
-        .overview-container {
-            max-width: 100%;
-            order: 1;
-        }
-
         .fields-container {
-            order: 2;
-            gap: 2rem;
+            .wrapper {
+                flex-direction: column;
+                gap: 3rem;
 
-            .misc-fields {
-                justify-content: space-between;
-                // &:nth-child(n+3) {
-                // }
+                .overview-container {
+                    max-width: 100%;
+                    order: 1;
+                }
+
+                .misc-fields {
+                    order: 2;
+                    gap: 2rem;
+
+                    .misc-fields {
+                        justify-content: space-between;
+                    }
+                }
             }
         }
+
+        
 
     }
 
@@ -280,6 +329,10 @@ h1.title {
             .tech-container {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                justify-items: center;
             }
         }
     }
