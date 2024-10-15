@@ -33,7 +33,10 @@
                         <div class="field">
                             <p class="label">Tech Stack</p>
                             <div class="tech-container">
-                                <p v-for="tech in technologies" class="label">{{ tech?.label }}</p>
+                                <div v-for="tech in technologies" class="tech-field">
+                                    <TechnologyIcon  :key="tech?.label" :technology="tech" />
+                                    <p class="label">{{ tech?.label }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,14 +155,39 @@ h1.title {
     }
 
     .tech-fields {
+        .field {
+            gap: 1rem;
+        }
+
         .tech-container {
             display: flex;
             flex-direction: row;
             gap: 1rem 2rem;
             flex-wrap: wrap;
 
+            .tech-field {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+                width: 60px;
+
+                .technology-icon {
+                    width: 30px;
+                    height: 30px;
+                }
+                
+                :global(.technology-icon svg) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
             .label {
+                font-family: arial, var(--font-system);
                 color: var(--text-foreground);
+                font-size: 0.8rem;
+                font-weight: 600;
             }
         }
     }
@@ -201,6 +229,7 @@ h1.title {
     }
 
     .overview-container {
+        max-width: 400px;
         p.value {
             font-weight: 400;
             line-height: 20px;
@@ -219,6 +248,7 @@ h1.title {
         flex-direction: column;
 
         .overview-container {
+            max-width: 100%;
             order: 1;
         }
 
@@ -227,9 +257,9 @@ h1.title {
             gap: 2rem;
 
             .misc-fields {
-                &:nth-child(n+3) {
-                    justify-content: space-between;
-                }
+                justify-content: space-between;
+                // &:nth-child(n+3) {
+                // }
             }
         }
 
@@ -243,6 +273,13 @@ h1.title {
         .field {
             &.type {
                 display: none;
+            }
+        }
+
+        .tech-fields {
+            .tech-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
             }
         }
     }
