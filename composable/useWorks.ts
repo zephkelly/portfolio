@@ -25,7 +25,9 @@ export function useWorks() {
         return works.value.find(work => work.slug === slug);
     }
 
-    const getTechnologies = (work: WorkCard) => {
+    const getTechnologies = (work: WorkCard | Work) => {
+        if (!work.technologies) return [];
+
         const techObject = toRaw(work.technologies);
         const techIds = Object.keys(techObject) as TechnologiesId[];
 
