@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "slug": "work/pennyprojects",
+        "slug": "pennyprojects",
         "title": "Penny Projects",
         "type": "client",
         "githubLink": "https://github.com/zephkelly/penny-projects",
         "githubLabel": "zephkelly/penny-projects",
         "link": "https://pennyprojects.org",
         "linkLabel": "pennyprojects.org",
-        "overview": "A non-profit organisation that aims to raise funds to make a last impact on the Riverside Secondary Highschool located in Zambia, and the surrounding community.",
+        "overview": "A non-profit organisation located in Zambia, Africa, that raises funds for humanitarian work in the local community.",
         "coverImageUrl": "images/works/pennyprojects/penny-projects-cover.webp",
         "coverImageAlt": "People gathering water at a well with organization logo",
         "technologies": {
@@ -38,14 +38,14 @@
     },
     {
         "id": 2,
-        "slug": "work/upbranched",
+        "slug": "upbranched",
         "title": "UpBranched",
         "type": "personal",
         "githubLink": "https://github.com/zephkelly/upbranched",
         "githubLabel": "zephkelly/upbranched",
         "link": "https://upbranched.com",
         "linkLabel": "upbranched.com",
-        "overview": "A lightweight social media platform built for independent communities. It allows users to create and join 'branches' which are collections of user-moderated groups.",
+        "overview": "A lightweight social media platform built for independent communities, allowing users to create and join 'branches' which are collections of user-moderated groups.",
         "coverImageUrl": "images/works/upbranched/upbranched-cover.webp",
         "coverImageAlt": "User posts on UpBranched platform homepage",
         "technologies": {
@@ -75,14 +75,14 @@
     },
     {
         "id": 3,
-        "slug": "work/paincoach",
+        "slug": "paincoach",
         "title": "Pain Coach",
         "type": "client",
         "githubLink": "https://github.com/zephkelly/paincoach",
         "githubLabel": "zephkelly/paincoach",
         "link": "https://paincoach.online",
         "linkLabel": "paincoach.online",
-        "overview": "A pain and lifestyle tracking app for post-operative patients that allows users to log their pain levels, activities, and other lifestyle factors to help them improve their quality of life.",
+        "overview": "A pain and lifestyle tracking app for post-operative patients that allows users to log their pain levels, activities, and other lifestyle factors to help reduce their overall pain.",
         "coverImageUrl": "images/works/paincoach/paincoach-cover.webp",
         "coverImageAlt": "Pain Coach app dashboard with tracking metrics",
         "technologies": {
@@ -112,7 +112,7 @@
     },
     {
         "id": 4,
-        "slug": "work/galactic-asteroid-miner",
+        "slug": "galactic-asteroid-miner",
         "title": "Galactic Asteroid Miner",
         "type": "personal",
         "githubLink": "https://github.com/zephkelly/galactic-asteroid-miner",
@@ -145,14 +145,14 @@
     },
     {
         "id": 5,
-        "slug": "work/ochre-and-ivy",
+        "slug": "ochre-and-ivy",
         "title": "Ochre & Ivy",
         "type": "client",
         "githubLink": "https://github.com/zephkelly/ochre-ivy",
         "githubLabel": "zephkelly/ochre-ivy",
         "link": "https://ochreivy.com",
         "linkLabel": "ochreivy.com",
-        "overview": "A vanilla blogging platform with a custom CMS created for a school teacher who wanted to share their passion for all things natural and organic.",
+        "overview": "A vanilla blogging platform with a custom CMS created for a school teacher wanting to share their passion for all things natural and organic.",
         "coverImageUrl": "images/works/ochreivy/ochreivy-cover.webp",
         "coverImageAlt": "Blog homepage with hand-drawn illustration and typography",
         "technologies": {
@@ -180,7 +180,7 @@
     },
     {
         "id": 6,
-        "slug": "work/portfolio",
+        "slug": "portfolio",
         "title": "My portfolio",
         "type": "personal",
         "githubLink": "https://github.com/zephkelly/portfolio",
@@ -215,14 +215,14 @@
     },
     {
         "id": 7,
-        "slug": "work/lipstick-hippy",
+        "slug": "lipstick-hippy",
         "title": "The Lipstick Hippy",
         "type": "client",
         "githubLink": "",
         "githubLabel": "",
         "link": "https://kylie5620.wixsite.com/thelipstickhippy",
         "linkLabel": "thelipstickhippy.com",
-        "overview": "A previously active online store that focused on selling organic health food products and blogging about general health and wellness advice.",
+        "overview": "A previously active online store that focused on selling organic health food products with blogs about general health and wellness advice.",
         "coverImageUrl": "images/works/lipstickhippy/lipstick-cover.webp",
         "coverImageAlt": "Online store homepage with organic products display",
         "technologies": {

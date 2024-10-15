@@ -1,5 +1,5 @@
 <template>
-    <section class="work-card" @click="navigateTo(workCard.slug)" tabindex="0">
+    <section class="work-card" @click="navigateTo('work/' + workCard.slug)" tabindex="0">
         <section class="cover">
             <div class="technologies" >
                 <TechnologyIcon v-for="technology in technologies" :key="technology.id" :technology="technology" />
@@ -19,7 +19,7 @@
                 <p class="overview">{{ workCard.overview }}</p>
             </div>
             <div class="link">
-                <p>Read the story</p>
+                <p>Read more</p>
             </div>
         </section>
     </section>
@@ -109,7 +109,10 @@ section.cover {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        padding: 0rem clamp(0.4rem, 5%, 1.5rem);
+        margin: 0rem clamp(0.4rem, 5%, 1.5rem);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background-color: var(--background);
 
         img {
             width: 100%;
@@ -124,6 +127,7 @@ section.cover {
             border-bottom: none;
             user-select: none;
             pointer-events: none;
+            aspect-ratio: 16 / 9;
 
             @media (prefers-color-scheme: light) {
                 box-shadow: 0 18px 20px 0 rgba(0, 0, 0, 0.2);
@@ -220,7 +224,7 @@ section.content {
     }
 
     .overview {
-        font-family: arial, sans-serif, var(--font-system);
+        font-family: arial, var(--font-system);
         font-size: 1.2rem;
         font-weight: 400;
         line-height: 1.4rem;

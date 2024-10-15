@@ -9,7 +9,7 @@
             <div class="container">
                 <header>
                     <div class="logo" @click="tryCloseMenu()">
-                        <NuxtLink :tabindex="menuActive ? -1 : 0" :class="{ 'overlay-active': menuActive }">
+                        <NuxtLink to="/" :tabindex="menuActive ? -1 : 0" :class="{ 'overlay-active': menuActive }">
                             <span class="fill">E</span>
                             <span class="outline">K</span>
                         </NuxtLink>

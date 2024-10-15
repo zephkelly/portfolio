@@ -27,14 +27,15 @@ export type Work = {
     coverImageUrl: string;
     coverImageAlt: string;
     overview: string;
-    technologies: TechnologiesId[];
+    technologies: {
+        [key in TechnologiesId]?: string;
+    }
     descriptionSections: WorkDescriptionSection;
     imageGallery: {
         [key: string]: WorkImage;
     };
 };
 
-// create a WorkCard type that picks from Work, but omits the descriptionSections and imageGallery
 export type WorkCard = Omit<
     Work,
     'descriptionSections' | 'imageGallery' | 'githubLink' | 'githubLabel' | 'link' | 'linkLabel'
