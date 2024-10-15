@@ -20,7 +20,7 @@
                             <p class="label">Type</p>
                             <p class="value type">{{ work?.type }}</p>
                         </div>
-                        <div class="field">
+                        <div class="field" v-if="work?.githubLabel !== ''">
                             <p class="label">GitHub</p>
                             <a class="value github-link" aria-label="Navigate to the source code on GitHub" tabindex="0" :href="work?.githubLink">{{  work?.githubLabel }}</a>
                         </div>
@@ -227,7 +227,9 @@ h1.title {
             gap: 2rem;
 
             .misc-fields {
-                justify-content: space-between;
+                &:nth-child(n+3) {
+                    justify-content: space-between;
+                }
             }
         }
 
