@@ -24,14 +24,13 @@
 import { useWorks } from '~/composable/useWorks';
 import { type Work } from '~/types/work.types';
 
-const router = useRouter();
-const routeParams = router.currentRoute.value.params;
+const route = useRoute();
 
 const { findWork } = useWorks();
 
 const workExists = ref(false);
 const work: ComputedRef<Work | undefined> = computed(() => {
-    const work = findWork(routeParams.slug as string);
+    const work = findWork(route.params.slug as string);
     workExists.value = !!work;
     return work;
 });

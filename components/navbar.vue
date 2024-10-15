@@ -149,6 +149,13 @@ onUnmounted(() => {
 
     window.removeEventListener('scroll', debouncedHandleScroll);
 });
+
+// Watch for route changes and close the menu
+watch(() => route.path, () => {
+    if (menuActive.value) {
+        menuActive.value = false;
+    }
+});
 </script>
 
   
