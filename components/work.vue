@@ -34,7 +34,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
         grid-template-columns: 1fr;
     }
 }

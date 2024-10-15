@@ -8,9 +8,9 @@
         "githubLabel": "zephkelly/penny-projects",
         "link": "https://pennyprojects.org",
         "linkLabel": "pennyprojects.org",
-        "overview": "Penny Projects is a non-profit organisation that aims to raise funds to make a last impact on the Riverside Secondary Highschool located in Zambia, and the surrounding community.",
+        "overview": "A non-profit organisation that aims to raise funds to make a last impact on the Riverside Secondary Highschool located in Zambia, and the surrounding community.",
         "coverImageUrl": "images/works/pennyprojects/penny-projects-cover.webp",
-        "coverImageAlt": "Penny Projects desktop hero section",
+        "coverImageAlt": "People gathering water at a well with organization logo",
         "technologies": {
             "ts": "ts",
             "vue3": "vue3",
@@ -45,9 +45,9 @@
         "githubLabel": "zephkelly/upbranched",
         "link": "https://upbranched.com",
         "linkLabel": "upbranched.com",
-        "overview": "Upbranched is a lightweight social media platform built for independant communities. It allows users to create and join 'branches' which are collections of user-moderated groups.",
+        "overview": "A lightweight social media platform built for independent communities. It allows users to create and join 'branches' which are collections of user-moderated groups.",
         "coverImageUrl": "images/works/upbranched/upbranched-cover.webp",
-        "coverImageAlt": "Penny Projects desktop hero section",
+        "coverImageAlt": "User posts on UpBranched platform homepage",
         "technologies": {
             "ts": "ts",
             "nuxt3": "nuxt3",
@@ -55,6 +55,178 @@
             "sass": "sass",
             "nginx": "nginx",
             "postgresql": "postgresql"
+        },
+        "descriptionSections": {
+            "design": {
+                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+            },
+            "development": {
+                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+            }
+        },
+        "imageGallery": {
+            "Home Desktop": {
+                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
+                "imageAlt": "Penny Projects desktop hero section",
+                "imageLabel": "Penny Projects desktop hero section",
+                "imageType": "desktop"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "slug": "work/paincoach",
+        "title": "Pain Coach",
+        "type": "client",
+        "githubLink": "https://github.com/zephkelly/paincoach",
+        "githubLabel": "zephkelly/paincoach",
+        "link": "https://paincoach.online",
+        "linkLabel": "paincoach.online",
+        "overview": "A pain and lifestyle tracking app for post-operative patients that allows users to log their pain levels, activities, and other lifestyle factors to help them improve their quality of life.",
+        "coverImageUrl": "images/works/paincoach/paincoach-cover.webp",
+        "coverImageAlt": "Pain Coach app dashboard with tracking metrics",
+        "technologies": {
+            "ts": "ts",
+            "nuxt3": "nuxt3",
+            "vue3": "vue3",
+            "sass": "sass",
+            "nginx": "nginx",
+            "postgresql": "postgresql"
+        },
+        "descriptionSections": {
+            "design": {
+                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+            },
+            "development": {
+                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+            }
+        },
+        "imageGallery": {
+            "Home Desktop": {
+                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
+                "imageAlt": "Penny Projects desktop hero section",
+                "imageLabel": "Penny Projects desktop hero section",
+                "imageType": "desktop"
+            }
+        }
+    },
+    {
+        "id": 4,
+        "slug": "work/galactic-asteroid-miner",
+        "title": "Galactic Asteroid Miner",
+        "type": "personal",
+        "githubLink": "https://github.com/zephkelly/galactic-asteroid-miner",
+        "githubLabel": "zephkelly/gam",
+        "link": "https://zephyrmg.itch.io/galactic-asteroid-miner",
+        "linkLabel": "itch.io/zephyrmg",
+        "overview": "A 2D arcade-style game where you control and upgrade a mining ship, collecting rare asteroids as you venture further out in space.",
+        "coverImageUrl": "images/works/galactic/gam-cover.webp",
+        "coverImageAlt": "Space station orbiting a star in game title screen",
+        "technologies": {
+            "unity": "unity",
+            "csharp": "csharp"
+        },
+        "descriptionSections": {
+            "design": {
+                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+            },
+            "development": {
+                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+            }
+        },
+        "imageGallery": {
+            "Home Desktop": {
+                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
+                "imageAlt": "Penny Projects desktop hero section",
+                "imageLabel": "Penny Projects desktop hero section",
+                "imageType": "desktop"
+            }
+        }
+    },
+    {
+        "id": 5,
+        "slug": "work/ochre-and-ivy",
+        "title": "Ochre & Ivy",
+        "type": "client",
+        "githubLink": "https://github.com/zephkelly/ochre-ivy",
+        "githubLabel": "zephkelly/ochre-ivy",
+        "link": "https://ochreivy.com",
+        "linkLabel": "ochreivy.com",
+        "overview": "A vanilla blogging platform with a custom CMS created for a school teacher who wanted to share their passion for all things natural and organic.",
+        "coverImageUrl": "images/works/ochreivy/ochreivy-cover.webp",
+        "coverImageAlt": "Blog homepage with hand-drawn illustration and typography",
+        "technologies": {
+            "ts": "ts",
+            "css": "css",
+            "mongodb": "mongodb",
+            "express": "express"
+        },
+        "descriptionSections": {
+            "design": {
+                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+            },
+            "development": {
+                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+            }
+        },
+        "imageGallery": {
+            "Home Desktop": {
+                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
+                "imageAlt": "Penny Projects desktop hero section",
+                "imageLabel": "Penny Projects desktop hero section",
+                "imageType": "desktop"
+            }
+        }
+    },
+    {
+        "id": 6,
+        "slug": "work/portfolio",
+        "title": "My portfolio",
+        "type": "personal",
+        "githubLink": "https://github.com/zephkelly/portfolio",
+        "githubLabel": "zephkelly/portfolio",
+        "link": "https://evankelly.dev",
+        "linkLabel": "evankelly.dev",
+        "overview": "My accessible, minimalist portfolio website, built to showcase my skills and experience as a software developer.",
+        "coverImageUrl": "images/works/portfolio/portfolio-cover.webp",
+        "coverImageAlt": "Portfolio homepage with project thumbnails and profile photo",
+        "technologies": {
+            "ts": "ts",
+            "nuxt3": "nuxt3",
+            "vue3": "vue3",
+            "sass": "sass"
+        },
+        "descriptionSections": {
+            "design": {
+                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+            },
+            "development": {
+                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+            }
+        },
+        "imageGallery": {
+            "Home Desktop": {
+                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
+                "imageAlt": "Penny Projects desktop hero section",
+                "imageLabel": "Penny Projects desktop hero section",
+                "imageType": "desktop"
+            }
+        }
+    },
+    {
+        "id": 7,
+        "slug": "work/lipstick-hippy",
+        "title": "The Lipstick Hippy",
+        "type": "client",
+        "githubLink": "",
+        "githubLabel": "",
+        "link": "https://kylie5620.wixsite.com/thelipstickhippy",
+        "linkLabel": "thelipstickhippy.com",
+        "overview": "A previously active online store that focused on selling organic health food products and blogging about general health and wellness advice.",
+        "coverImageUrl": "images/works/lipstickhippy/lipstick-cover.webp",
+        "coverImageAlt": "Online store homepage with organic products display",
+        "technologies": {
+            "wix": "wix"
         },
         "descriptionSections": {
             "design": {

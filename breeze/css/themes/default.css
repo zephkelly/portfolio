@@ -7,7 +7,7 @@
 
     --background-darker-dark: #151518;
     --background-dark: #1c1c20;
-    --background-dark-translucent: #1b1b1fe1;
+    --background-dark-translucent: #1c1c20e9;
     --background-hover-dark: #2a2a2e;
     --background-active-dark: #37373b;
     --background-active-secondary-dark: #424246;
@@ -46,7 +46,7 @@
     --background-active-secondary-light: #aeaeae;
     
     --text-foreground-light: #1c1c20;
-    --text-foreground-secondary-light: #1e1e21;
+    --text-foreground-secondary-light: #323236;
     --text-background-light: #fafafa;
     
     --disabled-foreground-light: #747474;

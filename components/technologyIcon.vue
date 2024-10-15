@@ -36,8 +36,8 @@ function sanitizeSvg(svg: string): string {
 
 .technology-icon {
     display: flex;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -56,35 +56,49 @@ function sanitizeSvg(svg: string): string {
 }
 
 .css {
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
+    margin-left: -4px;
+    margin-right: -2px;
+}
+
+.vue3 {
+    width: 24px;
+    height: 24px;
+}
+
+.nuxt3 {
+    width: 30px;
+    height: 30px;
     margin-left: -6px;
     margin-right: -4px;
 }
 
-.vue3 {
-    width: 28px;
-    height: 28px;
-}
-
-.nuxt3 {
-    width: 32px;
-    height: 32px;
-    margin-left: -6px;
-}
-
 .sass {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
+    margin-right: -2px;
 }
 
 .express {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
+    margin-right: -4px;
 }
 
 .wix {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
+}
+
+.postgresql {
+    width: 20px;
+    height: 20px;
+    margin-right: 1px;
+}
+
+.nginx {
+    width: 20px;
+    height: 20px;
 }
 </style>

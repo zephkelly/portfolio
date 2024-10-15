@@ -460,10 +460,6 @@ header {
                 height: 28px;
             }
         }
-
-        a.linkedin {
-            display: none;
-        }
     }
 
     .overlay {
@@ -473,6 +469,14 @@ header {
         &.active {
             opacity: 1;
             pointer-events: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .socials {
+        a.linkedin {
+            display: none;
         }
     }
 }

@@ -41,6 +41,8 @@ const technologies: Technology[] = getTechnologies(props.workCard);
 
 <style lang="scss" scoped>
 section.work-card {
+    display: flex;
+    flex-direction: column;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: border-color 0.2s ease;
@@ -48,6 +50,7 @@ section.work-card {
 
     &:hover, &:focus-visible, &:active {
         border-color: var(--border-color-hover);
+        cursor: pointer;
 
         .cover {
             :deep(.technology-icon svg) {
@@ -64,11 +67,23 @@ section.work-card {
 
         .content {
             border-color: var(--border-color-hover);
+
+            .wrapper.title {
+                .type-label {
+                    opacity: 1;
+                }
+            }
+
+            .link {
+                p::after {
+                    width: 100%;
+                }
+            }
         }
     }
 
     &:focus-visible {
-        outline: 2px solid var(--foreground);
+        outline: 4px solid var(--foreground);
         box-shadow: 0 0 0 5px var(--background);
     }
 }
@@ -107,7 +122,8 @@ section.cover {
             transition: border-color 0.2s ease, filter 0.2s ease;
             will-change: filter;
             border-bottom: none;
-            filter: grayscale(100%);
+            user-select: none;
+            pointer-events: none;
 
             @media (prefers-color-scheme: light) {
                 box-shadow: 0 18px 20px 0 rgba(0, 0, 0, 0.2);
@@ -126,12 +142,12 @@ section.content {
     justify-content: space-between;
     gap: 1.5rem;
     border-top: 1px solid var(--border-color);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
     transition: border-color 0.2s ease;
     padding: 1rem;
     padding-top: 1.5rem;
-    height: stretch;
-    height: 250px;
-    box-sizing: border-box;
+    flex-grow: 1;
 
     .wrapper.title {
         display: flex;
@@ -147,23 +163,54 @@ section.content {
     }
 
     .type-label {
+        padding: 0.3rem 0.5rem;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 6px;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+
+        @media (prefers-color-scheme: dark) {
+            opacity: 0.5;
+        }
+
+        :root[data-color-scheme="dark"] & {
+            opacity: 0.5;
+        }
+
         &.client {
-            background-color: var(--green-100);
-            border: 1px solid var(--green-200-invert);
+            background-color: var(--green-200);
+            border-color: var(--green-200-invert);
             color: var(--green-200-invert);
-            padding: 0.3rem 0.5rem;
-            border-radius: 6px;
 
             @media (prefers-color-scheme: dark) {
                 background-color: var(--green-300);
-                border: 1px solid var(--green-100-invert);
+                border-color: var(--green-100-invert);
                 color: var(--green-100-invert);
             }
 
             :root[data-color-scheme="dark"] & {
                 background-color: var(--green-300);
-                border: 1px solid var(--green-100-invert);
+                border-color: var(--green-100-invert);
                 color: var(--green-100-invert);
+            }
+        }
+
+        &.personal {
+            background-color: var(--orange-200);
+            border-color: var(--orange-200-invert);
+            color: var(--orange-200-invert);
+
+            @media (prefers-color-scheme: dark) {
+                background-color: var(--orange-300);
+                border-color: var(--orange-100-invert);
+                color: var(--orange-100-invert);
+            }
+
+            :root[data-color-scheme="dark"] & {
+                background-color: var(--orange-300);
+                border: 1px solid var(--orange-100-invert);
+                color: var(--orange-100-invert);
             }
         }
 
@@ -183,8 +230,31 @@ section.content {
     }
 
     .link {
+        display: flex;
+        justify-content: flex-start;
         font-size: 1.2rem;
         color: var(--accent-accessible);
+        
+        p {
+            transition: color 0.2s ease;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background: var(--accent-accessible);
+                transition: width 0.2s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.2s ease;
+            }
+
+            &:hover {
+                color: var(--text-foreground);
+
+                &::after {
+                    background: var(--text-foreground);
+                }
+            }
+        }
     }
 }
 </style>
