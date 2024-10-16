@@ -1,28 +1,30 @@
 <template>
-    <section class="work-card" @click="navigateTo('work/' + workCard.slug)" tabindex="0">
-        <section class="cover">
-            <div class="technologies" >
-                <TechnologyIcon v-for="technology in technologies" :key="technology.id" :technology="technology" />
-            </div>
-            <div class="wrapper" >
-                <img :src="workCard.coverImageUrl" :alt="workCard.coverImageAlt" loading="lazy"/>
-            </div>
-        </section> 
-        <section class="content">
-            <div>
-                <div class="wrapper title">
-                    <nuxt-link :to="workCard.slug" class="work-title"><h3>{{ workCard.title }}</h3></nuxt-link>
-                    <span class="type-label" :class="workCard.type">
-                        <p>{{ workCard.type }}</p>
-                    </span>
+    <NuxtLink :to="`/work/${workCard.slug}`" class="work-card" tabindex="0">
+        <section>
+            <section class="cover">
+                <div class="technologies" >
+                    <TechnologyIcon v-for="technology in technologies" :key="technology.id" :technology="technology" />
                 </div>
-                <p class="overview">{{ workCard.overview }}</p>
-            </div>
-            <div class="link">
-                <p>Read more</p>
-            </div>
+                <div class="wrapper" >
+                    <img :src="workCard.coverImageUrl" :alt="workCard.coverImageAlt" loading="lazy"/>
+                </div>
+            </section> 
+            <section class="content">
+                <div>
+                    <div class="wrapper title">
+                        <h3 class="work-title">{{ workCard.title }}</h3>
+                        <span class="type-label" :class="workCard.type">
+                            <p>{{ workCard.type }}</p>
+                        </span>
+                    </div>
+                    <p class="overview">{{ workCard.overview }}</p>
+                </div>
+                <div class="link">
+                    <p>Read more</p>
+                </div>
+            </section>
         </section>
-    </section>
+    </NuxtLink>
 </template>
 
 <script setup lang="ts">
@@ -40,7 +42,7 @@ const technologies: Technology[] = getTechnologies(props.workCard);
 </script>
 
 <style lang="scss" scoped>
-section.work-card {
+.work-card {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
