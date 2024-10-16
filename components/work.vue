@@ -23,7 +23,7 @@ const { workCards } = useWorks();
 
 <style lang="scss" scoped>
 h2 {
-    font-family: Poppins,sans-serif;
+    font-family: var(--font-family-secondary);
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: var(--text-foreground);

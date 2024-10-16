@@ -1,7 +1,13 @@
 <template>
     <Head>
-        <meta name="description" :content="work?.overview" />
         <Title>{{ work?.title }}</Title>
+        <Meta name="description" :content="work?.title + ' - Case Study: ' + work?.overview" />
+        <Meta hid="og:title" property="og:title" :content="work?.title" />
+        <Meta hid="og:description" property="og:description" :content="work?.title + ' - Case Study: ' + work?.overview" />
+        <Meta hid="og:image" property="og:image" :content="work?.ogImageUrl" />
+        <Meta hid="og:type" property="og:type" content="article" />
+        <Meta hid="og:url" property="og:url" :content="`https://www.evankelly.dev/work/${work?.slug}`" />
+        <Meta hid="og:locale" property="og:locale" content="en_GB" />
     </Head>
     <section v-if="workExists" class="component">
         <div class="container">
@@ -21,13 +27,13 @@
                                 <p class="label">Type</p>
                                 <p class="value type">{{ work?.type }}</p>
                             </div>
-                            <div class="field" v-if="work?.githubLabel !== ''">
-                                <p class="label">GitHub</p>
-                                <a class="value github-link" aria-label="Navigate to the source code on GitHub" tabindex="0" :href="work?.githubLink">{{  work?.githubLabel }}</a>
-                            </div>
                             <div class="field">
                                 <p class="label">Live</p>
-                                <a class="value live-link" target="_blank" aria-label="Navigate to the live website" tabindex="0" :href="work?.link">{{  work?.linkLabel }}</a>
+                                <a class="value live-link" target="_blank" aria-label="Navigate to the live website" rel="follow" tabindex="0" :href="work?.link">{{  work?.linkLabel }}</a>
+                            </div>
+                            <div class="field" v-if="work?.githubLabel !== ''">
+                                <p class="label">GitHub</p>
+                                <a class="value github-link" aria-label="Navigate to the source code on GitHub" tabindex="0" rel="nofollow" :href="work?.githubLink">{{  work?.githubLabel }}</a>
                             </div>
                         </div>
                         <div class="overview-container">
@@ -50,6 +56,21 @@
                     </div>
                 </div>
             </section>
+            <button class="video" @click.prevent="toggleVideo" :class="{ paused: !demoVideoActive }">
+                <div class="controls">
+                    <svg v-if="demoVideoActive" class="pause" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M8 19c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2v10c0 1.1.9 2 2 2m6-12v10c0 1.1.9 2 2 2s2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2"/></svg>
+                    <svg v-else class="play" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82"/></svg>
+                </div>
+                <video autoplay loop muted playsinline ref="demoVideo" >
+                    <source :src="work?.demoVideoUrl" :alt="work?.demoVideoAlt" type="video/mp4" />
+                </video>
+            </button>
+            <div class="descriptions">
+                <div v-for="description in descriptions" :key="description.id">
+                    <h3>{{ description.section }}</h3>
+                    <p>{{ description.value }}</p>
+                </div>
+            </div>
         </div>
     </section>
     <section v-else class="component">
@@ -73,17 +94,60 @@ const work: ComputedRef<Work | undefined> = computed(() => {
     return work;
 });
 const technologies: Ref<Technology[]> = ref(getTechnologies(work.value as Work));
+
+const descriptions = computed(() => {
+    if (!work.value) return [];
+    
+    return Object.entries(work.value.descriptionSections).flatMap(([sectionName, sectionContent]) => 
+        Object.entries(sectionContent).map(([descKey, descValue]) => ({
+            id: `${sectionName}-${descKey}`,
+            section: sectionName,
+            key: descKey,
+            value: descValue
+        }))
+    );
+});
+
+const demoVideo = ref<HTMLVideoElement | null>(null);
+const demoVideoActive = ref(true);
+const playVideo = () => {
+    if (demoVideo.value) {
+        demoVideo.value.play();
+        demoVideoActive.value = true;
+    }
+};
+
+const pauseVideo = () => {
+    if (demoVideo.value) {
+        demoVideo.value.pause();
+        demoVideoActive.value = false;
+    }
+};
+
+const toggleVideo = () => {
+    console.log('toggle');
+    if (demoVideoActive.value) {
+        pauseVideo();
+    } else {
+        playVideo();
+    }
+};
 </script>
 
 <style lang="scss" scoped>
 section.component {
     padding-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 .backlink {
     display: flex;
-    gap: 1rem;
-    opacity: 0.9;
+    gap: 0.8rem;
+    
+    p, a {
+        font-size: 0.8rem;
+        opacity: 0.8;
+    }
 
     a { 
         cursor: pointer;
@@ -108,13 +172,10 @@ section.component {
         }
     }
 
-    span {
-        font-size: 1.2rem;
-    }
-
     p {
         font-family: arial, var(--font-system);
-        color: var(--text-foreground-secondary);
+        color: var(--text-foreground);
+        opacity: 0.6;
     }
 }
 
@@ -122,7 +183,7 @@ h1.title {
     font-family: var(--font-family-secondary);
     font-size: clamp(2.5rem, 7vw, 3rem);
     font-weight: 700;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     color: var(--text-foreground);
     transition: color 0.3s ease;
 }
@@ -142,12 +203,16 @@ h1.title {
 
     &:hover {
         border-color: var(--border-color-hover);
+
+        :deep(.technology-icon svg) {
+            fill: var(--text-foreground);
+        }
     }
 
     .fields-container {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
 
         .wrapper {
             display: flex;
@@ -349,6 +414,104 @@ h1.title {
             flex-direction: column;
             gap: 1.5rem;
         }
+    }
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    border: none;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: var(--background-darker);
+
+    .controls {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        svg {
+            position: absolute;
+            width: clamp(5rem, 20%, 20rem);
+            height: clamp(5rem, 20%, 20rem);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            fill: var(--text-foreground);
+
+            &.play {
+                opacity: 0.7;
+                width: clamp(5rem, 23%, 20rem);
+                height: clamp(5rem, 23%, 20rem);
+                margin-left: -8px;
+            }
+        }
+    }
+
+    h2 {
+        font-family: var(--font-family-secondary);
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--text-foreground);
+    }
+
+    video {
+        width: 100%;
+        border-radius: 8px;
+        transition: opacity 0.2s ease;
+        z-index: 1;
+
+    }
+
+    &:hover {
+        video {
+            opacity: 0.8;
+        }
+
+        
+        .controls {
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+   
+
+    &.paused {
+        video {
+            opacity: 0.6;
+        }
+    }
+}
+
+.descriptions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h3 {
+        font-family: var(--font-family-secondary);
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-foreground);
+        text-transform: capitalize;
+    }
+
+    p {
+        font-family: arial, var(--font-system);
+        color: var(--text-foreground-secondary);
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
     }
 }
 </style>

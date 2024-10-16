@@ -9,8 +9,11 @@
         "link": "https://pennyprojects.org",
         "linkLabel": "pennyprojects.org",
         "overview": "A non-profit organisation located in Zambia, Africa, that raises funds for humanitarian work in the local community.",
-        "coverImageUrl": "images/works/pennyprojects/penny-projects-cover.webp",
+        "coverImageUrl": "/images/works/pennyprojects/penny-projects-cover.webp",
         "coverImageAlt": "People gathering water at a well with organization logo",
+        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "demoVideoUrl": "/videos/works/pennyprojects/pennyprojects-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "ts": "ts",
             "vue3": "vue3",
@@ -21,10 +24,10 @@
         },
         "descriptionSections": {
             "design": {
-                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+                "description1": "The site's design was developed through collaboration between a graphic designer and myself, focusing on simplicity, ease of navigation, strong brand identity, and highlighting the organization's impact through compelling content and beneficiary stories."
             },
             "development": {
-                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+                "description1": "Built with Nuxt3, the site leverages a hybrid SSR/SPA architecture to optimize SEO, load times, and client-side performance. Lots of attention was given to faithfully implementing the designer's vision, ensuring responsive functionality across all devices."
             }
         },
         "imageGallery": {
@@ -46,8 +49,11 @@
         "link": "https://upbranched.com",
         "linkLabel": "upbranched.com",
         "overview": "A lightweight social media platform built for independent communities, allowing users to create and join 'branches' which are collections of user-moderated groups.",
-        "coverImageUrl": "images/works/upbranched/upbranched-cover.webp",
+        "coverImageUrl": "/images/works/upbranched/upbranched-cover.webp",
         "coverImageAlt": "User posts on UpBranched platform homepage",
+        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "demoVideoUrl": "/videos/works/pennyprojects/pennyprojects-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "ts": "ts",
             "nuxt3": "nuxt3",
@@ -85,6 +91,9 @@
         "overview": "A pain and lifestyle tracking app for post-operative patients that allows users to log their pain levels, activities, and other lifestyle factors to help reduce their overall pain.",
         "coverImageUrl": "images/works/paincoach/paincoach-cover.webp",
         "coverImageAlt": "Pain Coach app dashboard with tracking metrics",
+        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "ts": "ts",
             "nuxt3": "nuxt3",
@@ -122,6 +131,9 @@
         "overview": "A 2D arcade-style game where you control and upgrade a mining ship, collecting rare asteroids as you venture further out in space.",
         "coverImageUrl": "images/works/galactic/gam-cover.webp",
         "coverImageAlt": "Space station orbiting a star in game title screen",
+        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "unity": "unity",
             "csharp": "csharp"
@@ -155,6 +167,9 @@
         "overview": "A vanilla blogging platform with a custom CMS created for a school teacher wanting to share their passion for all things natural and organic.",
         "coverImageUrl": "images/works/ochreivy/ochreivy-cover.webp",
         "coverImageAlt": "Blog homepage with hand-drawn illustration and typography",
+        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "ts": "ts",
             "css": "css",
@@ -190,6 +205,9 @@
         "overview": "My accessible, minimalist portfolio website, built to showcase my skills and experience as a software developer.",
         "coverImageUrl": "images/works/portfolio/portfolio-cover.webp",
         "coverImageAlt": "Portfolio homepage with project thumbnails and profile photo",
+        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "ts": "ts",
             "nuxt3": "nuxt3",
@@ -225,6 +243,9 @@
         "overview": "A previously active online store that focused on selling organic health food products with blogs about general health and wellness advice.",
         "coverImageUrl": "images/works/lipstickhippy/lipstick-cover.webp",
         "coverImageAlt": "Online store homepage with organic products display",
+        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "wix": "wix"
         },

@@ -31,7 +31,10 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: 'en',
             },
-            title: 'My App',
+            title: 'Evan Kelly - Software Developer',
+            link: [
+                { rel: 'canonical', href: 'https://evankelly.dev' },
+            ],
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },

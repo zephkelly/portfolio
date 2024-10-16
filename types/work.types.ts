@@ -26,6 +26,9 @@ export type Work = {
     githubLabel: string;
     coverImageUrl: string;
     coverImageAlt: string;
+    ogImageUrl: string;
+    demoVideoUrl: string;
+    demoVideoAlt: string;
     overview: string;
     technologies: {
         [key in TechnologiesId]?: string;
@@ -38,5 +41,5 @@ export type Work = {
 
 export type WorkCard = Omit<
     Work,
-    'descriptionSections' | 'imageGallery' | 'githubLink' | 'githubLabel' | 'link' | 'linkLabel'
+    'descriptionSections' | 'imageGallery' | 'githubLink' | 'githubLabel' | 'link' | 'linkLabel' | 'demoVideoUrl' | 'demoVideoAlt' | 'ogImageUrl'
 >;
