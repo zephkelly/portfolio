@@ -42,7 +42,7 @@
     {
         "id": 2,
         "slug": "upbranched",
-        "title": "UpBranched",
+        "title": "Upbranched",
         "type": "personal",
         "githubLink": "https://github.com/zephkelly/upbranched",
         "githubLabel": "zephkelly/upbranched",
@@ -52,7 +52,7 @@
         "coverImageUrl": "/images/works/upbranched/upbranched-cover.webp",
         "coverImageAlt": "User posts on UpBranched platform homepage",
         "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
-        "demoVideoUrl": "/videos/works/pennyprojects/pennyprojects-demo.mp4",
+        "demoVideoUrl": "/videos/works/upbranched/upbranched-demo.mp4",
         "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "ts": "ts",
@@ -64,10 +64,12 @@
         },
         "descriptionSections": {
             "design": {
-                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+                "description1": "Inspired by Reddit, I aimed to create a visually appealing and user-friendly site with enhanced customisation options to allow users to create and maintain their own communities.",
+                "description2": "Leveraging Nuxt3, I developed a fast, responsive, maintainable site that combines SSR and SPA for optimal performance and SEO. Vite, Vue3, TypeScript, and Sass were used for a modern and efficient development workflow."
             },
             "development": {
-                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+                "description1": "To handle the structured data required for a social media platform, I utilized PostgreSQL. All queries are executed using plain SQL, with thorough validation and sanitization of user-submitted content to prevent SQL injection.",
+                "description2": "To maintain a healthy community, I integrated Google's 'Perspective' API for comment moderation. The site also features Auth0 integration with Google, GitHub, and Discord, a image uploader and compressor using sharp, and an imgur web-scraper for cross-posting content and optimising data storage."
             }
         },
         "imageGallery": {

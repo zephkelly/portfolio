@@ -66,9 +66,11 @@
                 </video>
             </button>
             <div class="descriptions">
-                <div v-for="description in descriptions" :key="description.id">
-                    <h3>{{ description.section }}</h3>
-                    <p>{{ description.value }}</p>
+                <div v-for="(section, sectionName) in work?.descriptionSections" :key="sectionName">
+                    <h3>{{ sectionName }}</h3>
+                    <div v-for="(description, descriptionKey) in section" :key="descriptionKey">
+                        <p>{{ description }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,19 +96,6 @@ const work: ComputedRef<Work | undefined> = computed(() => {
     return work;
 });
 const technologies: Ref<Technology[]> = ref(getTechnologies(work.value as Work));
-
-const descriptions = computed(() => {
-    if (!work.value) return [];
-    
-    return Object.entries(work.value.descriptionSections).flatMap(([sectionName, sectionContent]) => 
-        Object.entries(sectionContent).map(([descKey, descValue]) => ({
-            id: `${sectionName}-${descKey}`,
-            section: sectionName,
-            key: descKey,
-            value: descValue
-        }))
-    );
-});
 
 const demoVideo = ref<HTMLVideoElement | null>(null);
 const demoVideoActive = ref(true);
@@ -468,7 +457,7 @@ h1.title {
         border-radius: 8px;
         transition: opacity 0.2s ease;
         z-index: 1;
-
+        transform: scale(1.008);
     }
 
     &:hover {
@@ -479,7 +468,7 @@ h1.title {
         
         .controls {
             svg {
-                opacity: 1;
+                opacity: 0.8;
             }
         }
     }

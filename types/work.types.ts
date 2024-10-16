@@ -10,8 +10,8 @@ export type WorkImage = {
 }
 
 export type WorkDescriptionSection = {
-    [key: string]: {
-        [key: string]: string;
+    [sectionName: string]: {
+        [descriptionKey: string]: string;
     };
 }
 
