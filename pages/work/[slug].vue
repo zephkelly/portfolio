@@ -56,15 +56,19 @@
                     </div>
                 </div>
             </section>
-            <button class="video" @click.prevent="toggleVideo" :class="{ paused: !demoVideoActive }">
+            <button class="video" @click.prevent="toggleVideo" :class="{ paused: !demoVideoActive }" v-if="workHasDemoVideo">
                 <div class="controls">
                     <svg v-if="demoVideoActive" class="pause" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M8 19c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2v10c0 1.1.9 2 2 2m6-12v10c0 1.1.9 2 2 2s2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2"/></svg>
                     <svg v-else class="play" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82"/></svg>
                 </div>
-                <video autoplay loop muted playsinline ref="demoVideo" >
+                <video autoplay loop muted playsinline ref="demoVideo">
                     <source :src="work?.demoVideoUrl" :alt="work?.demoVideoAlt" type="video/mp4" />
                 </video>
             </button>
+            <!-- Show cover image instead -->
+            <div class="cover-image" v-else>
+                <img :src="work?.coverImageUrl" :alt="work?.coverImageAlt" loading="lazy"/>
+            </div>
             <div class="descriptions">
                 <div v-for="(section, sectionName) in work?.descriptionSections" :key="sectionName">
                     <h3>{{ sectionName }}</h3>
@@ -96,6 +100,10 @@ const work: ComputedRef<Work | undefined> = computed(() => {
     return work;
 });
 const technologies: Ref<Technology[]> = ref(getTechnologies(work.value as Work));
+
+const workHasDemoVideo = computed(() => {
+    return !!work.value?.demoVideoUrl;
+});
 
 const demoVideo = ref<HTMLVideoElement | null>(null);
 const demoVideoActive = ref(true);
@@ -261,7 +269,7 @@ h1.title {
                         }
                     }
 
-                    &.nuxt3 {
+                    &.nuxt {
                         svg {
                             width: 44px;
                             height: 44px;

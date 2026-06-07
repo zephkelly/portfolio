@@ -4,9 +4,8 @@
             <img src="~/assets/images/profile.webp" alt="Evan Kelly, creator of this portfolio!"/>
             <h1>Hi, welcome to my site! <span data-v-1baf8294="">👋</span></h1>
             <p>
-                I'm <a class="name" href="https://www.linkedin.com/in/evan-kelly/">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
-                <span class="extra">Currently studying computer science <a target="_blank" href="https://www.linkedin.com/school/griffith-university/">@GriffithUni</a>.
-                I'm seeking new opportunities to leverage my skills and contribute to impactful projects.</span> Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
+                I'm <a class="name" href="https://github.com/zephkelly">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
+                I'm seeking opportunities to leverage my skills and contribute to impactful projects Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
             </p>
         </div>
     </section>

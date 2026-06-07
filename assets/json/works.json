@@ -1,6 +1,48 @@
 [
     {
         "id": 1,
+        "slug": "paincoach",
+        "title": "Pain Coach",
+        "type": "startup",
+        "githubLink": "https://github.com/zephkelly/paincoach",
+        "githubLabel": "zephkelly/paincoach",
+        "link": "https://paincoach.co",
+        "linkLabel": "paincoach.co",
+        "overview": "A pain and lifestyle tracking app for post-operative patients with a companion dashboard for clinicians that allows users to log their pain levels, activities, and lifestyle to help reduce their overall pain.",
+        "coverImageUrl": "images/works/paincoach/paincoach-cover.webp",
+        "coverImageAlt": "Pain Coach app dashboard with tracking metrics",
+        "ogImageUrl": "/images/works/paincoach/paincoach-og.png",
+        "demoVideoUrl": "videos/works/paincoach/paincoach-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Pain Coach app dashboard and tracking features",
+        "technologies": {
+            "ts": "ts",
+            "nuxt": "nuxt",
+            "vue3": "vue3",
+            "sass": "sass",
+            "nginx": "nginx",
+            "postgresql": "postgresql"
+        },
+        "descriptionSections": {
+            "design": {
+                "description1": "Inspired by the lack of accessible digital tooling in chronic pain management, I set out to build a clinical platform that could support real patients and clinicians in a highly regulated, trust-sensitive environment — one where reliability and data integrity are non-negotiable.",
+                "description2": "Built as a TypeScript/Vue monorepo using Nuxt and Nitro, Pain Coach combines a responsive patient-facing interface with a robust backend of over 600 API endpoints. The architecture supports multiple independent clinics, with their own programs, and role-based access control across clinicians, admins, and patients."
+            },
+            "development": {
+                "description1": "PostgreSQL underpins the platform's data layer, with an organisation model that isolates each clinic's data from others. All API boundaries are validated with Zod schemas, and strict role- and permission-based access control ensures clinicians, admins, and patients only ever access data within their own organisation.",
+                "description2": "The backend runs a pipeline of ~20 scheduled cron jobs handling async image processing, multi-channel clinical form delivery (email, SMS, and push notifications), and subscription billing lifecycle management via Stripe and Xero. Third-party integrations include AWS SES, S3, and SNS, Google Maps, and Cloudflare R2 — with a clinical trial currently running at the University of Technology Sydney."
+            }
+        },
+        "imageGallery": {
+            "Home Desktop": {
+                "imageUrl": "assets/images/works/paincoach/desktop-hero.webp",
+                "imageAlt": "Pain Coach desktop hero section",
+                "imageLabel": "Pain Coach desktop hero section",
+                "imageType": "desktop"
+            }
+        }
+    },
+    {
+        "id": 2,
         "slug": "pennyprojects",
         "title": "Penny Projects",
         "type": "client",
@@ -17,7 +59,7 @@
         "technologies": {
             "ts": "ts",
             "vue3": "vue3",
-            "nuxt3": "nuxt3",
+            "nuxt": "nuxt",
             "sass": "sass",
             "nginx": "nginx",
             "postgresql": "postgresql"
@@ -27,49 +69,7 @@
                 "description1": "The site's design was developed through collaboration between a graphic designer and myself, focusing on simplicity, ease of navigation, strong brand identity, and highlighting the organization's impact through compelling content and beneficiary stories."
             },
             "development": {
-                "description1": "Built with Nuxt3, the site leverages a hybrid SSR/SPA architecture to optimize SEO, load times, and client-side performance. Lots of attention was given to faithfully implementing the designer's vision, ensuring responsive functionality across all devices."
-            }
-        },
-        "imageGallery": {
-            "Home Desktop": {
-                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
-                "imageAlt": "Penny Projects desktop hero section",
-                "imageLabel": "Penny Projects desktop hero section",
-                "imageType": "desktop"
-            }
-        }
-    },
-    {
-        "id": 2,
-        "slug": "upbranched",
-        "title": "Upbranched",
-        "type": "personal",
-        "githubLink": "https://github.com/zephkelly/upbranched",
-        "githubLabel": "zephkelly/upbranched",
-        "link": "https://upbranched.com",
-        "linkLabel": "upbranched.com",
-        "overview": "A lightweight social media platform built for independent communities, allowing users to create and join 'branches' which are collections of user-moderated groups.",
-        "coverImageUrl": "/images/works/upbranched/upbranched-cover.webp",
-        "coverImageAlt": "User posts on UpBranched platform homepage",
-        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
-        "demoVideoUrl": "/videos/works/upbranched/upbranched-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
-        "technologies": {
-            "ts": "ts",
-            "nuxt3": "nuxt3",
-            "vue3": "vue3",
-            "sass": "sass",
-            "nginx": "nginx",
-            "postgresql": "postgresql"
-        },
-        "descriptionSections": {
-            "design": {
-                "description1": "Inspired by Reddit, I aimed to create a visually appealing and user-friendly site with enhanced customisation options to allow users to create and maintain their own communities.",
-                "description2": "Leveraging Nuxt3, I developed a fast, responsive, maintainable site that combines SSR and SPA for optimal performance and SEO. Vite, Vue3, TypeScript, and Sass were used for a modern and efficient development workflow."
-            },
-            "development": {
-                "description1": "To handle the structured data required for a social media platform, I utilized PostgreSQL. All queries are executed using plain SQL, with thorough validation and sanitization of user-submitted content to prevent SQL injection.",
-                "description2": "To maintain a healthy community, I integrated Google's 'Perspective' API for comment moderation. The site also features Auth0 integration with Google, GitHub, and Discord, a image uploader and compressor using sharp, and an imgur web-scraper for cross-posting content and optimising data storage."
+                "description1": "Built with nuxt, the site leverages a hybrid SSR/SPA architecture to optimize SEO, load times, and client-side performance. Lots of attention was given to faithfully implementing the designer's vision, ensuring responsive functionality across all devices."
             }
         },
         "imageGallery": {
@@ -83,46 +83,6 @@
     },
     {
         "id": 3,
-        "slug": "paincoach",
-        "title": "Pain Coach",
-        "type": "client",
-        "githubLink": "https://github.com/zephkelly/paincoach",
-        "githubLabel": "zephkelly/paincoach",
-        "link": "https://paincoach.online",
-        "linkLabel": "paincoach.online",
-        "overview": "A pain and lifestyle tracking app for post-operative patients that allows users to log their pain levels, activities, and other lifestyle factors to help reduce their overall pain.",
-        "coverImageUrl": "images/works/paincoach/paincoach-cover.webp",
-        "coverImageAlt": "Pain Coach app dashboard with tracking metrics",
-        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
-        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
-        "technologies": {
-            "ts": "ts",
-            "nuxt3": "nuxt3",
-            "vue3": "vue3",
-            "sass": "sass",
-            "nginx": "nginx",
-            "postgresql": "postgresql"
-        },
-        "descriptionSections": {
-            "design": {
-                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
-            },
-            "development": {
-                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
-            }
-        },
-        "imageGallery": {
-            "Home Desktop": {
-                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
-                "imageAlt": "Penny Projects desktop hero section",
-                "imageLabel": "Penny Projects desktop hero section",
-                "imageType": "desktop"
-            }
-        }
-    },
-    {
-        "id": 4,
         "slug": "galactic-asteroid-miner",
         "title": "Galactic Asteroid Miner",
         "type": "personal",
@@ -145,7 +105,49 @@
                 "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
             },
             "development": {
-                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+                "description1": "The site was built using nuxt, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+            }
+        },
+        "imageGallery": {
+            "Home Desktop": {
+                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
+                "imageAlt": "Penny Projects desktop hero section",
+                "imageLabel": "Penny Projects desktop hero section",
+                "imageType": "desktop"
+            }
+        }
+    },
+    {
+        "id": 4,
+        "slug": "upbranched",
+        "title": "Upbranched",
+        "type": "personal",
+        "githubLink": "https://github.com/zephkelly/upbranched",
+        "githubLabel": "zephkelly/upbranched",
+        "link": "https://upbranched.com",
+        "linkLabel": "upbranched.com",
+        "overview": "A lightweight social media platform built for independent communities, allowing users to create and join 'branches' which are collections of user-moderated groups.",
+        "coverImageUrl": "/images/works/upbranched/upbranched-cover.webp",
+        "coverImageAlt": "User posts on UpBranched platform homepage",
+        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "demoVideoUrl": "/videos/works/upbranched/upbranched-demo.mp4",
+        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
+        "technologies": {
+            "ts": "ts",
+            "nuxt": "nuxt",
+            "vue3": "vue3",
+            "sass": "sass",
+            "nginx": "nginx",
+            "postgresql": "postgresql"
+        },
+        "descriptionSections": {
+            "design": {
+                "description1": "Inspired by Reddit, I aimed to create a visually appealing and user-friendly site with enhanced customisation options to allow users to create and maintain their own communities.",
+                "description2": "Leveraging nuxt, I developed a fast, responsive, maintainable site that combines SSR and SPA for optimal performance and SEO. Vite, Vue3, TypeScript, and Sass were used for a modern and efficient development workflow."
+            },
+            "development": {
+                "description1": "To handle the structured data required for a social media platform, I utilized PostgreSQL. All queries are executed using plain SQL, with thorough validation and sanitization of user-submitted content to prevent SQL injection.",
+                "description2": "To maintain a healthy community, I integrated Google's 'Perspective' API for comment moderation. The site also features Auth0 integration with Google, GitHub, and Discord, a image uploader and compressor using sharp, and an imgur web-scraper for cross-posting content and optimising data storage."
             }
         },
         "imageGallery": {
@@ -170,8 +172,6 @@
         "coverImageUrl": "images/works/ochreivy/ochreivy-cover.webp",
         "coverImageAlt": "Blog homepage with hand-drawn illustration and typography",
         "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
-        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
         "technologies": {
             "ts": "ts",
             "css": "css",
@@ -183,7 +183,7 @@
                 "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
             },
             "development": {
-                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+                "description1": "The site was built using nuxt, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
             }
         },
         "imageGallery": {
@@ -197,44 +197,6 @@
     },
     {
         "id": 6,
-        "slug": "portfolio",
-        "title": "My portfolio",
-        "type": "personal",
-        "githubLink": "https://github.com/zephkelly/portfolio",
-        "githubLabel": "zephkelly/portfolio",
-        "link": "https://evankelly.dev",
-        "linkLabel": "evankelly.dev",
-        "overview": "My accessible, minimalist portfolio website, built to showcase my skills and experience as a software developer.",
-        "coverImageUrl": "images/works/portfolio/portfolio-cover.webp",
-        "coverImageAlt": "Portfolio homepage with project thumbnails and profile photo",
-        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
-        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
-        "technologies": {
-            "ts": "ts",
-            "nuxt3": "nuxt3",
-            "vue3": "vue3",
-            "sass": "sass"
-        },
-        "descriptionSections": {
-            "design": {
-                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
-            },
-            "development": {
-                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
-            }
-        },
-        "imageGallery": {
-            "Home Desktop": {
-                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
-                "imageAlt": "Penny Projects desktop hero section",
-                "imageLabel": "Penny Projects desktop hero section",
-                "imageType": "desktop"
-            }
-        }
-    },
-    {
-        "id": 7,
         "slug": "lipstick-hippy",
         "title": "The Lipstick Hippy",
         "type": "client",
@@ -256,14 +218,14 @@
                 "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
             },
             "development": {
-                "description1": "The site was built using Nuxt3, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+                "description1": "The site was built using nuxt, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
             }
         },
         "imageGallery": {
             "Home Desktop": {
-                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
-                "imageAlt": "Penny Projects desktop hero section",
-                "imageLabel": "Penny Projects desktop hero section",
+                "imageUrl": "assets/images/works/lipstickhippy/desktop-hero.webp",
+                "imageAlt": "Lipstick Hippy desktop hero section",
+                "imageLabel": "Lipstick Hippy desktop hero section",
                 "imageType": "desktop"
             }
         }

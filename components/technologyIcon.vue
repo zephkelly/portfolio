@@ -67,7 +67,7 @@ function sanitizeSvg(svg: string): string {
     height: 24px;
 }
 
-.nuxt3 {
+.nuxt {
     width: 30px;
     height: 30px;
     margin-left: -6px;

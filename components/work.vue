@@ -15,8 +15,6 @@
 
 <script setup lang="ts">
 import { useWorks } from '~/composable/useWorks';
-import { type Technology } from '~/types/technologies.types';
-import { type Work, type WorkCard } from '~/types/work.types';
 
 const { workCards } = useWorks();
 </script>
