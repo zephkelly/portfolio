@@ -11,7 +11,10 @@ export type WorkImage = {
 
 export type WorkDescriptionSection = {
     [sectionName: string]: {
-        [descriptionKey: string]: string;
+        description1: string;
+        description2?: string;
+        description3?: string;
+        description4?: string;
     };
 }
 
@@ -20,6 +23,7 @@ export type Work = {
     slug: string;
     title: string;
     type: string;
+    time?: string;
     link: string;
     linkLabel: string;
     githubLink: string;

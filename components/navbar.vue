@@ -36,7 +36,7 @@
                                 </BButton>
                             </li>
                             <li>
-                                <BButton class="menu-link" variant="flat" holdable to="/resume">
+                                <BButton class="menu-link" variant="flat" holdable href="/resume.pdf" download="Evan-Kelly-Resume.pdf" target="_blank" rel="noopener" aria-label="Download my resume (PDF)">
                                     Resume
                                 </BButton>
                             </li>

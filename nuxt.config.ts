@@ -5,6 +5,18 @@ export default defineNuxtConfig({
     extends: [
         ['github:zephkelly/breeze-ui'],
     ],
+
+    modules: ['@nuxt/image'],
+
+    // Source optimised images from the assets directory rather than public.
+    // With `dir` set, NuxtImg `src` values resolve relative to assets/images
+    // (e.g. src="/works/foo.webp" -> assets/images/works/foo.webp).
+    image: {
+        dir: 'assets/images',
+        quality: 80,
+        format: ['webp'],
+    },
+
     breeze: {
         theme: 'default',
         colors: 'default',

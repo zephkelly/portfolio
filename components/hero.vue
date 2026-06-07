@@ -1,7 +1,7 @@
 <template>
     <section class="component">
         <div class="container">
-            <img src="~/assets/images/profile.webp" alt="Evan Kelly, creator of this portfolio!"/>
+            <NuxtImg src="/profile.webp" alt="Evan Kelly, creator of this portfolio!" width="200" height="200" sizes="200px" densities="x1 x2" preload loading="eager" fetchpriority="high" />
             <h1>Hi, welcome to my site! <span data-v-1baf8294="">👋</span></h1>
             <p>
                 I'm <a class="name" href="https://github.com/zephkelly">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 

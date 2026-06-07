@@ -27,6 +27,10 @@
                                 <p class="label">Type</p>
                                 <p class="value type">{{ work?.type }}</p>
                             </div>
+                            <div class="field" v-if="work?.time">
+                                <p class="label">Timeframe</p>
+                                <p class="value">{{ work?.time }}</p>
+                            </div>
                             <div class="field">
                                 <p class="label">Live</p>
                                 <a class="value live-link" target="_blank" aria-label="Navigate to the live website" rel="follow" tabindex="0" :href="work?.link">{{  work?.linkLabel }}</a>
@@ -67,7 +71,7 @@
             </button>
             <!-- Show cover image instead -->
             <div class="cover-image" v-else>
-                <img :src="work?.coverImageUrl" :alt="work?.coverImageAlt" loading="lazy"/>
+                <NuxtImg :src="work?.coverImageUrl" :alt="work?.coverImageAlt" loading="lazy" sizes="sm:100vw md:100vw lg:900px" />
             </div>
             <div class="descriptions">
                 <div v-for="(section, sectionName) in work?.descriptionSections" :key="sectionName">
@@ -77,6 +81,19 @@
                     </div>
                 </div>
             </div>
+            <section class="gallery" v-if="workHasImageGallery">
+                <h2 class="label">Gallery</h2>
+                <div class="images">
+                <div v-for="image in work?.imageGallery" class="wrapper">
+                    <div class="container">
+                        <a :href="image.imageUrl" target="_blank" rel="noopener noreferrer">
+                            <NuxtImg :class="image.imageType" :src="image.imageUrl" loading="lazy" sizes="sm:100vw md:50vw lg:450px" />
+                        </a>
+                        <p>{{ image.imageLabel }}</p>
+                    </div>
+                </div>
+                </div>
+            </section>
         </div>
     </section>
     <section v-else class="component">
@@ -103,6 +120,10 @@ const technologies: Ref<Technology[]> = ref(getTechnologies(work.value as Work))
 
 const workHasDemoVideo = computed(() => {
     return !!work.value?.demoVideoUrl;
+});
+
+const workHasImageGallery = computed(() => {
+    return !!work.value?.imageGallery;
 });
 
 const demoVideo = ref<HTMLVideoElement | null>(null);
@@ -414,7 +435,7 @@ h1.title {
     }
 }
 
-.video {
+.video, .cover-image {
     position: relative;
     width: 100%;
     margin-top: 5rem;
@@ -488,6 +509,18 @@ h1.title {
         }
     }
 }
+.cover-image {
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
 
 .descriptions {
     display: flex;
@@ -509,6 +542,61 @@ h1.title {
         font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 1rem;
+    }
+}
+
+.gallery {
+    margin-top: 4rem;
+
+    .label {
+        font-family: var(--font-family-secondary);
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--text-foreground);
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 2rem;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+
+                img {
+                    border-radius: 8px;
+                    width: auto;
+                    max-width: 100%;
+                    max-height: 280px;
+                    height: auto;
+                    transition: transform 0.3s ease;
+
+                    &.desktop {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    &.mobile {
+                        width: auto;
+                        height: 500px;
+                    }
+                }
+
+                p {
+                    font-family: arial, var(--font-system);
+                    color: var(--text-foreground-secondary);
+                    font-size: 0.9rem;
+                }
+            }
+        }
     }
 }
 </style>

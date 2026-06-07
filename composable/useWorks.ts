@@ -5,8 +5,8 @@ import worksData from '~/assets/json/works.json';
 import technologiesData from '~/assets/json/technologies.json';
 
 export function useWorks() {
-    const works = ref<Work[]>(worksData as Work[]);
-    const technologies = ref<Technology[]>(technologiesData as Technology[]);
+    const works = ref<Work[]>(worksData as unknown as Work[]);
+    const technologies = ref<Technology[]>(technologiesData as unknown as Technology[]);
 
     const workCards = computed<WorkCard[]>(() =>
         works.value.map((work: Work) => ({

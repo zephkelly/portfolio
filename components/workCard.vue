@@ -6,7 +6,7 @@
                     <TechnologyIcon v-for="technology in technologies" :key="technology.id" :technology="technology" />
                 </div>
                 <div class="wrapper" >
-                    <img :src="workCard.coverImageUrl" :alt="workCard.coverImageAlt" loading="lazy"/>
+                    <NuxtImg :src="workCard.coverImageUrl" :alt="workCard.coverImageAlt" loading="lazy" sizes="sm:100vw md:50vw lg:400px" />
                 </div>
             </section> 
             <section class="content">

@@ -8,12 +8,10 @@
         "githubLabel": "zephkelly/paincoach",
         "link": "https://paincoach.co",
         "linkLabel": "paincoach.co",
-        "overview": "A pain and lifestyle tracking app for post-operative patients with a companion dashboard for clinicians that allows users to log their pain levels, activities, and lifestyle to help reduce their overall pain.",
-        "coverImageUrl": "images/works/paincoach/paincoach-cover.webp",
-        "coverImageAlt": "Pain Coach app dashboard with tracking metrics",
+        "overview": "A pain and lifestyle tracking platform for post-operative patients, paired with a companion dashboard for clinicians. Patients log their pain levels, activity, and lifestyle factors to better understand and reduce their long-term pain.",
+        "coverImageUrl": "/works/paincoach/paincoach-cover.webp",
+        "coverImageAlt": "Pain Coach app dashboard showing pain tracking metrics",
         "ogImageUrl": "/images/works/paincoach/paincoach-og.png",
-        "demoVideoUrl": "videos/works/paincoach/paincoach-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Pain Coach app dashboard and tracking features",
         "technologies": {
             "ts": "ts",
             "nuxt": "nuxt",
@@ -25,19 +23,11 @@
         "descriptionSections": {
             "design": {
                 "description1": "Inspired by the lack of accessible digital tooling in chronic pain management, I set out to build a clinical platform that could support real patients and clinicians in a highly regulated, trust-sensitive environment — one where reliability and data integrity are non-negotiable.",
-                "description2": "Built as a TypeScript/Vue monorepo using Nuxt and Nitro, Pain Coach combines a responsive patient-facing interface with a robust backend of over 600 API endpoints. The architecture supports multiple independent clinics, with their own programs, and role-based access control across clinicians, admins, and patients."
+                "description2": "Built as a TypeScript/Vue monorepo using Nuxt and Nitro, Pain Coach combines a responsive patient-facing interface with a robust backend of over 600 API endpoints. The architecture supports multiple independent clinics, each with their own programs, and role-based access control across clinicians, admins, and patients."
             },
             "development": {
-                "description1": "PostgreSQL underpins the platform's data layer, with an organisation model that isolates each clinic's data from others. All API boundaries are validated with Zod schemas, and strict role- and permission-based access control ensures clinicians, admins, and patients only ever access data within their own organisation.",
-                "description2": "The backend runs a pipeline of ~20 scheduled cron jobs handling async image processing, multi-channel clinical form delivery (email, SMS, and push notifications), and subscription billing lifecycle management via Stripe and Xero. Third-party integrations include AWS SES, S3, and SNS, Google Maps, and Cloudflare R2 — with a clinical trial currently running at the University of Technology Sydney."
-            }
-        },
-        "imageGallery": {
-            "Home Desktop": {
-                "imageUrl": "assets/images/works/paincoach/desktop-hero.webp",
-                "imageAlt": "Pain Coach desktop hero section",
-                "imageLabel": "Pain Coach desktop hero section",
-                "imageType": "desktop"
+                "description1": "PostgreSQL underpins the platform's data layer, with an organisation model that isolates each clinic's data from the others. All API boundaries are validated with Zod schemas, and strict role- and permission-based access control ensures clinicians, admins, and patients only ever access data within their own organisation.",
+                "description2": "The backend runs a pipeline of around 20 scheduled cron jobs handling async image processing, multi-channel clinical form delivery (email, SMS, and push notifications), and subscription billing lifecycle management via Stripe and Xero. Third-party integrations span AWS SES, S3, and SNS, Google Maps, and Cloudflare R2 — with a clinical trial currently running at the University of Technology Sydney."
             }
         }
     },
@@ -46,16 +36,17 @@
         "slug": "pennyprojects",
         "title": "Penny Projects",
         "type": "client",
+        "time": "8 Months",
         "githubLink": "https://github.com/zephkelly/penny-projects",
         "githubLabel": "zephkelly/penny-projects",
         "link": "https://pennyprojects.org",
         "linkLabel": "pennyprojects.org",
-        "overview": "A non-profit organisation located in Zambia, Africa, that raises funds for humanitarian work in the local community.",
-        "coverImageUrl": "/images/works/pennyprojects/penny-projects-cover.webp",
-        "coverImageAlt": "People gathering water at a well with organization logo",
+        "overview": "A non-profit raising funds to make a lasting impact on Riverside Secondary High School in Zambia and its surrounding community.",
+        "coverImageUrl": "/works/pennyprojects/penny-projects-cover.webp",
+        "coverImageAlt": "People gathering water at a well, with the Penny Projects logo",
         "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
         "demoVideoUrl": "/videos/works/pennyprojects/pennyprojects-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
+        "demoVideoAlt": "Short demonstration of the Penny Projects website landing section",
         "technologies": {
             "ts": "ts",
             "vue3": "vue3",
@@ -66,18 +57,54 @@
         },
         "descriptionSections": {
             "design": {
-                "description1": "The site's design was developed through collaboration between a graphic designer and myself, focusing on simplicity, ease of navigation, strong brand identity, and highlighting the organization's impact through compelling content and beneficiary stories."
+                "description1": "Designed in close collaboration with a graphic designer, working from my direction on the site's structure and layout. The result is a simple, easy-to-navigate experience with a strong brand identity that keeps the focus on the organisation's content and the stories of the people it helps."
             },
             "development": {
-                "description1": "Built with nuxt, the site leverages a hybrid SSR/SPA architecture to optimize SEO, load times, and client-side performance. Lots of attention was given to faithfully implementing the designer's vision, ensuring responsive functionality across all devices."
+                "description1": "Built with Nuxt 3 as a hybrid of SSR and SPA — rendered on the server, then hydrated on the client — so the site is SEO-friendly and fast to load while keeping the smoothness of a single-page app. Considerable care went into faithfully realising the designer's vision and ensuring a fully responsive experience across every device."
             }
         },
         "imageGallery": {
-            "Home Desktop": {
-                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
-                "imageAlt": "Penny Projects desktop hero section",
-                "imageLabel": "Penny Projects desktop hero section",
+            "Desktop landing page": {
+                "imageUrl": "/works/pennyprojects/desktop-hero.webp",
+                "imageAlt": "Penny Projects desktop landing page",
+                "imageLabel": "Desktop landing page",
                 "imageType": "desktop"
+            },
+            "Information section": {
+                "imageUrl": "/works/pennyprojects/desktop-approach.JPG",
+                "imageAlt": "Penny Projects information section",
+                "imageLabel": "Information section",
+                "imageType": "desktop"
+            },
+            "Founder section": {
+                "imageUrl": "/works/pennyprojects/desktop-founder.JPG",
+                "imageAlt": "Penny Projects founder section",
+                "imageLabel": "Founder section",
+                "imageType": "desktop"
+            },
+            "Desktop donation modal": {
+                "imageUrl": "/works/pennyprojects/desktop-modal.JPG",
+                "imageAlt": "Penny Projects desktop donation modal",
+                "imageLabel": "Desktop donation modal",
+                "imageType": "desktop"
+            },
+            "Mobile landing page": {
+                "imageUrl": "/works/pennyprojects/mobile-hero.JPG",
+                "imageAlt": "Penny Projects mobile landing page",
+                "imageLabel": "Mobile landing page",
+                "imageType": "mobile"
+            },
+            "Mobile donation section": {
+                "imageUrl": "/works/pennyprojects/mobile-donation.JPG",
+                "imageAlt": "Penny Projects mobile donation section",
+                "imageLabel": "Mobile donation section",
+                "imageType": "mobile"
+            },
+            "Mobile donation modal": {
+                "imageUrl": "/works/pennyprojects/mobile-modal.JPG",
+                "imageAlt": "Penny Projects mobile donation modal",
+                "imageLabel": "Mobile donation modal",
+                "imageType": "mobile"
             }
         }
     },
@@ -86,33 +113,57 @@
         "slug": "galactic-asteroid-miner",
         "title": "Galactic Asteroid Miner",
         "type": "personal",
+        "time": "2 Months",
         "githubLink": "https://github.com/zephkelly/galactic-asteroid-miner",
         "githubLabel": "zephkelly/gam",
         "link": "https://zephyrmg.itch.io/galactic-asteroid-miner",
         "linkLabel": "itch.io/zephyrmg",
-        "overview": "A 2D arcade-style game where you control and upgrade a mining ship, collecting rare asteroids as you venture further out in space.",
-        "coverImageUrl": "images/works/galactic/gam-cover.webp",
-        "coverImageAlt": "Space station orbiting a star in game title screen",
-        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
-        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
+        "overview": "A 2D arcade-style space mining game built in Unity. You pilot a mining ship and collect as many asteroids as you can while managing your fuel and health. It was my first released title, after more than six years of tinkering in Unity.",
+        "coverImageUrl": "/works/galactic/gam-cover.webp",
+        "coverImageAlt": "Space station orbiting a star on the game's title screen",
+        "ogImageUrl": "/images/works/galactic/galactic-og.png",
         "technologies": {
             "unity": "unity",
             "csharp": "csharp"
         },
         "descriptionSections": {
             "design": {
-                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+                "description1": "I had a clear visual direction before the gameplay even existed. With programming as my main focus, I kept the art deliberately simple and built around solid colours — giving the game a distinct aesthetic that players described as 'smooth gameplay, and a nostalgic experience.'"
             },
             "development": {
-                "description1": "The site was built using nuxt, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+                "description1": "Built in Unity with C# and .NET, using Unity's UI system for the menus and its physics engine tuned to model Newtonian gravity, with code following SOLID and DRY principles throughout.",
+                "description2": "The standout technical features include infinite procedural generation without a noise function like Perlin, an occlusion culling system that only renders objects within a set view radius, and spatial hashing that splits the world into manageable chunks — all underpinned by a clean architecture built for extensibility. I'm currently rewriting the networking from the ground up to add multiplayer with Mirror."
             }
         },
         "imageGallery": {
-            "Home Desktop": {
-                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
-                "imageAlt": "Penny Projects desktop hero section",
-                "imageLabel": "Penny Projects desktop hero section",
+            "Main Menu": {
+                "imageUrl": "/works/galactic/main-menu.webp",
+                "imageAlt": "Galactic Asteroid Miner main menu",
+                "imageLabel": "Main menu",
+                "imageType": "desktop"
+            },
+            "Red Dwarf": {
+                "imageUrl": "/works/galactic/red-dwarf.webp",
+                "imageAlt": "Galactic Asteroid Miner red dwarf system",
+                "imageLabel": "Red dwarf",
+                "imageType": "desktop"
+            },
+            "White Dwarf": {
+                "imageUrl": "/works/galactic/white-dwarf.webp",
+                "imageAlt": "Galactic Asteroid Miner white dwarf system",
+                "imageLabel": "White dwarf",
+                "imageType": "desktop"
+            },
+            "Shop UI": {
+                "imageUrl": "/works/galactic/shop-ui.webp",
+                "imageAlt": "Galactic Asteroid Miner shop interface",
+                "imageLabel": "Shop UI",
+                "imageType": "desktop"
+            },
+            "Asteroid Field": {
+                "imageUrl": "/works/galactic/asteroid-field.webp",
+                "imageAlt": "Galactic Asteroid Miner asteroid field",
+                "imageLabel": "Asteroid field",
                 "imageType": "desktop"
             }
         }
@@ -122,16 +173,17 @@
         "slug": "upbranched",
         "title": "Upbranched",
         "type": "personal",
+        "time": "In-progress",
         "githubLink": "https://github.com/zephkelly/upbranched",
         "githubLabel": "zephkelly/upbranched",
         "link": "https://upbranched.com",
         "linkLabel": "upbranched.com",
-        "overview": "A lightweight social media platform built for independent communities, allowing users to create and join 'branches' which are collections of user-moderated groups.",
-        "coverImageUrl": "/images/works/upbranched/upbranched-cover.webp",
-        "coverImageAlt": "User posts on UpBranched platform homepage",
-        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "overview": "A lightweight social platform built for independent communities. Users create and join 'branches' — collections of user-moderated groups — and share text, image, and video posts, vote them up or down, and reply through nested comments. Currently in development, with a release planned soon.",
+        "coverImageUrl": "/works/upbranched/upbranched-cover.webp",
+        "coverImageAlt": "User posts on the Upbranched platform homepage",
+        "ogImageUrl": "/images/works/upbranched/upbranched-og.png",
         "demoVideoUrl": "/videos/works/upbranched/upbranched-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
+        "demoVideoAlt": "A short video demonstration of the Upbranched platform",
         "technologies": {
             "ts": "ts",
             "nuxt": "nuxt",
@@ -142,20 +194,74 @@
         },
         "descriptionSections": {
             "design": {
-                "description1": "Inspired by Reddit, I aimed to create a visually appealing and user-friendly site with enhanced customisation options to allow users to create and maintain their own communities.",
-                "description2": "Leveraging nuxt, I developed a fast, responsive, maintainable site that combines SSR and SPA for optimal performance and SEO. Vite, Vue3, TypeScript, and Sass were used for a modern and efficient development workflow."
+                "description1": "Using Reddit as a starting point, I focused on the areas I felt it was lacking — building something more visually polished, easier to navigate, and far more customisable for the people running their own communities.",
+                "description2": "Nuxt 3 powers a fast, maintainable frontend that blends SSG and SPA rendering to stay responsive and highly SEO-friendly. The stack pairs Vite with the latest Vue 3 and TypeScript features, with Sass for structured, nested styling."
             },
             "development": {
-                "description1": "To handle the structured data required for a social media platform, I utilized PostgreSQL. All queries are executed using plain SQL, with thorough validation and sanitization of user-submitted content to prevent SQL injection.",
-                "description2": "To maintain a healthy community, I integrated Google's 'Perspective' API for comment moderation. The site also features Auth0 integration with Google, GitHub, and Discord, a image uploader and compressor using sharp, and an imgur web-scraper for cross-posting content and optimising data storage."
+                "description1": "A social platform needs structured, relational data, so I chose PostgreSQL over the non-relational databases I'd worked with before. Every query is written in plain SQL, and all user-submitted content is validated and sanitised to guard against SQL injection.",
+                "description2": "To keep communities healthy, I integrated Google's Perspective API for automated comment moderation. Other features include full Auth0 authentication with Google and GitHub, a custom image uploader and compressor, and an Imgur web-scraper for cross-posting content while easing the load on Upbranched's own storage."
             }
         },
         "imageGallery": {
-            "Home Desktop": {
-                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
-                "imageAlt": "Penny Projects desktop hero section",
-                "imageLabel": "Penny Projects desktop hero section",
+            "Home Desktop Light": {
+                "imageUrl": "/works/upbranched/home-desktop-light.webp",
+                "imageAlt": "Upbranched desktop hero section",
+                "imageLabel": "Upbranched desktop hero section - light mode",
                 "imageType": "desktop"
+            },
+            "Home Desktop Dark": {
+                "imageUrl": "/works/upbranched/home-desktop.webp",
+                "imageAlt": "Upbranched desktop hero section",
+                "imageLabel": "Upbranched desktop hero section - dark mode",
+                "imageType": "desktop"
+            },
+            "Branch Desktop Light": {
+                "imageUrl": "/works/upbranched/branch-desktop-light.webp",
+                "imageAlt": "Upbranched branch page desktop view",
+                "imageLabel": "Upbranched branch page desktop view - light mode",
+                "imageType": "desktop"
+            },
+            "Branch Desktop Dark": {
+                "imageUrl": "/works/upbranched/branch-desktop.webp",
+                "imageAlt": "Upbranched branch page desktop view",
+                "imageLabel": "Upbranched branch page desktop view - dark mode",
+                "imageType": "desktop"
+            },
+            "Branch Edit Desktop Light": {
+                "imageUrl": "/works/upbranched/branch-edit-desktop-light.webp",
+                "imageAlt": "Upbranched branch edit page desktop view",
+                "imageLabel": "Upbranched branch edit page desktop view - light mode",
+                "imageType": "desktop"
+            },
+            "Branch Edit Desktop Dark": {
+                "imageUrl": "/works/upbranched/branch-edit-desktop.webp",
+                "imageAlt": "Upbranched branch edit page desktop view",
+                "imageLabel": "Upbranched branch edit page desktop view - dark mode",
+                "imageType": "desktop"
+            },
+            "Create Desktop Light": {
+                "imageUrl": "/works/upbranched/create-desktop-light.webp",
+                "imageAlt": "Upbranched create branch page desktop view",
+                "imageLabel": "Upbranched create branch page desktop view - light mode",
+                "imageType": "desktop"
+            },
+            "Create Desktop Dark": {
+                "imageUrl": "/works/upbranched/create-desktop.webp",
+                "imageAlt": "Upbranched create branch page desktop view",
+                "imageLabel": "Upbranched create branch page desktop view - dark mode",
+                "imageType": "desktop"
+            },
+            "Branch Mobile Light": {
+                "imageUrl": "/works/upbranched/branch-mobile-light.webp",
+                "imageAlt": "Upbranched branch page mobile view",
+                "imageLabel": "Upbranched branch page mobile view - light mode",
+                "imageType": "mobile"
+            },
+            "Branch Mobile Dark": {
+                "imageUrl": "/works/upbranched/branch-mobile.webp",
+                "imageAlt": "Upbranched branch page mobile view",
+                "imageLabel": "Upbranched branch page mobile view - dark mode",
+                "imageType": "mobile"
             }
         }
     },
@@ -164,14 +270,15 @@
         "slug": "ochre-and-ivy",
         "title": "Ochre & Ivy",
         "type": "client",
+        "time": "2 Months",
         "githubLink": "https://github.com/zephkelly/ochre-ivy",
         "githubLabel": "zephkelly/ochre-ivy",
         "link": "https://ochreivy.com",
         "linkLabel": "ochreivy.com",
-        "overview": "A vanilla blogging platform with a custom CMS created for a school teacher wanting to share their passion for all things natural and organic.",
-        "coverImageUrl": "images/works/ochreivy/ochreivy-cover.webp",
-        "coverImageAlt": "Blog homepage with hand-drawn illustration and typography",
-        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
+        "overview": "A fully custom blogging platform built for a school teacher who wanted an online home to share their passion for all things natural and organic. Having found Squarespace and Wix too costly and restrictive, I built the site from scratch in TypeScript — no framework — with a built-in CMS and a user-friendly admin panel.",
+        "coverImageUrl": "/works/ochreivy/ochreivy-cover.webp",
+        "coverImageAlt": "Ochre & Ivy blog homepage with hand-drawn illustration and typography",
+        "ogImageUrl": "/images/works/ochreivy/ochreivy-og.png",
         "technologies": {
             "ts": "ts",
             "css": "css",
@@ -180,18 +287,44 @@
         },
         "descriptionSections": {
             "design": {
-                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+                "description1": "The brief called for something simple and minimal. With little copy across the site, it was essential that the blog and recipe content stayed front and centre and easy to digest — so I drew on my graphic design background to craft a brand identity that felt both unique and memorable.",
+                "description2": "Wherever others might reach for JavaScript or a library to build carousels and animations, I opted for CSS instead. That kept the site lightweight and fast, and made for a more accessible experience for users with disabilities."
             },
             "development": {
-                "description1": "The site was built using nuxt, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+                "description1": "As a deliberate learning exercise, I built the site from the ground up without a framework — a deep dive into how websites work under the hood and how to tune them for performance. The result scores 100% on Google Lighthouse across both mobile and desktop.",
+                "description2": "At its core is a built-in CMS that lets the client create, update, and delete content without ever leaving the site, secured behind user authentication and powered by EditorJS. Content is saved as JSON, validated on both the client and server to prevent code injection, then parsed and rendered — giving the client a flexible, familiar editing experience with no need to touch HTML or markdown."
             }
         },
         "imageGallery": {
             "Home Desktop": {
-                "imageUrl": "assets/images/works/pennyprojects/desktop-hero.webp",
-                "imageAlt": "Penny Projects desktop hero section",
-                "imageLabel": "Penny Projects desktop hero section",
+                "imageUrl": "/works/ochreivy/home-desktop.webp",
+                "imageAlt": "Ochre & Ivy home page desktop view",
+                "imageLabel": "Home desktop",
                 "imageType": "desktop"
+            },
+            "Blog Desktop": {
+                "imageUrl": "/works/ochreivy/blog-desktop.webp",
+                "imageAlt": "Ochre & Ivy blog page desktop view",
+                "imageLabel": "Blog desktop",
+                "imageType": "desktop"
+            },
+            "Dashboard Desktop": {
+                "imageUrl": "/works/ochreivy/dashboard-desktop.webp",
+                "imageAlt": "Ochre & Ivy CMS dashboard desktop view",
+                "imageLabel": "CMS dashboard",
+                "imageType": "desktop"
+            },
+            "Home Mobile": {
+                "imageUrl": "/works/ochreivy/home-mobile.webp",
+                "imageAlt": "Ochre & Ivy home page mobile view",
+                "imageLabel": "Home mobile",
+                "imageType": "mobile"
+            },
+            "Blog Mobile": {
+                "imageUrl": "/works/ochreivy/blog-mobile.webp",
+                "imageAlt": "Ochre & Ivy blog page mobile view",
+                "imageLabel": "Blog mobile",
+                "imageType": "mobile"
             }
         }
     },
@@ -200,33 +333,51 @@
         "slug": "lipstick-hippy",
         "title": "The Lipstick Hippy",
         "type": "client",
+        "time": "7 Months",
         "githubLink": "",
         "githubLabel": "",
         "link": "https://kylie5620.wixsite.com/thelipstickhippy",
         "linkLabel": "thelipstickhippy.com",
-        "overview": "A previously active online store that focused on selling organic health food products with blogs about general health and wellness advice.",
-        "coverImageUrl": "images/works/lipstickhippy/lipstick-cover.webp",
-        "coverImageAlt": "Online store homepage with organic products display",
-        "ogImageUrl": "/images/works/pennyprojects/pennyprojects-og.png",
-        "demoVideoUrl": "videos/works/pennyprojects/pennyprojects-demo.mp4",
-        "demoVideoAlt": "A short video demonstration of the Penny Project website landing section",
+        "overview": "An online store for natural and organic health food products, built on Wix. Now retired, the project was an end-to-end exercise in delivering a polished, self-manageable storefront and a complete brand identity for a small business.",
+        "coverImageUrl": "/works/lipstickhippy/lipstick-cover.webp",
+        "coverImageAlt": "The Lipstick Hippy online store homepage with an organic products display",
+        "ogImageUrl": "/images/works/lipstickhippy/lipstickhippy-og.png",
         "technologies": {
             "wix": "wix"
         },
         "descriptionSections": {
             "design": {
-                "description1": "A graphic designer created mockups of the site under some direction from myself as to how the website should be structured. The site was designed to be simple and easy to navigate, with a clear brand identity and a focus on the content and the stories of the people that the organisation helps"
+                "description1": "Starting from a template, I customised the store to fit the client's needs and gave it a unified brand identity within the first few weeks. Across seven months I handled all of the brand work myself — logo design, colour palette, graphics, and email marketing campaigns — and, where the platform couldn't support a custom recipe builder, designed a bespoke Photoshop template the client could use to send recipes to customers."
             },
             "development": {
-                "description1": "The site was built using nuxt, as a hybrid of SSR and SPA through initial rendering on the server and then hydration on the client. This means that the site is SEO friendly and loads fast, but also has the performance benefits of a SPA. A lot of work went into implementing design as provided by the graphic designer, and ensuring this was working correctly and responsive across all devices."
+                "description1": "I built the store in Wix's low-code editor so the client could manage day-to-day changes themselves without incurring extra cost. I rapidly prototyped the design and functionality, then worked closely with the client to teach them the platform and handle larger updates.",
+                "description2": "The site brought together a range of plugins and ongoing maintenance — email marketing campaigns, a blog, a full store with custom shipping and payment options, an authentication and login system, and a subscription-only member portal."
             }
         },
         "imageGallery": {
             "Home Desktop": {
-                "imageUrl": "assets/images/works/lipstickhippy/desktop-hero.webp",
-                "imageAlt": "Lipstick Hippy desktop hero section",
-                "imageLabel": "Lipstick Hippy desktop hero section",
+                "imageUrl": "/works/lipstickhippy/home-desktop.webp",
+                "imageAlt": "The Lipstick Hippy home page desktop view",
+                "imageLabel": "Home desktop",
                 "imageType": "desktop"
+            },
+            "Recipes Desktop": {
+                "imageUrl": "/works/lipstickhippy/blog-desktop.webp",
+                "imageAlt": "The Lipstick Hippy recipes page desktop view",
+                "imageLabel": "Recipes desktop",
+                "imageType": "desktop"
+            },
+            "Home Mobile": {
+                "imageUrl": "/works/lipstickhippy/home-mobile.webp",
+                "imageAlt": "The Lipstick Hippy home page mobile view",
+                "imageLabel": "Home mobile",
+                "imageType": "mobile"
+            },
+            "Blog Mobile": {
+                "imageUrl": "/works/lipstickhippy/blog-mobile.webp",
+                "imageAlt": "The Lipstick Hippy blog page mobile view",
+                "imageLabel": "Blog mobile",
+                "imageType": "mobile"
             }
         }
     }
