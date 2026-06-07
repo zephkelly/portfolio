@@ -1,4 +1,0 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=https://cloudconvert.com/
-HostUrl=https://eu-central.storage.cloudconvert.com/tasks/701fe5e5-56c2-4910-9f00-304eea50947b/education-griffith.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240426%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240426T042007Z&X-Amz-Expires=86400&X-Amz-Signature=29dd135eb4a49b3cf95f491869e82af2a81d0f91f7cec2e0b0b6ebc8620cb746&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22education-griffith.webp%22&response-content-type=image%2Fwebp&x-id=GetObject

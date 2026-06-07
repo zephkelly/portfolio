@@ -1,403 +1,485 @@
 <template>
-  <section ref="navSection" class="navbar active">
-    <div v-show="renderElements" ref="navButton" class="button" style="display:none;">
-      <button ref="mobileButton" v-on:click="toggleMobileNav" style="background-color: transparent; backdrop-filter: none;">
-        <img class="nav-svg" src="/images/svg/menu.svg" alt="Menu">
-      </button>
+    <div>
+        <div ref="navObserver" class="nav-observer"></div>
+        <section 
+            style="position: fixed;"
+            class="component"
+            :class="{ 'nav-hidden': isNavHidden }"
+        >
+            <div class="container">
+                <header>
+                    <div class="logo" @click="tryCloseMenu()">
+                        <NuxtLink to="/" :tabindex="menuActive ? -1 : 0" :class="{ 'overlay-active': menuActive }">
+                            <span class="fill">E</span>
+                            <span class="outline">K</span>
+                        </NuxtLink>
+                    </div>
+                    <div class="menu">
+                        <button 
+                            tabindex="0" 
+                            @click="toggleMenu()" 
+                            :class="{ active: menuActive }"
+                            aria-label="Toggle navigation menu"
+                            :aria-expanded="menuActive"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" width="48" height="48" aria-hidden="true" focusable="false"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+                        </button>
+                        <ul :class="{ active: menuActive }">
+                            <li v-if="isHome === false">
+                                <BButton class="menu-link" variant="flat" holdable to="/">
+                                    Home
+                                </BButton>
+                            </li>
+                            <li>
+                                <BButton class="menu-link" variant="flat" holdable to="/contact">
+                                    Contact
+                                </BButton>
+                            </li>
+                            <li>
+                                <BButton class="menu-link" variant="flat" holdable href="/resume.pdf" download="Evan-Kelly-Resume.pdf" target="_blank" rel="noopener" aria-label="Download my resume (PDF)">
+                                    Resume
+                                </BButton>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="socials" @click="tryCloseMenu()">
+                        <a href="https://github.com/zephkelly" class="github" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile" tabindex="0" :class="{ 'overlay-active': menuActive }">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"/><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"/></g></svg>
+                        </a>
+                    </div>
+                </header>
+            </div>
+        </section>
+        <div class="overlay" :class="{ active: menuActive }" @click="tryCloseMenu()"></div>
     </div>
-    <div v-show="renderElements" ref="navLogo" class="logo">
-      <nuxt-link to="/"><span>E</span>K</nuxt-link>
-    </div>
-    <nav v-show="renderElements" ref="navLinks" style="display:none;">
-      <ul>
-        <li @click="hideMobileNav">
-          <nuxt-link to="/">Home</nuxt-link>
-        </li>
-        <li @click="hideMobileNav">
-          <nuxt-link to="/contact">Contact</nuxt-link>
-        </li>
-        <li>
-          <a href="/resume.pdf" target="_blank">Resume</a>
-        </li>
-      </ul>
-    </nav>
-    <div v-show="renderElements" ref="navLogoMobile" class="logo mobile" style="display: none">
-      <nuxt-link to="/"><span>E</span>K</nuxt-link>
-    </div>
-    <div v-show="renderElements" ref="navRefs" class="socials" style="display: none;">
-      <a href="https://github.com/zephkelly" target="_blank" alt="My GitHub" title="My GitHub">
-        <img class="social-svg github" src="/images/svg/github.svg" alt="GitHub">
-      </a>
-      <a class="linkedin" href="https://www.linkedin.com/in/evan-kelly/" target="_blank" alt="My LinkedIn" title="My LinkedIn">
-        <img class="social-svg linkedin" src="/images/svg/linkedin.svg" alt="LinkedIn">
-      </a>
-    </div>
-  </section>
 </template>
 
+<script setup lang="ts">
+const menuActive: Ref<boolean> = ref(false);
+
+function debounce(func: any, timeout: any) {
+    let timeoutId: any;
+
+    return (...args: any) => {
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => {
+            func(...args);
+        }, timeout);
+    };
+}
+
+const toggleMenu = debounce(() => {
+    menuActive.value = !menuActive.value;
+}, 100);
+
+const tryCloseMenu = () => {
+    if (menuActive.value === false) return;
+    menuActive.value = false;
+};
+
+const route = useRoute();
+const isHome: ComputedRef<boolean> = computed(() => route.path === '/');
+
+// Intersection Observer and Scroll-Linked effects
+const isNavHidden: Ref<boolean> = ref(false);
+const hasScrolled: Ref<boolean> = ref(false);
+const navObserver: Ref<HTMLElement | null> = ref<HTMLElement | null>(null);
+
+let lastScrollY = 0;
+const TOP_MARGIN = 20;
+const observerOptions = {
+    root: null,
+    rootMargin: `${TOP_MARGIN}px 0px 0px 0px`,
+    threshold: 0
+};
+
+const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+        isNavHidden.value = false;
+        hasScrolled.value = false;
+    } else {
+        hasScrolled.value = true;
+    }
+};
+
+const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (menuActive.value) {
+        menuActive.value = false;
+    }
+
+    if (currentScrollY <= TOP_MARGIN) {
+        isNavHidden.value = false;
+    }
+    else if (currentScrollY < lastScrollY) {
+        isNavHidden.value = false;
+    }
+    else if (currentScrollY > lastScrollY && currentScrollY > TOP_MARGIN) {
+        isNavHidden.value = true;
+    }
+
+    lastScrollY = currentScrollY;
+};
+
+const debouncedHandleScroll = debounce(handleScroll, 10);
+
+let observer: IntersectionObserver;
+
+onMounted(() => {
+    if (navObserver.value) {
+        observer = new IntersectionObserver(handleIntersect, observerOptions);
+        observer.observe(navObserver.value);
+    }
+
+    window.addEventListener('scroll', debouncedHandleScroll);
+});
+
+onUnmounted(() => {
+    if (observer && navObserver.value) {
+        observer.unobserve(navObserver.value);
+    }
+
+    window.removeEventListener('scroll', debouncedHandleScroll);
+});
+
+// Watch for route changes and close the menu
+watch(() => route.path, () => {
+    if (menuActive.value) {
+        menuActive.value = false;
+    }
+});
+</script>
+
+  
 <style lang="scss" scoped>
-  @font-face {
-    font-family: 'Roboto';
-    src: url('~/assets/fonts/Roboto-Medium.ttf');
-    font-weight: 500;
-    font-style: normal;
-  }
+.nav-observer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: transparent;
+    pointer-events: none;
+}
 
-  button {
-    background: none;
-    border: none;
-    min-width: 3.2rem;
-    min-height: 3.2rem;
-    padding: 0rem;
-    cursor: pointer;
-    opacity: 0.8;
-    position: relative;
-    right: 0.9rem;
-    border-radius: 0.6rem;
+section {
+    height: 64px;
+    background-color: var(--background-translucent);
     backdrop-filter: blur(6px);
+    z-index: 100;
 
-    img {
-      width: 2rem;
-      height: auto;
-      filter: invert(1);
+    &.component {
+        transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.3s ease;
+        will-change: transform, opacity;
 
-      @media (prefers-color-scheme: light) {
-        filter: invert(0);
-      }
-    }
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  .navbar {
-    display: grid;
-    position: fixed;
-    grid-template-columns: 0.4fr 2fr 0.4fr;
-    width: 100%;
-    height: 5rem;
-    max-width: 1000px;
-    box-sizing: border-box;
-    padding: 1rem 2rem;
-    background-color: var(--nav-background-color);
-    backdrop-filter: blur(6px);
-    z-index: 1;
-    transition: transform 0.25s ease-out;
-
-    nav  {
-      display: flex;
-      justify-content: center;
-      
-      & > * {
-        height: 100%;
-      }
-
-      ul {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-          font-family: 'Roboto', sans-serif;
-          font-weight: 500;
-          font-size: 1rem;
-          
-          a {
-            color: var(--text-main-color);
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            padding: 1rem;
-            transition: background-color 0.15s ease-out;
-            border-radius: 0.5rem;
-            opacity: 0.8;
-
-            &:hover {
-              color: white;
-              opacity: 1;
-              background-color: #303032;
-            }
-
-            @media (prefers-color-scheme: light) {
-              transition: background-color 0.15s ease-out;
-              opacity: 0.9;
-
-              &:hover {
-                background-color: rgba(0, 0, 0, 0.10);
-                color: var(--text-main-color);
-              }
-            }
-          }
+        &.nav-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
         }
-      }
-
-      @media (max-width: 1000px) {
-        display: none;
-        position: absolute;
-        top: 6rem;
-        left: 1rem;
-        background-color: rgba(41, 41, 45, 0.85);
-        padding: 0.8rem;
-        gap: 0.8rem;
-        backdrop-filter: blur(26px);
-        border-radius: 0.6rem;
-        
-        @media (prefers-color-scheme: light) {
-          background-color: rgba(220, 220, 220, 0.8);
-          box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.2);
-        }
-
-        ul {  
-          gap: 1rem;
-          flex-direction: column;
-          
-          li {
-            width: 25rem;
-
-            @media (max-width:400px) {
-              width: 15rem
-            }
-
-            a {
-              border-radius: 0.3rem;
-              height: 2rem;
-
-              @media (max-width:400px) {
-                background-color: rgba(0, 0, 0, 0.35);
-
-                @media (prefers-color-scheme: light) {
-                  background-color: rgba(0, 0, 0, 0.2);
-                }
-              }
-
-              &:hover {
-                background-color: rgba(0, 0, 0, 0.35);
-              }
-            }
-          }
-        }
-      }
     }
-  }
+}
 
-  .logo.mobile {
-    justify-content: center;
-  }
-
-  .logo {
+header {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    max-height: 100%;
+    height: 64px;
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-    img {
-      height: 1.7rem;
-    }
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    order: 1;
 
     a {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: 2.8rem;
-      padding-left: 0.05em;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 800;
-      font-size: 1.8rem;
-      font-style: italic;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      transition: opacity 0.15s ease-out;
-      color: var(--background-color);
-      background-image: linear-gradient(260deg, #ffe203, #ffbb55);
-      opacity: 0.9;
-      background-clip: text;
-      background-size: 150% 100%;
-      -webkit-text-stroke: 4px transparent;
+        width: 3.2rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.05rem;
+        align-items: center;
+        font-family: 'Roboto';
+        font-weight: 900;
+        font-size: 1.8rem;
+        font-style: normal;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        transition: opacity 0.15s ease-out;
+        color: var(--background);
+        background-image: linear-gradient(260deg, var(--accent-main), var(--accent-secondary));
+        opacity: 0.9;
+        background-clip: text;
+        background-size: 150% 100%;
+        -webkit-text-stroke: 4px transparent;
+        user-select: none;
+        cursor: pointer;
+        border-radius: 6px;
 
-      @media (prefers-color-scheme: light) {
-        color: rgba(255, 255, 255, 0.753);
-        opacity: 1;
-        background-image: linear-gradient(260deg, #ffe203d9, #ffbb55d3);
-      }
-      
-      span {
-        font-size: 2.05rem;
-        margin-right: 0.05em;
-        display: inline-block;
-        color: transparent;
-        background-size: 145% 145%;
-        -webkit-text-stroke: 1px transparent;
-        -webkit-background-clip: text;
-      }
+        @media (prefers-color-scheme: light) {
+            gap: 0.15rem;
+            -webkit-text-stroke: 8px transparent;
+
+            .outline {
+                font-size: 1.42rem;
+            }
+        }
+
+        :root[data-color-scheme="light"] & {
+            gap: 0.15rem;
+            -webkit-text-stroke: 8px transparent;
+
+            .outline {
+                font-size: 1.42rem;
+            }
+        }
+
+        span {
+            position: relative;
+            left: -0.15rem;
+            user-select: none;
+        }
+
+        span.fill {
+            font-size: 2rem;
+            display: inline-block;
+            color: transparent;
+            background-size: 145% 145%;
+            background-clip: text;
+            -webkit-text-stroke: 1px transparent;
+            -webkit-background-clip: text;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--foreground);
+            box-shadow: 0 0 0 5px var(--background); 
+        }
     }
-  }
+}
 
-  .socials {
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    height: 44px;
+    
+    button {
+        display: none;
+        background-color: transparent;
+        border: none;
+        height: 100%;
+        width: 44px;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+        
+        svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--foreground);
+        }
+        
+        &.active {
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .menu-link {
+        width: 82px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
+
+.socials {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 2rem;
-    width: 100%;
+    gap: 1.5rem;
     height: 100%;
+    order: 3;
 
-    @media (max-width: 786px) {
-      gap: 0.5rem;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 28px;
+        width: 28px;
+        border-radius: 6px;
 
-      .linkedin {
-        display: none;
-      }
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--foreground);
+            box-shadow: 0 0 0 5px var(--background); 
+        }
+
+        &.linkedin {
+            transform: scale(1.1);
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        @media (prefers-color-scheme: light) {
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        :root[data-color-scheme="light"] & {
+            &:hover {
+                opacity: 0.9;
+            }
+        }
     }
 
-    .social-svg {
-      filter: grayscale(100%) invert(100%);
-      opacity: 0.8;
-      height: 1.6rem;
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--foreground);
 
-      @media (prefers-color-scheme: light) {
-        filter: invert(0);
-      }
+    }
+}
 
-      &:hover {
-        opacity: 1;
-      }
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 99;
+}
+
+.overlay-active {
+    cursor: default;
+    pointer-events: none;
+}
+
+//Mobile menu
+@media (max-width: 1000px) {
+    .logo {
+        order: 2;
     }
 
-    .social-svg.github {
-      opacity: 0.9;
+    .menu {
+        width: 44px;
+        order: 1;
 
-      &:hover {
-        opacity: 1;
-      }
+        button {
+            display: flex;
+            background-color: transparent;
+
+            &:hover {
+                background-color: var(--background-hover);
+            }
+
+            &.active {
+                background-color: var(--menu-mobile-background);
+            }
+        }
+
+        ul {
+            flex-direction: column;
+            position: absolute;
+            top: 76px;
+            left: 0rem;
+            right: 0rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(26px);
+            background-color: var(--menu-mobile-background);
+            max-width: 500px;
+            opacity: 0;
+            pointer-events: none;
+            
+            li {
+                border-radius: 6px;
+                width: 100%;
+                
+                a.menu-link {
+                    box-sizing: border-box;
+                    height: 64px;
+                    width: 100%;
+                    transition: border-color 0.1s ease, background-color 0.1s ease, box-shadow 0.1s ease;
+                    
+                    &:hover {
+                        background-color: var(--background-active);
+                        border-color: var(--background-active);
+                    }
+                    
+                    &.breeze-button--active {
+                        background-color: var(--background-active-secondary);
+                        border-color: var(--background-active-secondary);
+                    }
+                }
+            }
+            
+            &.active {
+                opacity: 1;
+                transition: opacity 0.2s ease;
+                pointer-events: all;
+            }
+        }
     }
-  }
+
+    .socials {
+        width: 44px;
+
+        a {
+            width: 44px;
+            height: 44px;
+
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+
+    .overlay {
+        display: block;
+        pointer-events: none;
+
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .socials {
+        a.linkedin {
+            display: none;
+        }
+    }
+}
 </style>
-
-<script>
-import { ref } from 'vue'
-
-const navSection = ref(null);
-const navButton = ref(null);
-const mobileButton = ref(null);
-const navLinks = ref(null);
-const navRefs = ref(null);
-const navLogo = ref(null);
-const navLogoMobile = ref(null);
-
-let renderElements = false;
-
-export default {
-  setup() {
-    onMounted(() => {
-      renderElements = true;
-      navRefs.value.style.display = "";
-      navLinks.value.style.display = "";
-
-      handleResize();
-      window.addEventListener('resize', handleResize)
-      
-      lastScrollY = window.scrollY;
-      window.addEventListener('scroll', toggleHiddenNavMobile)
-    })
-    
-    onUnmounted(() => {
-      window.removeEventListener('resize', handleResize)
-      
-      window.removeEventListener('scroll', toggleHiddenNavMobile)
-    })
-    
-    return {
-      navSection,
-      navButton,
-      mobileButton,
-      navLogo,
-      navLogoMobile,
-      navLinks,
-      navRefs,
-      renderElements,
-      toggleMobileNav,
-    }
-  },
-  methods: {
-    toggleMobileNav,
-    hideMobileNav,
-    handleResize,
-    toggleHiddenNavMobile,
-  }
-};
-
-function handleResize() {
-  if (window.innerWidth < 1000) {
-    hideMobileNav();
-    navButton.value.style.display = "flex";
-    navLogo.value.style.display = "none";
-    navLogoMobile.value.style.display = "flex";
-  } else {
-    navSection.value.style.transform = "";
-    navButton.value.style.display = "none";
-    navLogo.value.style.display = "flex";
-    navLinks.value.style.display = "flex";
-    navLogoMobile.value.style.display = "none";
-  }
-}
-
-let lastScrollY = 0;
-function toggleHiddenNavMobile() {
-  const windowSize = window.innerWidth;
-  const scrollY = window.scrollY;
-  
-  if (windowSize > 1000) return;
-  
-  if (scrollY > lastScrollY && scrollY > 80) {
-    hideMobileNav();
-    navSection.value.style.transform = "translateY(-100%)";
-  } else {
-    navSection.value.style.transform = "";
-  }
-  
-  lastScrollY = scrollY;
-}
-
-function hideMobileNav() {
-  navLinks.value.style.display = "";
-
-  mobileButton.value.style.backgroundColor = "transparent";
-  mobileButton.value.style.backdropFilter = "none";
-  mobileButton.value.style.opacity = "";
-
-  mobileNavOpen = false;
-}
-
-let mobileNavOpen = false;
-function toggleMobileNav() {
-  console.log("Hellow")
-  
-  if (mobileNavOpen) {
-    navLinks.value.style.display = "";
-
-    mobileButton.value.style.backgroundColor = "transparent";
-    mobileButton.value.style.backdropFilter = "none";
-    mobileButton.value.style.opacity = "";
-
-    mobileNavOpen = false;
-  } else {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      mobileButton.value.style.backgroundColor = "rgba(0, 0, 0, 0.08)";
-    } else {
-      mobileButton.value.style.backgroundColor = "rgba(255, 255, 255, 0.06)";
-    }
-
-    navLinks.value.style.display = "block";
-    mobileButton.value.style.backdropFilter = "";
-    mobileButton.value.style.opacity = "1";
-      
-    mobileNavOpen = true;
-  }
-}
-</script>

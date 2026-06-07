@@ -1,56 +1,56 @@
-:root {
-  --b-c-light: rgb(255, 255, 255);
+@import './reset.scss';
 
-  --b-c-dark: #1c1c20;
+@font-face {
+    font-display: auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./../fonts/roboto-500-latin.woff2') format('woff2');
+}
 
-  --b-c-dark-opaque: #1c1c20dd;
+@font-face {
+    font-display: auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./../fonts/roboto-900-i-latin.woff2') format('woff2');
+}
 
-  --b-c-light-opaque: #ffffffd6;
-
-  --p-c-light: rgb(220, 220, 220);
-
-  --p-c-dark: rgb(30, 30, 30);
-  
-  --p-c-highlight: rgb(255, 255, 255);
-
-  --p-c-unhighlight-dark: rgb(156 163 175);
-
-  --p-c-unhighlight-light: rgb(40, 42, 45);
-
-  --p-c-accent: #cb940a;
-
-  --p-c-accent-light: #7C4603;
-
-  --p-c-accent-light-alternate: #bb830a;
+@font-face {
+    font-display: auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./../fonts/poppins-700-latin.woff2') format('woff2');
 }
 
 :root {
-  --background-color: var(--b-c-dark);
-  --nav-background-color: var(--b-c-dark-opaque);
-  --text-main-color: var(--p-c-light);
-  --text-main-color-dark: var(--p-c-dark);
-  --text-main-color-light: var(--p-c-light);
-  --text-main-color-reverse: var(--p-c-dark);
-  --text-secondary-color: var(--p-c-unhighlight-dark);
-  --text-highlight-color: var(--p-c-highlight);
-  --accent-color: var(--p-c-accent);
-  --accent-color-alternate: var(--p-c-accent);
-  color-scheme: dark;
+    --font-system: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    --font-family-main: 'Roboto', var(--font-system);
+    --font-family-secondary: 'Poppins', var(--font-system);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: var(--b-c-light);
-    --nav-background-color: var(--b-c-light-opaque);
-    --text-main-color: var(--p-c-dark);
-    --text-main-color-reverse: var(--p-c-light);
-    --text-secondary-color: var(--p-c-unhighlight-light);
-    --accent-color: var(--p-c-accent-light);
-    --accent-color-alternate: var(--p-c-accent-light-alternate);
-    color-scheme: light;
-  }
+html {
+    scrollbar-width: thin;
 }
 
 body {
-  margin: 0;
+    background-color: var(--background);
+    text-rendering: optimizeLegibility;
+}
+
+section.component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0rem 1rem;
+
+    .container {
+        position: relative;
+        max-width: calc(1000px - 1rem);
+        width: 100%;
+    }
 }
