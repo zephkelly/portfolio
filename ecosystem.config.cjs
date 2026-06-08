@@ -21,6 +21,10 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
 
+        // Port the Nitro server listens on (defaults to 3000 if unset).
+        // Allow .env to override, otherwise use 8000.
+        PORT: process.env.PORT || 8000,
+
         // Read directly by the AWS SDK's default credential chain.
         AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
         AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
