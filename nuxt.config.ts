@@ -8,6 +8,14 @@ export default defineNuxtConfig({
 
     modules: ['@nuxt/image'],
 
+    // Server-only config for the contact form's AWS SES sender.
+    // Credentials come from the EC2 instance's IAM role, so no keys here.
+    runtimeConfig: {
+        sesRegion: process.env.SES_REGION || 'ap-southeast-2',
+        contactFromEmail: process.env.CONTACT_FROM_EMAIL || '',
+        contactToEmail: process.env.CONTACT_TO_EMAIL || '',
+    },
+
     // Source optimised images from the assets directory rather than public.
     // With `dir` set, NuxtImg `src` values resolve relative to assets/images
     // (e.g. src="/works/foo.webp" -> assets/images/works/foo.webp).
