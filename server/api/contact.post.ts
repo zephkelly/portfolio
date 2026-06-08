@@ -4,12 +4,20 @@ type ContactBody = {
     name?: string
     email?: string
     message?: string
+    honeypot?: string
 }
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default defineEventHandler(async (event) => {
-    const { name, email, message } = await readBody<ContactBody>(event) ?? {}
+    const { name, email, message, honeypot } = await readBody<ContactBody>(event) ?? {}
+
+    // Honeypot: a real user never fills the hidden field. If it's set, this is
+    // almost certainly a bot — silently drop the message but return success so
+    // the bot gets no signal it was caught.
+    if (honeypot && honeypot.trim()) {
+        return { ok: true }
+    }
 
     // Validate input
     if (!name?.trim() || !email?.trim() || !message?.trim()) {
@@ -49,8 +57,11 @@ export default defineEventHandler(async (event) => {
             },
         }))
     } catch (error) {
+        // Log the real SES error to the server so failures are diagnosable.
         console.error('[contact] SES send failed:', error)
-        throw createError({ statusCode: 502, statusMessage: 'Failed to send message.' })
+        // NOTE: use 500, not 502/503/504 — Cloudflare intercepts those gateway
+        // statuses and shows its own branded error page instead of passing ours through.
+        throw createError({ statusCode: 500, statusMessage: 'Failed to send message.' })
     }
 
     return { ok: true }

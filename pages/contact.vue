@@ -26,7 +26,15 @@
             <label for="message">Message</label>
             <textarea id="message" v-model="message"></textarea>
           </div>
-          <button type="submit">Send</button>
+          <!-- Honeypot: hidden from real users, bots tend to fill it. Server silently drops if set. -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" v-model="honeypot" tabindex="-1" autocomplete="off">
+          </div>
+          <button type="submit" :class="{ sending }" :disabled="sending" :aria-busy="sending">
+            <span v-if="sending" class="spinner" aria-hidden="true"></span>
+            <span v-else>Send</span>
+          </button>
         </form>
         <p class="status" v-if="status">Message sent!</p>
       </div>
@@ -41,7 +49,9 @@ export default {
       name: '',
       email: '',
       message: '',
-      status: false
+      honeypot: '',
+      status: false,
+      sending: false
     }
   },
   methods: {
@@ -51,6 +61,9 @@ export default {
         return;
       }
 
+      this.sending = true;
+      this.status = false;
+
       try {
         await $fetch('/api/contact', {
           method: 'POST',
@@ -58,6 +71,7 @@ export default {
             name: this.name,
             email: this.email,
             message: this.message,
+            honeypot: this.honeypot,
           },
         })
 
@@ -72,6 +86,8 @@ export default {
         this.status = false;
 
         console.error(error);
+      } finally {
+        this.sending = false;
       }
     }
   }
@@ -144,6 +160,16 @@ export default {
   form {
     margin-top: 3rem;
 
+    // Honeypot — kept in the accessibility tree off-screen rather than display:none,
+    // since some bots skip display:none/visibility:hidden fields.
+    .hp-field {
+      position: absolute;
+      left: -5000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
     div {
       display: flex;
       flex-direction: column;
@@ -190,6 +216,9 @@ export default {
     }
 
     button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       font-size: 1rem;
@@ -206,6 +235,36 @@ export default {
         background-color: var(--background-hover);
         border-color: var(--border-color-hover);
       }
+
+      &:disabled {
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: var(--background-darker);
+          border-color: var(--border-color);
+        }
+      }
+    }
+
+    .spinner {
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid var(--border-color-hover);
+      border-top-color: var(--accent-accessible);
+      border-radius: 50%;
+      animation: contact-spin 0.6s linear infinite;
+    }
+  }
+
+  @keyframes contact-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spinner {
+      animation-duration: 1.5s;
     }
   }
 </style>
