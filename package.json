@@ -12,6 +12,7 @@
     "dependencies": {
         "@aws-sdk/client-ses": "^3.1063.0",
         "@nuxt/image": "^2.0.0",
+        "dotenv": "^17.4.2",
         "nuxt": "^3.13.0",
         "vue": "latest",
         "vue-router": "latest"
