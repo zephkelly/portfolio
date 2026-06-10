@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts">
-const { applySystemColorScheme } = useColorScheme();
+useColorScheme();
 </script>
 
 <style lang="scss" scoped>
