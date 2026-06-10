@@ -69,14 +69,20 @@ jobs:
       - name: Deploy to EC2
         timeout-minutes: 5
         run: |
-          scp -i ~/.ssh/deploy_key portfolio-build.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
-          ssh -i ~/.ssh/deploy_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+          SSH_OPTS="-o BatchMode=yes -o ConnectTimeout=20 -o ServerAliveInterval=20 -o ServerAliveCountMax=5"
+          scp -i ~/.ssh/deploy_key $SSH_OPTS portfolio-build.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
+          ssh -i ~/.ssh/deploy_key $SSH_OPTS ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
           set -e
 
-          # Load NVM and the pinned Node version
-          export NVM_DIR="$HOME/.nvm"
+          # Load NVM and ensure the pinned Node version is present (install if missing)
+          # nvm lives on the secondary EBS volume (/mnt/data) to keep the small root disk free
+          export NVM_DIR="/mnt/data/nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          nvm install 25.1.0
           nvm use 25.1.0
+
+          # Ensure pm2 is available for this Node version
+          command -v pm2 >/dev/null 2>&1 || npm install -g pm2
 
           # Stop the current app
           pm2 stop Portfolio || true
@@ -88,7 +94,7 @@ jobs:
 
           # Create deployment directory owned by the deploy user
           sudo mkdir -p /mnt/data/portfolio
-          sudo chown "$USER":"$USER" /mnt/data/portfolio
+          sudo chown "$(whoami)":"$(whoami)" /mnt/data/portfolio
 
           # Extract the new build
           tar -xzf /tmp/portfolio-build.tar.gz -C /mnt/data/portfolio
