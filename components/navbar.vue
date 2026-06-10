@@ -96,7 +96,7 @@ const observerOptions = {
 
 const handleIntersect = (entries: IntersectionObserverEntry[]) => {
     const [entry] = entries;
-    if (entry.isIntersecting) {
+    if (entry?.isIntersecting) {
         isNavHidden.value = false;
         hasScrolled.value = false;
     } else {

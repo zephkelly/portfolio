@@ -35,6 +35,10 @@ html {
 }
 
 body {
+    // Set after the reset's `font: inherit` (imported above) so the site font
+    // wins; otherwise body falls back to the browser default (serif) and any
+    // element without its own font-family — e.g. BButton text — renders serif.
+    font-family: var(--font-family-main);
     background-color: var(--background);
     text-rendering: optimizeLegibility;
 }

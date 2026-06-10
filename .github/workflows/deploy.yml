@@ -1,0 +1,122 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        run: corepack enable && corepack prepare pnpm@10.20.0 --activate
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '25.1.0'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Create .env file
+        run: |
+          cat > .env << 'EOL'
+          ${{ secrets.ENV_FILE }}
+          EOL
+
+      - name: Build for production
+        timeout-minutes: 10
+        run: pnpm run build
+        env:
+          NODE_ENV: production
+          CI: true
+
+      - name: Verify build output
+        run: ls -la .output/server/index.mjs
+
+      - name: Create deployment package
+        run: |
+          mkdir -p deploy
+          cp -r .output deploy/.output
+          cp .env deploy/.env
+          cp ecosystem.config.cjs deploy/ecosystem.config.cjs
+
+          # ecosystem.config.cjs does `require('dotenv')` to load .env when PM2
+          # evaluates it. The Nitro .output bundle is standalone and doesn't
+          # expose dotenv to the config file, so ship just dotenv (no deps).
+          mkdir -p deploy/node_modules
+          cp -rL node_modules/dotenv deploy/node_modules/dotenv
+
+          tar -czf portfolio-build.tar.gz -C deploy .
+          ls -lh portfolio-build.tar.gz
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to EC2
+        timeout-minutes: 5
+        run: |
+          scp -i ~/.ssh/deploy_key portfolio-build.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
+          ssh -i ~/.ssh/deploy_key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+          set -e
+
+          # Load NVM and the pinned Node version
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          nvm use 25.1.0
+
+          # Stop the current app
+          pm2 stop Portfolio || true
+          pm2 delete Portfolio || true
+
+          # Backup current deployment for quick rollback
+          sudo rm -rf /mnt/data/portfolio-backup
+          sudo mv /mnt/data/portfolio /mnt/data/portfolio-backup || true
+
+          # Create deployment directory owned by the deploy user
+          sudo mkdir -p /mnt/data/portfolio
+          sudo chown "$USER":"$USER" /mnt/data/portfolio
+
+          # Extract the new build
+          tar -xzf /tmp/portfolio-build.tar.gz -C /mnt/data/portfolio
+          rm /tmp/portfolio-build.tar.gz
+
+          chmod -R 755 /mnt/data/portfolio
+
+          # Start with PM2 (reads ecosystem.config.cjs -> port 8000)
+          cd /mnt/data/portfolio
+          pm2 start ecosystem.config.cjs --cwd /mnt/data/portfolio
+          pm2 save
+
+          pm2 status
+          sleep 3
+          pm2 logs Portfolio --lines 30 --nostream || true
+          EOF
+
+      - name: Cleanup
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
+
+      - name: Deployment Summary
+        run: |
+          echo "### 🚀 Portfolio Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Node Version:** 25.1.0" >> $GITHUB_STEP_SUMMARY
+          echo "- **Package Manager:** pnpm" >> $GITHUB_STEP_SUMMARY
+          echo "- **Build Type:** SSR (pnpm run build)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployment Path:** /mnt/data/portfolio" >> $GITHUB_STEP_SUMMARY
+          echo "- **Process Manager:** PM2 (port 8000)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployed by:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY

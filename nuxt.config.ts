@@ -1,11 +1,6 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
 
-    // UI Library
-    extends: [
-        ['github:zephkelly/breeze-ui'],
-    ],
-
     modules: ['@nuxt/image'],
 
     // Server-only config for the contact form's AWS SES sender.
@@ -25,25 +20,17 @@ export default defineNuxtConfig({
         format: ['webp'],
     },
 
-    breeze: {
-        theme: 'default',
-        colors: 'default',
-        devWarnings: true,
-    },
-
-    css: ['~/assets/scss/global.scss'],
+    // Design system (vendored from the former breeze-ui layer):
+    // colors/themes define the raw --*-light/--*-dark tokens, base maps them
+    // to the active --foreground/--background/etc. vars (and imports reset.css).
+    css: [
+        '~/assets/css/colors.css',
+        '~/assets/css/themes.css',
+        '~/assets/css/base.css',
+        '~/assets/scss/global.scss',
+    ],
     typescript: {
         typeCheck: true
-    },
-
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    api: 'modern-compiler',
-                },
-            },
-        },
     },
 
     app: {
@@ -58,6 +45,47 @@ export default defineNuxtConfig({
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            ],
+            // Set data-color-scheme before paint so base.css reveals the page
+            // (it hides html until the attribute is present) and there is no
+            // light/dark flash. The colorScheme plugin takes over reactively.
+            script: [
+                {
+                    innerHTML: `
+                    (function() {
+                        function getInitialColorScheme() {
+                            const cookie = document.cookie.split('; ').find(row => row.startsWith('color-scheme='));
+                            if (cookie) {
+                                const scheme = cookie.split('=')[1];
+                                return scheme;
+                            }
+
+                            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                                return 'dark';
+                            }
+                            else {
+                                return 'light';
+                            }
+                        }
+
+                        const scheme = getInitialColorScheme();
+
+                        if (scheme === 'light') {
+                            document.documentElement.style.backgroundColor = '#fafafa;';
+                        }
+                        else {
+                            document.documentElement.style.backgroundColor = '#1c1c20';
+                        }
+
+                        window.addEventListener('load', () => {
+                            document.documentElement.style.removeProperty('background-color');
+                        });
+
+                        document.documentElement.setAttribute('data-color-scheme', scheme);
+                    })();
+                `,
+                    type: 'text/javascript',
+                },
             ],
         },
     },
