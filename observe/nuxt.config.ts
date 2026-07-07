@@ -16,11 +16,14 @@ export default defineNuxtConfig({
     // .data file for `pnpm dev`.
     database: { path: process.env.OBSERVE_DB_PATH || '.data/observe.sqlite3' },
 
-    // Minimum viable auth: a single bootstrap admin. The password is never in
-    // config — only the NAME of the env var that holds it. Every other user,
-    // service, group and ingest key is created later through the dashboard UI.
+    // DB-backed users: the `users` table is the source of truth. Users are created
+    // and scoped through the dashboard UI. The config `admin` below is only the
+    // bootstrap fallback: it authenticates while the DB has zero enabled admins, then
+    // retires automatically once a real DB admin exists (never written to the DB).
+    // The password is never in config — only the NAME of the env var that holds it.
     // NUXT_SESSION_PASSWORD (>=32 chars) must also be set for cookie sessions.
     auth: {
+        provider: 'db',
         users: [{ name: 'admin', role: 'admin', passwordEnv: 'NUXT_OBSERVE_ADMIN_PASSWORD' }],
         jwt: {
             enabled: true,
