@@ -21,9 +21,12 @@ export default defineNuxtConfig({
     // service, group and ingest key is created later through the dashboard UI.
     // NUXT_SESSION_PASSWORD (>=32 chars) must also be set for cookie sessions.
     auth: {
-      users: [
-        { name: 'admin', role: 'admin', passwordEnv: 'NUXT_OBSERVE_ADMIN_PASSWORD' },
-      ],
+        users: [{ name: 'admin', role: 'admin', passwordEnv: 'NUXT_OBSERVE_ADMIN_PASSWORD' }],
+        jwt: {
+            enabled: true,
+            algorithms: ['HS256'],
+            roleMap: { superuser: 'admin', staff: 'manager' }, // maps your token's role claim → observe role
+        },
     },
   },
 })

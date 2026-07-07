@@ -21,7 +21,7 @@ module.exports = {
         NODE_ENV: 'production',
 
         // Distinct from the portfolio's 8000. Allow .env to override.
-        PORT: process.env.PORT || 8001,
+        PORT: process.env.PORT || 8004,
 
         // nuxt-auth-utils cookie sessions require a >= 32-char secret.
         // Mandatory in production.

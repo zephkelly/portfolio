@@ -15,8 +15,8 @@ importers:
         specifier: ^4.4.8
         version: 4.4.8(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7))(@parcel/watcher@2.5.6)(@types/node@22.20.0)(@vue/compiler-sfc@3.5.39)(better-sqlite3@12.11.1)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.11.1))(esbuild@0.28.1)(ioredis@5.11.1)(lightningcss@1.32.0)(magicast@0.5.3)(rollup-plugin-visualizer@7.0.1(rollup@4.62.2))(rollup@4.62.2)(srvx@0.11.21)(terser@5.48.0)(typescript@5.9.3)(vite@7.3.6(@types/node@22.20.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.9.0))(yaml@2.9.0)
       nuxt-observe:
-        specifier: file:vendor/nuxt-observe-0.0.1.tgz
-        version: file:vendor/nuxt-observe-0.0.1.tgz(d2ccbe5b205b7a521c91a3eeab61fa55)
+        specifier: ^0.0.2
+        version: 0.0.2(d2ccbe5b205b7a521c91a3eeab61fa55)
     devDependencies:
       '@types/node':
         specifier: ^22.10.0
@@ -3414,9 +3414,8 @@ packages:
       '@simplewebauthn/server':
         optional: true
 
-  nuxt-observe@file:vendor/nuxt-observe-0.0.1.tgz:
-    resolution: {integrity: sha512-LeUJHYwI25ux7IjRNV5WOpdJFWmPgGHJob3xrwS07hMwBhcBlN3xmMeDlMWugiT/TZBejTNkat87OhGOzwrO4g==, tarball: file:vendor/nuxt-observe-0.0.1.tgz}
-    version: 0.0.1
+  nuxt-observe@0.0.2:
+    resolution: {integrity: sha512-R2UhgdFL2PHQuxDI/DMgfCUx++Bv+eJl40MTPOxlbZT3sFFh2x9JO54Ss6TIXuzCQjmF+qMKr9fxyQjgZDjMIQ==}
 
   nuxt@4.4.8:
     resolution: {integrity: sha512-r/DGE4cNkEDclOw9tbJ18zqu+ix3me+7QCfumPdl5lBXGWgCajskzuq/HzDkHKfIZsn7ACVEjMLRNA2teh++bQ==}
@@ -8163,7 +8162,7 @@ snapshots:
       - bcrypt
       - magicast
 
-  nuxt-observe@file:vendor/nuxt-observe-0.0.1.tgz(d2ccbe5b205b7a521c91a3eeab61fa55):
+  nuxt-observe@0.0.2(d2ccbe5b205b7a521c91a3eeab61fa55):
     dependencies:
       '@iconify-json/lucide': 1.2.116
       '@nuxt/kit': 4.4.8(magicast@0.5.3)
@@ -8171,6 +8170,7 @@ snapshots:
       better-sqlite3: 12.11.1
       d3: 7.9.0
       defu: 6.1.7
+      jose: 6.2.3
       nuxt-auth-utils: 0.5.29(magicast@0.5.3)
       tailwindcss: 4.3.2
       zod: 4.4.3
