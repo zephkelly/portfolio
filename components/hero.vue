@@ -9,7 +9,7 @@
                     I'm seeking opportunities to leverage my skills and contribute to impactful projects Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
                 </template>
                 <template v-else>
-                    I love building for the web and sharing what I make along the way. Always happy to talk shop — feel free to <NuxtLink href="/contact">reach out!</NuxtLink>
+                    I build thoughtful, well-crafted software and enjoy connecting with others in the industry. Feel free to <NuxtLink href="/contact">contact me here</NuxtLink>.
                 </template>
             </p>
         </div>
