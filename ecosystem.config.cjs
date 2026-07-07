@@ -35,6 +35,12 @@ module.exports = {
         NUXT_SES_REGION: process.env.SES_REGION,
         NUXT_CONTACT_FROM_EMAIL: process.env.CONTACT_FROM_EMAIL,
         NUXT_CONTACT_TO_EMAIL: process.env.CONTACT_TO_EMAIL,
+
+        // Admin dashboard credentials — same pattern: change .env + `pm2 reload`
+        // to rotate the login without a rebuild.
+        NUXT_ADMIN_USERNAME: process.env.ADMIN_USERNAME,
+        NUXT_ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
+        NUXT_ADMIN_SECRET: process.env.ADMIN_SECRET,
       },
     },
   ],

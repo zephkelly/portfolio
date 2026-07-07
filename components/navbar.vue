@@ -35,7 +35,7 @@
                                     Contact
                                 </BButton>
                             </li>
-                            <li>
+                            <li v-if="!privacyMode">
                                 <BButton class="menu-link" variant="flat" holdable href="/resume.pdf" download="Evan-Kelly-Resume.pdf" target="_blank" rel="noopener" aria-label="Download my resume (PDF)">
                                     Resume
                                 </BButton>
@@ -55,6 +55,8 @@
 </template>
 
 <script setup lang="ts">
+const privacyMode = usePrivacyMode();
+
 const menuActive: Ref<boolean> = ref(false);
 
 function debounce(func: any, timeout: any) {

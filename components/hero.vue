@@ -4,12 +4,21 @@
             <NuxtImg src="/profile.webp" alt="Evan Kelly, creator of this portfolio!" width="200" height="200" sizes="200px" densities="x1 x2" preload loading="eager" fetchpriority="high" />
             <h1>Hi, welcome to my site! <span data-v-1baf8294="">👋</span></h1>
             <p>
-                I'm <a class="name" href="https://github.com/zephkelly">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps. 
-                I'm seeking opportunities to leverage my skills and contribute to impactful projects Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
+                I'm <a class="name" href="https://github.com/zephkelly">Evan</a>, a fullstack software developer with a passion for creating beautiful, functional apps.
+                <template v-if="!privacyMode">
+                    I'm seeking opportunities to leverage my skills and contribute to impactful projects Let's discuss how I can add value to your team. Just <NuxtLink href="/contact">reach out!</NuxtLink>
+                </template>
+                <template v-else>
+                    I love building for the web and sharing what I make along the way. Always happy to talk shop — feel free to <NuxtLink href="/contact">reach out!</NuxtLink>
+                </template>
             </p>
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+const privacyMode = usePrivacyMode();
+</script>
 
 <style lang="scss" scoped>
 img {

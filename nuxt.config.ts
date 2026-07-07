@@ -9,6 +9,22 @@ export default defineNuxtConfig({
         sesRegion: process.env.SES_REGION || 'ap-southeast-2',
         contactFromEmail: process.env.CONTACT_FROM_EMAIL || '',
         contactToEmail: process.env.CONTACT_TO_EMAIL || '',
+
+        // Admin dashboard (privacy mode toggle). Server-only — never exposed to
+        // the client. Hardcoded credentials live in .env / GitHub secrets.
+        // adminSecret signs the short-lived session token; falls back to
+        // adminPassword if unset (see server/utils/adminAuth.ts).
+        adminUsername: process.env.ADMIN_USERNAME || '',
+        adminPassword: process.env.ADMIN_PASSWORD || '',
+        adminSecret: process.env.ADMIN_SECRET || '',
+    },
+
+    // Filesystem-backed store for the persistent privacy mode flag. Kept out of
+    // the deploy bundle, so a fresh deploy resets privacy mode to OFF.
+    nitro: {
+        storage: {
+            admin: { driver: 'fs', base: './.data/admin' },
+        },
     },
 
     // Source optimised images from the assets directory rather than public.
