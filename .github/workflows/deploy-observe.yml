@@ -1,11 +1,9 @@
-name: Deploy
+name: Deploy Observe
 
 on:
   push:
     branches: [main]
-    # The standalone observe/ app has its own workflow (deploy-observe.yml);
-    # don't rebuild the portfolio for observe-only changes.
-    paths-ignore:
+    paths:
       - 'observe/**'
       - '.github/workflows/deploy-observe.yml'
   workflow_dispatch:
@@ -15,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: main
     timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: observe
 
     steps:
       - name: Checkout code
@@ -28,14 +29,15 @@ jobs:
         with:
           node-version: '25.1.0'
           cache: 'pnpm'
+          cache-dependency-path: observe/pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Create .env file
+      - name: Create runtime .env
         run: |
           cat > .env << 'EOL'
-          ${{ secrets.ENV_FILE }}
+          ${{ secrets.OBSERVE_ENV_FILE }}
           EOL
 
       - name: Build for production
@@ -44,6 +46,9 @@ jobs:
         env:
           NODE_ENV: production
           CI: true
+          # Bake the persistent, out-of-deploy-dir SQLite path into the build so
+          # releases never wipe collected observability data.
+          OBSERVE_DB_PATH: /mnt/data/observe-data/observe.sqlite3
 
       - name: Verify build output
         run: ls -la .output/server/index.mjs
@@ -55,14 +60,15 @@ jobs:
           cp .env deploy/.env
           cp ecosystem.config.cjs deploy/ecosystem.config.cjs
 
-          # ecosystem.config.cjs does `require('dotenv')` to load .env when PM2
-          # evaluates it. The Nitro .output bundle is standalone and doesn't
-          # expose dotenv to the config file, so ship just dotenv (no deps).
+          # ecosystem.config.cjs does `require('dotenv')` when PM2 evaluates it.
+          # The standalone Nitro bundle doesn't expose dotenv to the config file,
+          # so ship just dotenv (no deps). With shamefully-hoist, dotenv lives at
+          # the observe working-dir node_modules.
           mkdir -p deploy/node_modules
           cp -rL node_modules/dotenv deploy/node_modules/dotenv
 
-          tar -czf portfolio-build.tar.gz -C deploy .
-          ls -lh portfolio-build.tar.gz
+          tar -czf observe-build.tar.gz -C deploy .
+          ls -lh observe-build.tar.gz
 
       - name: Setup SSH
         run: |
@@ -75,7 +81,7 @@ jobs:
         timeout-minutes: 5
         run: |
           SSH_OPTS="-o BatchMode=yes -o ConnectTimeout=20 -o ServerAliveInterval=20 -o ServerAliveCountMax=5"
-          scp -i ~/.ssh/deploy_key $SSH_OPTS portfolio-build.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
+          scp -i ~/.ssh/deploy_key $SSH_OPTS observe-build.tar.gz ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/tmp/
           ssh -i ~/.ssh/deploy_key $SSH_OPTS ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
           set -e
 
@@ -89,32 +95,37 @@ jobs:
           # Ensure pm2 is available for this Node version
           command -v pm2 >/dev/null 2>&1 || npm install -g pm2
 
-          # Stop the current app
-          pm2 stop Portfolio || true
-          pm2 delete Portfolio || true
+          # Persistent SQLite dir, created ONCE and never wiped by a deploy.
+          # Must match OBSERVE_DB_PATH baked into the build above.
+          sudo mkdir -p /mnt/data/observe-data
+          sudo chown "$(whoami)":"$(whoami)" /mnt/data/observe-data
 
-          # Backup current deployment for quick rollback
-          sudo rm -rf /mnt/data/portfolio-backup
-          sudo mv /mnt/data/portfolio /mnt/data/portfolio-backup || true
+          # Stop the current app
+          pm2 stop Observe || true
+          pm2 delete Observe || true
+
+          # Back up the app dir only (NOT observe-data) for quick rollback
+          sudo rm -rf /mnt/data/observe-backup
+          sudo mv /mnt/data/observe /mnt/data/observe-backup || true
 
           # Create deployment directory owned by the deploy user
-          sudo mkdir -p /mnt/data/portfolio
-          sudo chown "$(whoami)":"$(whoami)" /mnt/data/portfolio
+          sudo mkdir -p /mnt/data/observe
+          sudo chown "$(whoami)":"$(whoami)" /mnt/data/observe
 
           # Extract the new build
-          tar -xzf /tmp/portfolio-build.tar.gz -C /mnt/data/portfolio
-          rm /tmp/portfolio-build.tar.gz
+          tar -xzf /tmp/observe-build.tar.gz -C /mnt/data/observe
+          rm /tmp/observe-build.tar.gz
 
-          chmod -R 755 /mnt/data/portfolio
+          chmod -R 755 /mnt/data/observe
 
-          # Start with PM2 (reads ecosystem.config.cjs -> port 8000)
-          cd /mnt/data/portfolio
-          pm2 start ecosystem.config.cjs --cwd /mnt/data/portfolio
+          # Start with PM2 (reads ecosystem.config.cjs -> port 8001)
+          cd /mnt/data/observe
+          pm2 start ecosystem.config.cjs --cwd /mnt/data/observe
           pm2 save
 
           pm2 status
           sleep 3
-          pm2 logs Portfolio --lines 30 --nostream || true
+          pm2 logs Observe --lines 30 --nostream || true
           EOF
 
       - name: Cleanup
@@ -123,12 +134,12 @@ jobs:
 
       - name: Deployment Summary
         run: |
-          echo "### 🚀 Portfolio Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "### 🚀 Observe Deployment Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **App:** nuxt-observe host" >> $GITHUB_STEP_SUMMARY
           echo "- **Node Version:** 25.1.0" >> $GITHUB_STEP_SUMMARY
-          echo "- **Package Manager:** pnpm" >> $GITHUB_STEP_SUMMARY
-          echo "- **Build Type:** SSR (pnpm run build)" >> $GITHUB_STEP_SUMMARY
-          echo "- **Deployment Path:** /mnt/data/portfolio" >> $GITHUB_STEP_SUMMARY
-          echo "- **Process Manager:** PM2 (port 8000)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deployment Path:** /mnt/data/observe" >> $GITHUB_STEP_SUMMARY
+          echo "- **Data (persistent):** /mnt/data/observe-data" >> $GITHUB_STEP_SUMMARY
+          echo "- **Process Manager:** PM2 (port 8001)" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Deployed by:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
