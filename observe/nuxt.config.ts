@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
 
   observe: {
+    pwa: true,
     // Persistent SQLite location. Set at build time in CI to a path OUTSIDE the
     // deploy dir so releases don't wipe collected data. Falls back to a local
     // .data file for `pnpm dev`.
